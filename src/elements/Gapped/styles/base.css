@@ -1,0 +1,43 @@
+.gapped {
+  display: flex;
+}
+
+.gapped--vertical {
+  flex-direction: column;
+}
+
+.gapped--align-start {
+  align-items: flex-start;
+}
+
+.gapped--align-end {
+  align-items: flex-end;
+}
+
+.gapped--align-center {
+  align-items: center;
+}
+
+.gapped--align-baseline {
+  align-items: baseline;
+}
+
+.gapped--align-stretch {
+  align-items: stretch;
+}
+
+.gapped--justify-start {
+  justify-content: flex-start;
+}
+
+.gapped--justify-end {
+  justify-content: flex-end;
+}
+
+.gapped--justify-center {
+  justify-content: center;
+}
+
+.gapped--wrap {
+  flex-wrap: wrap;
+}
