@@ -1,0 +1,25 @@
+.react-simple-star-rating {
+  display: block !important;
+
+  [class*='style-module']:has(> &) {
+    display: block !important;
+  }
+
+  .empty-icons,
+  .filled-icons {
+    display: flex !important;
+    gap: 0.1em !important;
+
+    .feather {
+      fill: currentColor;
+    }
+  }
+
+  .empty-icons {
+    color: var(--color-grey-800) !important;
+  }
+
+  .filled-icons {
+    color: var(--color-rate) !important;
+  }
+}

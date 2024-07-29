@@ -1,0 +1,23 @@
+@layer variables, global, elements, components, modificators;
+
+@import './variables/colors.css' layer(variables);
+@import './variables/fonts.css' layer(variables);
+@import './variables/layout.css' layer(variables);
+@import './variables/theme.css' layer(variables);
+@import './variables/z-index.css' layer(variables);
+
+@import './global.css' layer(global);
+@import './container/index.css' layer(global);
+@import './fancybox/index.css' layer(global);
+@import './feather/index.css' layer(global);
+@import './react-simple-star-rating/index.css' layer(global);
+@import './react-toastify/index.css' layer(global);
+@import './swiper/index.css' layer(global);
+
+@import './_modificators.css' layer(modificators);
+
+@layer global {
+  .app {
+    display: contents;
+  }
+}

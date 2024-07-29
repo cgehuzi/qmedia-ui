@@ -1,0 +1,82 @@
+._h1,
+._h2,
+._h3,
+._h4,
+._h5,
+._h6 {
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+._h1 {
+  font-size: var(--font-size-h1) !important;
+}
+
+._h2 {
+  font-size: var(--font-size-h2) !important;
+}
+
+._h3 {
+  font-size: var(--font-size-h3) !important;
+}
+
+._h4 {
+  font-size: var(--font-size-h4) !important;
+}
+
+._h5 {
+  font-size: var(--font-size-h5) !important;
+}
+
+._h6 {
+  font-size: var(--font-size-h6) !important;
+}
+
+._sticked {
+  position: sticky;
+  top: calc(var(--top-sticky-height) + var(--grid-item-gap));
+  z-index: 1;
+  /* перебиваем z-index всех остальных элементов без явного указания,
+  чтобы дочерние элементы у ._sticked имели приоритет и их position: fixed не ломался */
+}
+
+/* Phone */
+
+@media (width < 768px) {
+  ._hidden-phone {
+    display: none !important;
+  }
+
+  ._sticked-phone {
+    position: sticky;
+    top: calc(var(--top-sticky-height) + var(--grid-item-gap));
+  }
+}
+
+/* Tablet */
+
+@media (768px <= width < 1200px) {
+  ._hidden-tablet {
+    display: none !important;
+  }
+
+  ._sticked-tablet {
+    position: sticky;
+    top: calc(var(--top-sticky-height) + var(--grid-item-gap));
+  }
+}
+
+/* Desktop */
+
+@media (width >= 1200px) {
+  ._hidden-desktop {
+    display: none !important;
+  }
+
+  ._sticked-desktop {
+    position: sticky;
+    top: calc(var(--top-sticky-height) + var(--grid-item-gap));
+  }
+}

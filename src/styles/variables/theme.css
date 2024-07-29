@@ -1,0 +1,73 @@
+:root {
+  --line-height: 1.4;
+  --box-shadow-small: 0 0 8px color-mix(in srgb, var(--color-grey-100) 10%, transparent);
+  --box-shadow-base: 0 0 16px color-mix(in srgb, var(--color-grey-100) 10%, transparent);
+  --box-shadow-large: 0 0 24px color-mix(in srgb, var(--color-grey-100) 10%, transparent);
+
+  --backdrop-color: color-mix(in srgb, var(--color-grey-50) 80%, transparent);
+
+  --transition-turbo: 0.2s ease-in-out;
+  --transition-fast: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+
+  /* Controls */
+
+  --control-micro-font-size: var(--font-size-micro);
+  --control-micro-padding-inline: 0.6rem;
+  --control-micro-padding-block: 0.25rem;
+  --control-micro-padding: var(--control-micro-padding-block) var(--control-micro-padding-inline);
+  --control-micro-border-width: 1px;
+  --control-micro-border-radius: 0.25rem;
+
+  --control-small-font-size: var(--font-size-small);
+  --control-small-padding-inline: 0.75rem;
+  --control-small-padding-block: 0.35rem;
+  --control-small-padding: var(--control-small-padding-block) var(--control-small-padding-inline);
+  --control-small-border-width: 1px;
+  --control-small-border-radius: 0.3rem;
+
+  --control-font-size: var(--font-size-base);
+  --control-padding-inline: 1rem;
+  --control-padding-block: 0.45rem;
+  --control-padding: var(--control-padding-block) var(--control-padding-inline);
+  --control-border-width: 1px;
+  --control-border-radius: 0.325rem;
+
+  --control-large-font-size: var(--font-size-base);
+  --control-large-padding-inline: 1.25rem;
+  --control-large-padding-block: 0.6rem;
+  --control-large-padding: var(--control-large-padding-block) var(--control-large-padding-inline);
+  --control-large-border-width: 1px;
+  --control-large-border-radius: 0.325rem;
+
+  --control-extra-font-size: var(--font-size-base);
+  --control-extra-padding-inline: 1.5rem;
+  --control-extra-padding-block: 0.75rem;
+  --control-extra-padding: var(--control-extra-padding-block) var(--control-extra-padding-inline);
+  --control-extra-border-width: 1px;
+  --control-extra-border-radius: 0.35rem;
+}
+
+/* Phone */
+
+@media (width < 768px) {
+  :root {
+    --rounded-radius: 7px;
+  }
+}
+
+/* Tablet */
+
+@media (768px <= width < 1200px) {
+  :root {
+    --rounded-radius: 9px;
+  }
+}
+
+/* Desktop */
+
+@media (width >= 1200px) {
+  :root {
+    --rounded-radius: 12px;
+  }
+}

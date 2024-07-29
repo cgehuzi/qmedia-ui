@@ -1,1 +1,1 @@
-# qmedia-ui
+# Qmedia UI

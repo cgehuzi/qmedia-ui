@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@import '../src/styles/index.css';
+
+:root {
+  --color-second: teal;
+  --color-third: orange;
+}
+
+#rsg-root {
+  [class*='rsg--sidebar-'] {
+    width: 300px;
+  }
+
+  [class*='rsg--preview-'] {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+      linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+    background-size: 16px 16px;
+    background-position: center;
+  }
+
+  [class*='rsg--pathline-'] {
+    font-size: var(--font-size-micro);
+  }
+
+  [class*='rsg--heading-'] {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-medium);
+
+    &[class*='heading1-'] {
+      font-size: var(--font-size-h1);
+    }
+
+    &[class*='heading2-'] {
+      font-size: var(--font-size-h2);
+    }
+
+    &[class*='heading3-'] {
+      font-size: var(--font-size-h3);
+    }
+
+    &[class*='heading4-'] {
+      font-size: var(--font-size-h4);
+    }
+
+    &[class*='heading5-'] {
+      font-size: var(--font-size-h5);
+    }
+
+    &[class*='heading6-'] {
+      font-size: var(--font-size-h6);
+    }
+
+    [class*='rsg--header-'] & {
+      font-size: var(--font-size-h1);
+    }
+  }
+
+  [class*='rsg--para-'] {
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+  }
+
+  [class*='rsg--code-'] {
+    font-size: 90%;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+    padding: 0.2em 0.4em;
+    font-weight: var(--font-weight-medium);
+  }
+
+  [class*='rsg--table-'] {
+    & tr {
+      &:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+    }
+
+    [class*='rsg--tableHead-'] {
+      background-color: #f5f5f5;
+      border: none;
+    }
+
+    [class*='rsg--cellHeading-'],
+    [class*='rsg--cell-'] {
+      padding: 8px 16px;
+      min-width: 120px;
+      font-size: var(--font-size-small);
+
+      [class*='rsg--para-'] {
+        font-size: inherit;
+      }
+    }
+  }
+}

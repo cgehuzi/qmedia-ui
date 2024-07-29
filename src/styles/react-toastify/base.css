@@ -1,0 +1,12 @@
+@import '~react-toastify/dist/ReactToastify.css';
+
+:root {
+  --toastify-color-dark: var(--color-grey-100);
+  --toastify-color-success: var(--color-success);
+  --toastify-color-error: var(--color-error);
+  --toastify-text-color-light: var(--color-grey);
+}
+
+.Toastify__toast-container {
+  z-index: var(--z-toastify);
+}

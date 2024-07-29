@@ -1,0 +1,28 @@
+:root {
+  --bottom-sticky-height: 72px;
+  --aside-width: 290px;
+}
+
+/* Phone */
+
+@media (width < 768px) {
+  :root {
+    --top-sticky-height: 60px;
+  }
+}
+
+/* Tablet */
+
+@media (768px <= width < 1200px) {
+  :root {
+    --top-sticky-height: 72px;
+  }
+}
+
+/* Desktop */
+
+@media (width >= 1200px) {
+  :root {
+    --top-sticky-height: 86px;
+  }
+}

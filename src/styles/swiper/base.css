@@ -1,0 +1,79 @@
+@import 'swiper/css/bundle';
+
+:root {
+  --swiper-theme-color: var(--color-grey-200);
+  --swiper-pagination-bullet-inactive-opacity: 0.4;
+  --swiper-pagination-bullet-opacity: 1;
+}
+
+.swiper {
+  isolation: isolate;
+  z-index: auto;
+}
+
+.swiper-slide {
+  width: auto;
+  height: auto;
+}
+
+.swiper-navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  visibility: hidden;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+  width: var(--swiper-navigation-size);
+  height: var(--swiper-navigation-size);
+  margin: var(--swiper-navigation-sides-offset);
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.4s;
+  position: static;
+  box-shadow:
+    0 1px 8px color-mix(in srgb, #000000 8%, transparent),
+    0 2px 4px color-mix(in srgb, #000000 12%, transparent);
+  visibility: visible;
+
+  &::after {
+    display: none;
+  }
+
+  .feather {
+    stroke-width: 1.6;
+    margin: 25%;
+    width: auto;
+    height: auto;
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0 !important;
+  cursor: default;
+}
+
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  visibility: hidden;
+
+  &.swiper-pagination-lock {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet {
+  visibility: visible;
+}
