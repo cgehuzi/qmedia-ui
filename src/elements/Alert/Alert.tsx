@@ -4,12 +4,12 @@ import classNames from 'classnames';
 
 export interface AlertProps {
   /** Размер компонента */
-  size?: 'micro' | 'small' | 'large' | 'extra';
+  size?: 'micro' | 'small' | 'base' | 'large' | 'extra';
   /** Цвет компонента */
-  color?: string;
-  /** HTML-контент для отображения внутри компонента.<br> Если указано, то `children` игнорируется */
+  color?: 'grey' | 'first' | 'second' | 'third' | 'success' | 'error';
+  /** HTML-контент для отображения внутри компонента.<br> Если указан, то `children` игнорируется */
   content?: string;
-  /** Ссылка на компонент. Будет передан в ключевой элемент как `ref` */
+  /** Ссылка на HTML-элемент */
   myRef?: React.Ref<HTMLDivElement>;
 }
 
@@ -24,13 +24,17 @@ export class Alert extends React.Component<React.HTMLAttributes<HTMLDivElement> 
     this.myRef = props.myRef || React.createRef();
   }
 
+  static defaultProps = {
+    size: 'base',
+  };
+
   render() {
     const { size, color, content, className, children, ...props } = this.props;
     const componentProps = {
       className: classNames(
         'alert',
-        size && `alert--size-${size}`,
-        color && `alert--color-${color}`,
+        size !== 'base' && `alert--${size}`,
+        color && `alert--${color}`,
         className
       ),
       ...props,

@@ -5,10 +5,10 @@
 #### Размеры
 
 ```js
-import { Gapped } from '../Gapped';
+import { Gapped } from '../../components/Gapped';
 
-<Gapped vertical align="strentch">
-  <Alert size="micro">micro – Сообщение размера micro</Alert>
+<Gapped isVertical align="strentch">
+  <Alert size="micro">Сообщение размера micro</Alert>
   <Alert size="small">Сообщение размера small</Alert>
   <Alert>Сообщение без указания размера (base)</Alert>
   <Alert size="large">Сообщение размера large</Alert>
@@ -19,10 +19,11 @@ import { Gapped } from '../Gapped';
 #### Цвета
 
 ```js
-import { Gapped } from '../Gapped';
+import { Gapped } from '../../components/Gapped';
 
-<Gapped vertical align="strentch">
+<Gapped isVertical align="strentch">
   <Alert>Сообщение без указания цвета</Alert>
+  <Alert color="grey">Сообщение цвета grey</Alert>
   <Alert color="first">Сообщение цвета first</Alert>
   <Alert color="second">Сообщение цвета second</Alert>
   <Alert color="third">Сообщение цвета third</Alert>

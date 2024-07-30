@@ -1,56 +1,62 @@
 .alert {
-  background-color: var(--color-grey-transparent-90);
+  background-color: var(--background-color, transparent);
   border-radius: var(--control-border-radius);
   font-size: var(--font-size-base);
   white-space: pre-wrap;
   padding: 0.75em 1.5em;
-  color: var(--color-grey-100);
+  color: inherit;
   font-size: var(--font-size-small);
   display: grid;
   gap: 0.5em;
+  border: 2px solid var(--background-color, var(--color-grey-white-80));
 
   & > * {
     margin: 0;
   }
 }
 
-.alert--size-micro {
+.alert--micro {
   font-size: var(--font-size-micro);
 }
 
-.alert--size-small {
+.alert--small {
   font-size: var(--font-size-small);
 }
 
-.alert--size-large {
+.alert--large {
   font-size: var(--font-size-large);
 }
 
-.alert--size-extra {
+.alert--extra {
   font-size: var(--font-size-extra);
 }
 
-.alert--color-first {
-  background-color: var(--color-first-transparent-85);
+.alert--grey {
+  --background-color: var(--color-grey-trans-80);
+  color: var(--color-grey);
+}
+
+.alert--first {
+  --background-color: var(--color-first-trans-80);
   color: var(--color-first);
 }
 
-.alert--color-second {
-  background-color: var(--color-second-transparent-85);
+.alert--second {
+  --background-color: var(--color-second-trans-80);
   color: var(--color-second);
 }
 
-.alert--color-third {
-  background-color: var(--color-third-transparent-85);
+.alert--third {
+  --background-color: var(--color-third-trans-80);
   color: var(--color-third);
 }
 
-.alert--color-success {
-  background-color: var(--color-success-transparent-85);
+.alert--success {
+  --background-color: var(--color-success-trans-80);
   color: var(--color-success);
 }
 
-.alert--color-error {
-  background-color: var(--color-error-transparent-85);
+.alert--error {
+  --background-color: var(--color-error-trans-80);
   color: var(--color-error);
 }
