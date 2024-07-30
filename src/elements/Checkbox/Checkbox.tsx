@@ -23,7 +23,7 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
 }
 
 /**
- * Информационное сообщение или предупреждение.
+ * Стилизованный элемент `input` с типом `checkbox`. Поддерживает все стандартные атрибуты и события элемента `input`.
  */
 export class Checkbox extends React.Component<CheckboxProps> {
   myRef: React.Ref<HTMLInputElement>;
@@ -79,6 +79,7 @@ export class Checkbox extends React.Component<CheckboxProps> {
         <input
           className="checkbox__input"
           type="checkbox"
+          value={value}
           disabled={this.state.disabled || this.state.waiting}
           defaultChecked={this.state.checked}
           onChange={this.handleChange}
@@ -88,9 +89,9 @@ export class Checkbox extends React.Component<CheckboxProps> {
         {this.state.waiting ? (
           <FeatherIcon icon="loader" className="checkbox__spinner" />
         ) : (
-          <div className={classNames('checkbox__visible', color && `_color-${color}`)} />
+          <div className={classNames('checkbox__icon', color && `_color-${color}`)} />
         )}
-        <span className="checkbox__title">{children || value}</span>
+        <div className="checkbox__title">{children || value}</div>
       </label>
     );
   }

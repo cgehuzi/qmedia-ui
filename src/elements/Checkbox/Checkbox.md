@@ -9,7 +9,7 @@
 На внутренне содержимое компонента могут повлиять 2 параметра.
 
 1. `children` – все потомки попадут в область справа от чекбокса
-2. `value` – исли children пустой
+2. `value` – если children пустой
 
 ```js
 import { Gapped } from '../../components/Gapped';
@@ -89,7 +89,7 @@ const handleWaiting = (e) => {
 
 <Gapped isVertical>
   <Checkbox checked disabled>
-    Отключено взаимодействие
+    в отключенном состоянии
   </Checkbox>
   <Checkbox checked isInvalid>
     в состоянии ошибки
@@ -98,7 +98,7 @@ const handleWaiting = (e) => {
     в режиме ожидания
   </Checkbox>
   <Checkbox checked={checked} isWaiting={isWaiting} onChange={handleWaiting}>
-    нажми на меня
+    действие после ожидания
   </Checkbox>
 </Gapped>;
 ```
