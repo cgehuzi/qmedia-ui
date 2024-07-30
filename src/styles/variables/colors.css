@@ -1,226 +1,211 @@
 :root {
-  --color-grey: hsl(210, 13%, 50%);
-  --color-grey-text: #ffffff;
-
-  --color-first: hsl(208, 87%, 50%);
-  --color-first-text: #ffffff;
-
-  --color-second: var(--color-first);
-  --color-second-text: #ffffff;
-
-  --color-third: var(--color-first);
-  --color-third-text: #ffffff;
-
-  --color-success: green;
-  --color-success-text: #ffffff;
-
-  --color-error: red;
-  --color-error-text: #ffffff;
-
-  --color-badge: red;
-  --color-badge-text: #ffffff;
-
   /* color-grey */
-  --color-grey-50: color-mix(in srgb, #000000, var(--color-grey) 10%);
-  --color-grey-100: color-mix(in srgb, #000000, var(--color-grey) 20%);
-  --color-grey-200: color-mix(in srgb, #000000, var(--color-grey) 40%);
-  --color-grey-300: color-mix(in srgb, #000000, var(--color-grey) 60%);
-  --color-grey-400: color-mix(in srgb, #000000, var(--color-grey) 80%);
-  --color-grey-500: var(--color-grey);
-  --color-grey-600: color-mix(in srgb, #ffffff, var(--color-grey) 80%);
-  --color-grey-700: color-mix(in srgb, #ffffff, var(--color-grey) 60%);
-  --color-grey-800: color-mix(in srgb, #ffffff, var(--color-grey) 40%);
-  --color-grey-900: color-mix(in srgb, #ffffff, var(--color-grey) 20%);
-  --color-grey-950: color-mix(in srgb, #ffffff, var(--color-grey) 10%);
 
-  /* color-grey-transparent */
-  --color-grey-transparent-5: color-mix(in srgb, var(--color-grey), transparent 5%);
-  --color-grey-transparent-10: color-mix(in srgb, var(--color-grey), transparent 10%);
-  --color-grey-transparent-15: color-mix(in srgb, var(--color-grey), transparent 15%);
-  --color-grey-transparent-20: color-mix(in srgb, var(--color-grey), transparent 20%);
-  --color-grey-transparent-25: color-mix(in srgb, var(--color-grey), transparent 25%);
-  --color-grey-transparent-30: color-mix(in srgb, var(--color-grey), transparent 30%);
-  --color-grey-transparent-35: color-mix(in srgb, var(--color-grey), transparent 35%);
-  --color-grey-transparent-40: color-mix(in srgb, var(--color-grey), transparent 40%);
-  --color-grey-transparent-45: color-mix(in srgb, var(--color-grey), transparent 45%);
-  --color-grey-transparent-50: color-mix(in srgb, var(--color-grey), transparent 50%);
-  --color-grey-transparent-55: color-mix(in srgb, var(--color-grey), transparent 55%);
-  --color-grey-transparent-60: color-mix(in srgb, var(--color-grey), transparent 60%);
-  --color-grey-transparent-65: color-mix(in srgb, var(--color-grey), transparent 65%);
-  --color-grey-transparent-70: color-mix(in srgb, var(--color-grey), transparent 70%);
-  --color-grey-transparent-75: color-mix(in srgb, var(--color-grey), transparent 75%);
-  --color-grey-transparent-80: color-mix(in srgb, var(--color-grey), transparent 80%);
-  --color-grey-transparent-85: color-mix(in srgb, var(--color-grey), transparent 85%);
-  --color-grey-transparent-90: color-mix(in srgb, var(--color-grey), transparent 90%);
-  --color-grey-transparent-95: color-mix(in srgb, var(--color-grey), transparent 95%);
+  --color-grey: hsl(210, 13%, 50%);
+  --color-grey-text: white;
+
+  --color-grey-white-10: color-mix(in srgb, var(--color-grey), white 10%);
+  --color-grey-white-20: color-mix(in srgb, var(--color-grey), white 20%);
+  --color-grey-white-30: color-mix(in srgb, var(--color-grey), white 30%);
+  --color-grey-white-40: color-mix(in srgb, var(--color-grey), white 40%);
+  --color-grey-white-50: color-mix(in srgb, var(--color-grey), white 50%);
+  --color-grey-white-60: color-mix(in srgb, var(--color-grey), white 60%);
+  --color-grey-white-70: color-mix(in srgb, var(--color-grey), white 70%);
+  --color-grey-white-80: color-mix(in srgb, var(--color-grey), white 80%);
+  --color-grey-white-90: color-mix(in srgb, var(--color-grey), white 90%);
+
+  --color-grey-black-10: color-mix(in srgb, var(--color-grey), black 10%);
+  --color-grey-black-20: color-mix(in srgb, var(--color-grey), black 20%);
+  --color-grey-black-30: color-mix(in srgb, var(--color-grey), black 30%);
+  --color-grey-black-40: color-mix(in srgb, var(--color-grey), black 40%);
+  --color-grey-black-50: color-mix(in srgb, var(--color-grey), black 50%);
+  --color-grey-black-60: color-mix(in srgb, var(--color-grey), black 60%);
+  --color-grey-black-70: color-mix(in srgb, var(--color-grey), black 70%);
+  --color-grey-black-80: color-mix(in srgb, var(--color-grey), black 80%);
+  --color-grey-black-90: color-mix(in srgb, var(--color-grey), black 90%);
+
+  --color-grey-trans-10: color-mix(in srgb, var(--color-grey), transparent 10%);
+  --color-grey-trans-20: color-mix(in srgb, var(--color-grey), transparent 20%);
+  --color-grey-trans-30: color-mix(in srgb, var(--color-grey), transparent 30%);
+  --color-grey-trans-40: color-mix(in srgb, var(--color-grey), transparent 40%);
+  --color-grey-trans-50: color-mix(in srgb, var(--color-grey), transparent 50%);
+  --color-grey-trans-60: color-mix(in srgb, var(--color-grey), transparent 60%);
+  --color-grey-trans-70: color-mix(in srgb, var(--color-grey), transparent 70%);
+  --color-grey-trans-80: color-mix(in srgb, var(--color-grey), transparent 80%);
+  --color-grey-trans-90: color-mix(in srgb, var(--color-grey), transparent 90%);
 
   /* color-first */
-  --color-first-50: color-mix(in srgb, #000000, var(--color-first) 10%);
-  --color-first-100: color-mix(in srgb, #000000, var(--color-first) 20%);
-  --color-first-200: color-mix(in srgb, #000000, var(--color-first) 40%);
-  --color-first-300: color-mix(in srgb, #000000, var(--color-first) 60%);
-  --color-first-400: color-mix(in srgb, #000000, var(--color-first) 80%);
-  --color-first-500: var(--color-first);
-  --color-first-600: color-mix(in srgb, #ffffff, var(--color-first) 80%);
-  --color-first-700: color-mix(in srgb, #ffffff, var(--color-first) 60%);
-  --color-first-800: color-mix(in srgb, #ffffff, var(--color-first) 40%);
-  --color-first-900: color-mix(in srgb, #ffffff, var(--color-first) 20%);
-  --color-first-950: color-mix(in srgb, #ffffff, var(--color-first) 10%);
 
-  /* color-first-transparent */
-  --color-first-transparent-5: color-mix(in srgb, var(--color-first), transparent 5%);
-  --color-first-transparent-10: color-mix(in srgb, var(--color-first), transparent 10%);
-  --color-first-transparent-15: color-mix(in srgb, var(--color-first), transparent 15%);
-  --color-first-transparent-20: color-mix(in srgb, var(--color-first), transparent 20%);
-  --color-first-transparent-25: color-mix(in srgb, var(--color-first), transparent 25%);
-  --color-first-transparent-30: color-mix(in srgb, var(--color-first), transparent 30%);
-  --color-first-transparent-35: color-mix(in srgb, var(--color-first), transparent 35%);
-  --color-first-transparent-40: color-mix(in srgb, var(--color-first), transparent 40%);
-  --color-first-transparent-45: color-mix(in srgb, var(--color-first), transparent 45%);
-  --color-first-transparent-50: color-mix(in srgb, var(--color-first), transparent 50%);
-  --color-first-transparent-55: color-mix(in srgb, var(--color-first), transparent 55%);
-  --color-first-transparent-60: color-mix(in srgb, var(--color-first), transparent 60%);
-  --color-first-transparent-65: color-mix(in srgb, var(--color-first), transparent 65%);
-  --color-first-transparent-70: color-mix(in srgb, var(--color-first), transparent 70%);
-  --color-first-transparent-75: color-mix(in srgb, var(--color-first), transparent 75%);
-  --color-first-transparent-80: color-mix(in srgb, var(--color-first), transparent 80%);
-  --color-first-transparent-85: color-mix(in srgb, var(--color-first), transparent 85%);
-  --color-first-transparent-90: color-mix(in srgb, var(--color-first), transparent 90%);
-  --color-first-transparent-95: color-mix(in srgb, var(--color-first), transparent 95%);
+  --color-first: hsl(208, 87%, 50%);
+  --color-first-text: white;
+
+  --color-first-white-10: color-mix(in srgb, var(--color-first), white 10%);
+  --color-first-white-20: color-mix(in srgb, var(--color-first), white 20%);
+  --color-first-white-30: color-mix(in srgb, var(--color-first), white 30%);
+  --color-first-white-40: color-mix(in srgb, var(--color-first), white 40%);
+  --color-first-white-50: color-mix(in srgb, var(--color-first), white 50%);
+  --color-first-white-60: color-mix(in srgb, var(--color-first), white 60%);
+  --color-first-white-70: color-mix(in srgb, var(--color-first), white 70%);
+  --color-first-white-80: color-mix(in srgb, var(--color-first), white 80%);
+  --color-first-white-90: color-mix(in srgb, var(--color-first), white 90%);
+
+  --color-first-black-10: color-mix(in srgb, var(--color-first), black 10%);
+  --color-first-black-20: color-mix(in srgb, var(--color-first), black 20%);
+  --color-first-black-30: color-mix(in srgb, var(--color-first), black 30%);
+  --color-first-black-40: color-mix(in srgb, var(--color-first), black 40%);
+  --color-first-black-50: color-mix(in srgb, var(--color-first), black 50%);
+  --color-first-black-60: color-mix(in srgb, var(--color-first), black 60%);
+  --color-first-black-70: color-mix(in srgb, var(--color-first), black 70%);
+  --color-first-black-80: color-mix(in srgb, var(--color-first), black 80%);
+  --color-first-black-90: color-mix(in srgb, var(--color-first), black 90%);
+
+  --color-first-trans-10: color-mix(in srgb, var(--color-first), transparent 10%);
+  --color-first-trans-20: color-mix(in srgb, var(--color-first), transparent 20%);
+  --color-first-trans-30: color-mix(in srgb, var(--color-first), transparent 30%);
+  --color-first-trans-40: color-mix(in srgb, var(--color-first), transparent 40%);
+  --color-first-trans-50: color-mix(in srgb, var(--color-first), transparent 50%);
+  --color-first-trans-60: color-mix(in srgb, var(--color-first), transparent 60%);
+  --color-first-trans-70: color-mix(in srgb, var(--color-first), transparent 70%);
+  --color-first-trans-80: color-mix(in srgb, var(--color-first), transparent 80%);
+  --color-first-trans-90: color-mix(in srgb, var(--color-first), transparent 90%);
 
   /* color-second */
-  --color-second-50: color-mix(in srgb, #000000, var(--color-second) 10%);
-  --color-second-100: color-mix(in srgb, #000000, var(--color-second) 20%);
-  --color-second-200: color-mix(in srgb, #000000, var(--color-second) 40%);
-  --color-second-300: color-mix(in srgb, #000000, var(--color-second) 60%);
-  --color-second-400: color-mix(in srgb, #000000, var(--color-second) 80%);
-  --color-second-500: var(--color-second);
-  --color-second-600: color-mix(in srgb, #ffffff, var(--color-second) 80%);
-  --color-second-700: color-mix(in srgb, #ffffff, var(--color-second) 60%);
-  --color-second-800: color-mix(in srgb, #ffffff, var(--color-second) 40%);
-  --color-second-900: color-mix(in srgb, #ffffff, var(--color-second) 20%);
-  --color-second-950: color-mix(in srgb, #ffffff, var(--color-second) 10%);
 
-  /* color-second-transparent */
-  --color-second-transparent-5: color-mix(in srgb, var(--color-second), transparent 5%);
-  --color-second-transparent-10: color-mix(in srgb, var(--color-second), transparent 10%);
-  --color-second-transparent-15: color-mix(in srgb, var(--color-second), transparent 15%);
-  --color-second-transparent-20: color-mix(in srgb, var(--color-second), transparent 20%);
-  --color-second-transparent-25: color-mix(in srgb, var(--color-second), transparent 25%);
-  --color-second-transparent-30: color-mix(in srgb, var(--color-second), transparent 30%);
-  --color-second-transparent-35: color-mix(in srgb, var(--color-second), transparent 35%);
-  --color-second-transparent-40: color-mix(in srgb, var(--color-second), transparent 40%);
-  --color-second-transparent-45: color-mix(in srgb, var(--color-second), transparent 45%);
-  --color-second-transparent-50: color-mix(in srgb, var(--color-second), transparent 50%);
-  --color-second-transparent-55: color-mix(in srgb, var(--color-second), transparent 55%);
-  --color-second-transparent-60: color-mix(in srgb, var(--color-second), transparent 60%);
-  --color-second-transparent-65: color-mix(in srgb, var(--color-second), transparent 65%);
-  --color-second-transparent-70: color-mix(in srgb, var(--color-second), transparent 70%);
-  --color-second-transparent-75: color-mix(in srgb, var(--color-second), transparent 75%);
-  --color-second-transparent-80: color-mix(in srgb, var(--color-second), transparent 80%);
-  --color-second-transparent-85: color-mix(in srgb, var(--color-second), transparent 85%);
-  --color-second-transparent-90: color-mix(in srgb, var(--color-second), transparent 90%);
-  --color-second-transparent-95: color-mix(in srgb, var(--color-second), transparent 95%);
+  --color-second: var(--color-first);
+  --color-second-text: white;
+
+  --color-second-white-10: color-mix(in srgb, var(--color-second), white 10%);
+  --color-second-white-20: color-mix(in srgb, var(--color-second), white 20%);
+  --color-second-white-30: color-mix(in srgb, var(--color-second), white 30%);
+  --color-second-white-40: color-mix(in srgb, var(--color-second), white 40%);
+  --color-second-white-50: color-mix(in srgb, var(--color-second), white 50%);
+  --color-second-white-60: color-mix(in srgb, var(--color-second), white 60%);
+  --color-second-white-70: color-mix(in srgb, var(--color-second), white 70%);
+  --color-second-white-80: color-mix(in srgb, var(--color-second), white 80%);
+  --color-second-white-90: color-mix(in srgb, var(--color-second), white 90%);
+
+  --color-second-black-10: color-mix(in srgb, var(--color-second), black 10%);
+  --color-second-black-20: color-mix(in srgb, var(--color-second), black 20%);
+  --color-second-black-30: color-mix(in srgb, var(--color-second), black 30%);
+  --color-second-black-40: color-mix(in srgb, var(--color-second), black 40%);
+  --color-second-black-50: color-mix(in srgb, var(--color-second), black 50%);
+  --color-second-black-60: color-mix(in srgb, var(--color-second), black 60%);
+  --color-second-black-70: color-mix(in srgb, var(--color-second), black 70%);
+  --color-second-black-80: color-mix(in srgb, var(--color-second), black 80%);
+  --color-second-black-90: color-mix(in srgb, var(--color-second), black 90%);
+
+  --color-second-trans-10: color-mix(in srgb, var(--color-second), transparent 10%);
+  --color-second-trans-20: color-mix(in srgb, var(--color-second), transparent 20%);
+  --color-second-trans-30: color-mix(in srgb, var(--color-second), transparent 30%);
+  --color-second-trans-40: color-mix(in srgb, var(--color-second), transparent 40%);
+  --color-second-trans-50: color-mix(in srgb, var(--color-second), transparent 50%);
+  --color-second-trans-60: color-mix(in srgb, var(--color-second), transparent 60%);
+  --color-second-trans-70: color-mix(in srgb, var(--color-second), transparent 70%);
+  --color-second-trans-80: color-mix(in srgb, var(--color-second), transparent 80%);
+  --color-second-trans-90: color-mix(in srgb, var(--color-second), transparent 90%);
 
   /* color-third */
-  --color-third-50: color-mix(in srgb, #000000, var(--color-third) 10%);
-  --color-third-100: color-mix(in srgb, #000000, var(--color-third) 20%);
-  --color-third-200: color-mix(in srgb, #000000, var(--color-third) 40%);
-  --color-third-300: color-mix(in srgb, #000000, var(--color-third) 60%);
-  --color-third-400: color-mix(in srgb, #000000, var(--color-third) 80%);
-  --color-third-500: var(--color-third);
-  --color-third-600: color-mix(in srgb, #ffffff, var(--color-third) 80%);
-  --color-third-700: color-mix(in srgb, #ffffff, var(--color-third) 60%);
-  --color-third-800: color-mix(in srgb, #ffffff, var(--color-third) 40%);
-  --color-third-900: color-mix(in srgb, #ffffff, var(--color-third) 20%);
-  --color-third-950: color-mix(in srgb, #ffffff, var(--color-third) 10%);
 
-  /* color-third-transparent */
-  --color-third-transparent-5: color-mix(in srgb, var(--color-third), transparent 5%);
-  --color-third-transparent-10: color-mix(in srgb, var(--color-third), transparent 10%);
-  --color-third-transparent-15: color-mix(in srgb, var(--color-third), transparent 15%);
-  --color-third-transparent-20: color-mix(in srgb, var(--color-third), transparent 20%);
-  --color-third-transparent-25: color-mix(in srgb, var(--color-third), transparent 25%);
-  --color-third-transparent-30: color-mix(in srgb, var(--color-third), transparent 30%);
-  --color-third-transparent-35: color-mix(in srgb, var(--color-third), transparent 35%);
-  --color-third-transparent-40: color-mix(in srgb, var(--color-third), transparent 40%);
-  --color-third-transparent-45: color-mix(in srgb, var(--color-third), transparent 45%);
-  --color-third-transparent-50: color-mix(in srgb, var(--color-third), transparent 50%);
-  --color-third-transparent-55: color-mix(in srgb, var(--color-third), transparent 55%);
-  --color-third-transparent-60: color-mix(in srgb, var(--color-third), transparent 60%);
-  --color-third-transparent-65: color-mix(in srgb, var(--color-third), transparent 65%);
-  --color-third-transparent-70: color-mix(in srgb, var(--color-third), transparent 70%);
-  --color-third-transparent-75: color-mix(in srgb, var(--color-third), transparent 75%);
-  --color-third-transparent-80: color-mix(in srgb, var(--color-third), transparent 80%);
-  --color-third-transparent-85: color-mix(in srgb, var(--color-third), transparent 85%);
-  --color-third-transparent-90: color-mix(in srgb, var(--color-third), transparent 90%);
-  --color-third-transparent-95: color-mix(in srgb, var(--color-third), transparent 95%);
+  --color-third: var(--color-first);
+  --color-third-text: white;
+
+  --color-third-white-10: color-mix(in srgb, var(--color-third), white 10%);
+  --color-third-white-20: color-mix(in srgb, var(--color-third), white 20%);
+  --color-third-white-30: color-mix(in srgb, var(--color-third), white 30%);
+  --color-third-white-40: color-mix(in srgb, var(--color-third), white 40%);
+  --color-third-white-50: color-mix(in srgb, var(--color-third), white 50%);
+  --color-third-white-60: color-mix(in srgb, var(--color-third), white 60%);
+  --color-third-white-70: color-mix(in srgb, var(--color-third), white 70%);
+  --color-third-white-80: color-mix(in srgb, var(--color-third), white 80%);
+  --color-third-white-90: color-mix(in srgb, var(--color-third), white 90%);
+
+  --color-third-black-10: color-mix(in srgb, var(--color-third), black 10%);
+  --color-third-black-20: color-mix(in srgb, var(--color-third), black 20%);
+  --color-third-black-30: color-mix(in srgb, var(--color-third), black 30%);
+  --color-third-black-40: color-mix(in srgb, var(--color-third), black 40%);
+  --color-third-black-50: color-mix(in srgb, var(--color-third), black 50%);
+  --color-third-black-60: color-mix(in srgb, var(--color-third), black 60%);
+  --color-third-black-70: color-mix(in srgb, var(--color-third), black 70%);
+  --color-third-black-80: color-mix(in srgb, var(--color-third), black 80%);
+  --color-third-black-90: color-mix(in srgb, var(--color-third), black 90%);
+
+  --color-third-trans-10: color-mix(in srgb, var(--color-third), transparent 10%);
+  --color-third-trans-20: color-mix(in srgb, var(--color-third), transparent 20%);
+  --color-third-trans-30: color-mix(in srgb, var(--color-third), transparent 30%);
+  --color-third-trans-40: color-mix(in srgb, var(--color-third), transparent 40%);
+  --color-third-trans-50: color-mix(in srgb, var(--color-third), transparent 50%);
+  --color-third-trans-60: color-mix(in srgb, var(--color-third), transparent 60%);
+  --color-third-trans-70: color-mix(in srgb, var(--color-third), transparent 70%);
+  --color-third-trans-80: color-mix(in srgb, var(--color-third), transparent 80%);
+  --color-third-trans-90: color-mix(in srgb, var(--color-third), transparent 90%);
 
   /* color-success */
-  --color-success-50: color-mix(in srgb, #000000, var(--color-success) 10%);
-  --color-success-100: color-mix(in srgb, #000000, var(--color-success) 20%);
-  --color-success-200: color-mix(in srgb, #000000, var(--color-success) 40%);
-  --color-success-300: color-mix(in srgb, #000000, var(--color-success) 60%);
-  --color-success-400: color-mix(in srgb, #000000, var(--color-success) 80%);
-  --color-success-500: var(--color-success);
-  --color-success-600: color-mix(in srgb, #ffffff, var(--color-success) 80%);
-  --color-success-700: color-mix(in srgb, #ffffff, var(--color-success) 60%);
-  --color-success-800: color-mix(in srgb, #ffffff, var(--color-success) 40%);
-  --color-success-900: color-mix(in srgb, #ffffff, var(--color-success) 20%);
-  --color-success-950: color-mix(in srgb, #ffffff, var(--color-success) 10%);
 
-  /* color-success-transparent */
-  --color-success-transparent-5: color-mix(in srgb, var(--color-success), transparent 5%);
-  --color-success-transparent-10: color-mix(in srgb, var(--color-success), transparent 10%);
-  --color-success-transparent-15: color-mix(in srgb, var(--color-success), transparent 15%);
-  --color-success-transparent-20: color-mix(in srgb, var(--color-success), transparent 20%);
-  --color-success-transparent-25: color-mix(in srgb, var(--color-success), transparent 25%);
-  --color-success-transparent-30: color-mix(in srgb, var(--color-success), transparent 30%);
-  --color-success-transparent-35: color-mix(in srgb, var(--color-success), transparent 35%);
-  --color-success-transparent-40: color-mix(in srgb, var(--color-success), transparent 40%);
-  --color-success-transparent-45: color-mix(in srgb, var(--color-success), transparent 45%);
-  --color-success-transparent-50: color-mix(in srgb, var(--color-success), transparent 50%);
-  --color-success-transparent-55: color-mix(in srgb, var(--color-success), transparent 55%);
-  --color-success-transparent-60: color-mix(in srgb, var(--color-success), transparent 60%);
-  --color-success-transparent-65: color-mix(in srgb, var(--color-success), transparent 65%);
-  --color-success-transparent-70: color-mix(in srgb, var(--color-success), transparent 70%);
-  --color-success-transparent-75: color-mix(in srgb, var(--color-success), transparent 75%);
-  --color-success-transparent-80: color-mix(in srgb, var(--color-success), transparent 80%);
-  --color-success-transparent-85: color-mix(in srgb, var(--color-success), transparent 85%);
-  --color-success-transparent-90: color-mix(in srgb, var(--color-success), transparent 90%);
-  --color-success-transparent-95: color-mix(in srgb, var(--color-success), transparent 95%);
+  --color-success: green;
+  --color-success-text: white;
+
+  --color-success-white-10: color-mix(in srgb, var(--color-success), white 10%);
+  --color-success-white-20: color-mix(in srgb, var(--color-success), white 20%);
+  --color-success-white-30: color-mix(in srgb, var(--color-success), white 30%);
+  --color-success-white-40: color-mix(in srgb, var(--color-success), white 40%);
+  --color-success-white-50: color-mix(in srgb, var(--color-success), white 50%);
+  --color-success-white-60: color-mix(in srgb, var(--color-success), white 60%);
+  --color-success-white-70: color-mix(in srgb, var(--color-success), white 70%);
+  --color-success-white-80: color-mix(in srgb, var(--color-success), white 80%);
+  --color-success-white-90: color-mix(in srgb, var(--color-success), white 90%);
+
+  --color-success-black-10: color-mix(in srgb, var(--color-success), black 10%);
+  --color-success-black-20: color-mix(in srgb, var(--color-success), black 20%);
+  --color-success-black-30: color-mix(in srgb, var(--color-success), black 30%);
+  --color-success-black-40: color-mix(in srgb, var(--color-success), black 40%);
+  --color-success-black-50: color-mix(in srgb, var(--color-success), black 50%);
+  --color-success-black-60: color-mix(in srgb, var(--color-success), black 60%);
+  --color-success-black-70: color-mix(in srgb, var(--color-success), black 70%);
+  --color-success-black-80: color-mix(in srgb, var(--color-success), black 80%);
+  --color-success-black-90: color-mix(in srgb, var(--color-success), black 90%);
+
+  --color-success-trans-10: color-mix(in srgb, var(--color-success), transparent 10%);
+  --color-success-trans-20: color-mix(in srgb, var(--color-success), transparent 20%);
+  --color-success-trans-30: color-mix(in srgb, var(--color-success), transparent 30%);
+  --color-success-trans-40: color-mix(in srgb, var(--color-success), transparent 40%);
+  --color-success-trans-50: color-mix(in srgb, var(--color-success), transparent 50%);
+  --color-success-trans-60: color-mix(in srgb, var(--color-success), transparent 60%);
+  --color-success-trans-70: color-mix(in srgb, var(--color-success), transparent 70%);
+  --color-success-trans-80: color-mix(in srgb, var(--color-success), transparent 80%);
+  --color-success-trans-90: color-mix(in srgb, var(--color-success), transparent 90%);
 
   /* color-error */
-  --color-error-50: color-mix(in srgb, #000000, var(--color-error) 10%);
-  --color-error-100: color-mix(in srgb, #000000, var(--color-error) 20%);
-  --color-error-200: color-mix(in srgb, #000000, var(--color-error) 40%);
-  --color-error-300: color-mix(in srgb, #000000, var(--color-error) 60%);
-  --color-error-400: color-mix(in srgb, #000000, var(--color-error) 80%);
-  --color-error-500: var(--color-error);
-  --color-error-600: color-mix(in srgb, #ffffff, var(--color-error) 80%);
-  --color-error-700: color-mix(in srgb, #ffffff, var(--color-error) 60%);
-  --color-error-800: color-mix(in srgb, #ffffff, var(--color-error) 40%);
-  --color-error-900: color-mix(in srgb, #ffffff, var(--color-error) 20%);
-  --color-error-950: color-mix(in srgb, #ffffff, var(--color-error) 10%);
 
-  /* color-error-transparent */
-  --color-error-transparent-5: color-mix(in srgb, var(--color-error), transparent 5%);
-  --color-error-transparent-10: color-mix(in srgb, var(--color-error), transparent 10%);
-  --color-error-transparent-15: color-mix(in srgb, var(--color-error), transparent 15%);
-  --color-error-transparent-20: color-mix(in srgb, var(--color-error), transparent 20%);
-  --color-error-transparent-25: color-mix(in srgb, var(--color-error), transparent 25%);
-  --color-error-transparent-30: color-mix(in srgb, var(--color-error), transparent 30%);
-  --color-error-transparent-35: color-mix(in srgb, var(--color-error), transparent 35%);
-  --color-error-transparent-40: color-mix(in srgb, var(--color-error), transparent 40%);
-  --color-error-transparent-45: color-mix(in srgb, var(--color-error), transparent 45%);
-  --color-error-transparent-50: color-mix(in srgb, var(--color-error), transparent 50%);
-  --color-error-transparent-55: color-mix(in srgb, var(--color-error), transparent 55%);
-  --color-error-transparent-60: color-mix(in srgb, var(--color-error), transparent 60%);
-  --color-error-transparent-65: color-mix(in srgb, var(--color-error), transparent 65%);
-  --color-error-transparent-70: color-mix(in srgb, var(--color-error), transparent 70%);
-  --color-error-transparent-75: color-mix(in srgb, var(--color-error), transparent 75%);
-  --color-error-transparent-80: color-mix(in srgb, var(--color-error), transparent 80%);
-  --color-error-transparent-85: color-mix(in srgb, var(--color-error), transparent 85%);
-  --color-error-transparent-90: color-mix(in srgb, var(--color-error), transparent 90%);
-  --color-error-transparent-95: color-mix(in srgb, var(--color-error), transparent 95%);
+  --color-error: red;
+  --color-error-text: white;
+
+  --color-error-white-10: color-mix(in srgb, var(--color-error), white 10%);
+  --color-error-white-20: color-mix(in srgb, var(--color-error), white 20%);
+  --color-error-white-30: color-mix(in srgb, var(--color-error), white 30%);
+  --color-error-white-40: color-mix(in srgb, var(--color-error), white 40%);
+  --color-error-white-50: color-mix(in srgb, var(--color-error), white 50%);
+  --color-error-white-60: color-mix(in srgb, var(--color-error), white 60%);
+  --color-error-white-70: color-mix(in srgb, var(--color-error), white 70%);
+  --color-error-white-80: color-mix(in srgb, var(--color-error), white 80%);
+  --color-error-white-90: color-mix(in srgb, var(--color-error), white 90%);
+
+  --color-error-black-10: color-mix(in srgb, var(--color-error), black 10%);
+  --color-error-black-20: color-mix(in srgb, var(--color-error), black 20%);
+  --color-error-black-30: color-mix(in srgb, var(--color-error), black 30%);
+  --color-error-black-40: color-mix(in srgb, var(--color-error), black 40%);
+  --color-error-black-50: color-mix(in srgb, var(--color-error), black 50%);
+  --color-error-black-60: color-mix(in srgb, var(--color-error), black 60%);
+  --color-error-black-70: color-mix(in srgb, var(--color-error), black 70%);
+  --color-error-black-80: color-mix(in srgb, var(--color-error), black 80%);
+  --color-error-black-90: color-mix(in srgb, var(--color-error), black 90%);
+
+  --color-error-trans-10: color-mix(in srgb, var(--color-error), transparent 10%);
+  --color-error-trans-20: color-mix(in srgb, var(--color-error), transparent 20%);
+  --color-error-trans-30: color-mix(in srgb, var(--color-error), transparent 30%);
+  --color-error-trans-40: color-mix(in srgb, var(--color-error), transparent 40%);
+  --color-error-trans-50: color-mix(in srgb, var(--color-error), transparent 50%);
+  --color-error-trans-60: color-mix(in srgb, var(--color-error), transparent 60%);
+  --color-error-trans-70: color-mix(in srgb, var(--color-error), transparent 70%);
+  --color-error-trans-80: color-mix(in srgb, var(--color-error), transparent 80%);
+  --color-error-trans-90: color-mix(in srgb, var(--color-error), transparent 90%);
 }

@@ -1,10 +1,12 @@
 :root {
-  --line-height: 1.4;
-  --box-shadow-small: 0 0 8px color-mix(in srgb, var(--color-grey-100) 10%, transparent);
-  --box-shadow-base: 0 0 16px color-mix(in srgb, var(--color-grey-100) 10%, transparent);
-  --box-shadow-large: 0 0 24px color-mix(in srgb, var(--color-grey-100) 10%, transparent);
+  --body-text-color: var(--color-grey-black-70);
+  --body-line-height: 1.5;
 
-  --backdrop-color: color-mix(in srgb, var(--color-grey-50) 80%, transparent);
+  --box-shadow-small: 0 0 8px color-mix(in srgb, var(--color-grey-black-80) 10%, transparent);
+  --box-shadow-base: 0 0 16px color-mix(in srgb, var(--color-grey-black-80) 10%, transparent);
+  --box-shadow-large: 0 0 24px color-mix(in srgb, var(--color-grey-black-80) 10%, transparent);
+
+  --backdrop-color: color-mix(in srgb, var(--color-grey-black-80) 80%, transparent);
 
   --transition-turbo: 0.2s ease-in-out;
   --transition-fast: 0.3s ease-in-out;

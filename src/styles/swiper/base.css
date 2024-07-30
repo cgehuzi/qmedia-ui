@@ -1,7 +1,7 @@
 @import 'swiper/css/bundle';
 
 :root {
-  --swiper-theme-color: var(--color-grey-200);
+  --swiper-theme-color: var(--color-grey-black-50);
   --swiper-pagination-bullet-inactive-opacity: 0.4;
   --swiper-pagination-bullet-opacity: 1;
 }
@@ -37,14 +37,14 @@
   height: var(--swiper-navigation-size);
   margin: var(--swiper-navigation-sides-offset);
   flex-shrink: 0;
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 50%;
   cursor: pointer;
   transition: 0.4s;
   position: static;
   box-shadow:
-    0 1px 8px color-mix(in srgb, #000000 8%, transparent),
-    0 2px 4px color-mix(in srgb, #000000 12%, transparent);
+    0 1px 8px color-mix(in srgb, black 8%, transparent),
+    0 2px 4px color-mix(in srgb, black 12%, transparent);
   visibility: visible;
 
   &::after {

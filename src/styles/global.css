@@ -7,6 +7,7 @@
 * {
   scroll-margin-top: calc(var(--top-sticky-height, 0px) + var(--grid-item-gap, 0px));
   scroll-margin-bottom: var(--bottom-sticky-height, 0px);
+  text-underline-offset: 0.2em;
 }
 
 :focus-visible {
@@ -24,14 +25,14 @@ body {
 
 html {
   font-size: 16px;
-  background-color: #ffffff;
-  line-height: var(--line-height);
+  background-color: white;
   height: 100%;
 }
 
 body {
   margin: 0;
-  color: var(--color-grey-100);
+  color: var(--body-text-color);
+  line-height: var(--body-line-height);
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
@@ -42,7 +43,6 @@ body {
 
 a {
   color: inherit;
-  text-underline-offset: 0.25em;
 }
 
 button {

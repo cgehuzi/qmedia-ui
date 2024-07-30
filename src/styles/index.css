@@ -2,7 +2,6 @@
 
 @import './variables/colors.css' layer(variables);
 @import './variables/fonts.css' layer(variables);
-@import './variables/layout.css' layer(variables);
 @import './variables/theme.css' layer(variables);
 @import './variables/z-index.css' layer(variables);
 

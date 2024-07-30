@@ -34,12 +34,18 @@
   font-size: var(--font-size-h6) !important;
 }
 
-._sticked {
-  position: sticky;
-  top: calc(var(--top-sticky-height) + var(--grid-item-gap));
+._sticked,
+._sticked-phone,
+._sticked-tablet,
+._sticked-desktop {
+  top: calc(var(--top-sticky-height, 0px) + var(--grid-item-gap, 0px));
   z-index: 1;
   /* перебиваем z-index всех остальных элементов без явного указания,
   чтобы дочерние элементы у ._sticked имели приоритет и их position: fixed не ломался */
+}
+
+._sticked {
+  position: sticky;
 }
 
 /* Phone */
@@ -51,7 +57,6 @@
 
   ._sticked-phone {
     position: sticky;
-    top: calc(var(--top-sticky-height) + var(--grid-item-gap));
   }
 }
 
@@ -64,7 +69,6 @@
 
   ._sticked-tablet {
     position: sticky;
-    top: calc(var(--top-sticky-height) + var(--grid-item-gap));
   }
 }
 
@@ -77,6 +81,5 @@
 
   ._sticked-desktop {
     position: sticky;
-    top: calc(var(--top-sticky-height) + var(--grid-item-gap));
   }
 }
