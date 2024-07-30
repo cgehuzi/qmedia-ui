@@ -1,15 +1,19 @@
 .badge {
+  --background-color: var(--badge-color, red);
+  --text-color: var(--badge-text-color, white);
+
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-badge);
-  color: var(--color-badge-text);
+  background-color: var(--background-color);
+  color: var(--text-color);
   line-height: 1;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-weight: var(--font-weight-bold);
-  height: 1.1em;
-  width: 1.1em;
-  border-radius: 0.55em;
+  height: 1em;
+  width: 1em;
+  border-radius: 0.5em;
+  flex-shrink: 0;
 
   &:has(span) {
     height: 1.5em;
@@ -19,14 +23,41 @@
   }
 }
 
+.badge--size-micro {
+  font-size: 0.5rem;
+}
+
 .badge--size-small {
   font-size: 0.6rem;
 }
 
 .badge--size-large {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .badge--size-extra {
-  font-size: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.badge--left,
+.badge--right {
+  position: absolute;
+
+  :has(> &) {
+    position: relative;
+  }
+}
+
+.badge--left {
+  top: -0.35em;
+  right: auto;
+  bottom: auto;
+  left: -0.35em;
+}
+
+.badge--right {
+  top: -0.35em;
+  right: -0.35em;
+  bottom: auto;
+  left: auto;
 }
