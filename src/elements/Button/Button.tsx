@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 import FeatherIcon from 'feather-icons-react';
 
-export interface ButtonProps {
+export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement & HTMLAnchorElement> {
   /** Является ли компонент ссылкой. Будет использован тег `<a>` */
   isLink?: boolean;
   /** Размер компонента */
@@ -33,9 +33,7 @@ export interface ButtonProps {
 /**
  * Информационное сообщение или предупреждение.
  */
-export class Button extends React.Component<
-  React.HTMLAttributes<HTMLButtonElement & HTMLAnchorElement> & ButtonProps
-> {
+export class Button extends React.Component<ButtonProps> {
   myRef: React.Ref<HTMLButtonElement & HTMLAnchorElement>;
 
   constructor(props: ButtonProps) {

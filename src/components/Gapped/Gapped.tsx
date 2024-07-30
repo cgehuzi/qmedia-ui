@@ -2,7 +2,7 @@ import './styles/index.css';
 import React from 'react';
 import classNames from 'classnames';
 
-export interface GappedProps {
+export interface GappedProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Расстояние между элементами в пикселях */
   gap?: number;
   /** Направление потока дочерних элементов */
@@ -20,7 +20,7 @@ export interface GappedProps {
 /**
  * Блок, расстояние между элементами в котором равно `gap`
  */
-export class Gapped extends React.Component<React.HTMLAttributes<HTMLDivElement> & GappedProps> {
+export class Gapped extends React.Component<GappedProps> {
   myRef: React.Ref<HTMLDivElement>;
 
   static defaultProps = {

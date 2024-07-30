@@ -116,7 +116,7 @@ const handleWaiting = () => {
   if (isWaiting) return;
 
   setIsWaiting(true);
-  setTimeout(() => setIsWaiting(false), 5000);
+  setTimeout(() => setIsWaiting(false), 3000);
 };
 
 <Gapped isWrap>

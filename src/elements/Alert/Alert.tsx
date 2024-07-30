@@ -2,7 +2,7 @@ import './styles/index.css';
 import React from 'react';
 import classNames from 'classnames';
 
-export interface AlertProps {
+export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Размер компонента */
   size?: 'micro' | 'small' | 'base' | 'large' | 'extra';
   /** Цвет компонента */
@@ -16,7 +16,7 @@ export interface AlertProps {
 /**
  * Информационное сообщение или предупреждение.
  */
-export class Alert extends React.Component<React.HTMLAttributes<HTMLDivElement> & AlertProps> {
+export class Alert extends React.Component<AlertProps> {
   myRef: React.Ref<HTMLDivElement>;
 
   constructor(props: AlertProps) {

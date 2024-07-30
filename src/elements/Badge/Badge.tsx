@@ -2,7 +2,7 @@ import './styles/index.css';
 import React from 'react';
 import classNames from 'classnames';
 
-export interface BadgeProps {
+export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Размер компонента */
   size?: 'micro' | 'small' | 'base' | 'large' | 'extra';
   /** Цвет компонента */
@@ -16,7 +16,7 @@ export interface BadgeProps {
 /**
  * Индикатор уведомления об активностях (счётчик)
  */
-export class Badge extends React.Component<React.HTMLAttributes<HTMLDivElement> & BadgeProps> {
+export class Badge extends React.Component<BadgeProps> {
   myRef: React.Ref<HTMLDivElement>;
 
   constructor(props: BadgeProps) {

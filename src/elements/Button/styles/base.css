@@ -214,5 +214,6 @@
 }
 
 .button__spinner {
+  stroke-width: 2.5;
   animation: button-spinner 1.5s infinite;
 }
