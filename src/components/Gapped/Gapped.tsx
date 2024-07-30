@@ -6,14 +6,14 @@ export interface GappedProps {
   /** Расстояние между элементами в пикселях */
   gap?: number;
   /** Направление потока дочерних элементов */
-  vertical?: boolean;
+  isVertical?: boolean;
   /** Выравнивание элементов относительно оси потока */
   align?: 'start' | 'end' | 'center' | 'baseline' | 'stretch';
   /** Выравнивание элементов относительно оси, перпендикулярной потоку */
-  justify?: 'start' | 'end' | 'center';
+  justify?: 'start' | 'end' | 'center' | 'stretch';
   /** Перенос элементов на новую строку */
-  wrap?: boolean;
-  /** Ссылка на компонент. Будет передан в ключевой элемент как `ref` */
+  isWrap?: boolean;
+  /** Ссылка на HTML-элемент */
   myRef?: React.Ref<HTMLDivElement>;
 }
 
@@ -25,10 +25,10 @@ export class Gapped extends React.Component<React.HTMLAttributes<HTMLDivElement>
 
   static defaultProps = {
     gap: 8,
-    vertical: false,
+    isVertical: false,
     align: 'start',
     justify: 'start',
-    wrap: false,
+    isWrap: false,
   };
 
   constructor(props: GappedProps) {
@@ -37,20 +37,22 @@ export class Gapped extends React.Component<React.HTMLAttributes<HTMLDivElement>
   }
 
   render() {
-    const { gap, vertical, align, justify, wrap, className, children, ...props } = this.props;
+    const { gap, isVertical, align, justify, isWrap, className, style, children, ...props } =
+      this.props;
 
     return (
       <div
         className={classNames(
           'gapped',
-          vertical && `gapped--vertical`,
+          isVertical && `gapped--vertical`,
           align && `gapped--align-${align}`,
           justify && `gapped--justify-${justify}`,
-          wrap && 'gapped--wrap',
+          isWrap && 'gapped--wrap',
           className
         )}
         style={{
           gap: `${gap}px`,
+          ...style,
         }}
         {...props}
       >

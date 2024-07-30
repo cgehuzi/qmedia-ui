@@ -38,6 +38,14 @@
   justify-content: center;
 }
 
+.gapped--justify-stretch {
+  justify-content: stretch;
+
+  & > * {
+    flex-grow: 1;
+  }
+}
+
 .gapped--wrap {
   flex-wrap: wrap;
 }
