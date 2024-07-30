@@ -4,33 +4,27 @@ const path = require('path');
 const COMPONENTS_DIR = path.resolve(__dirname, '../src/components');
 const ELEMENTS_DIR = path.resolve(__dirname, '../src/elements');
 
-const excludedComponents = ['GuideColors'];
-
-const findComponent = (dirPath) => {
+const findComponents = (dirPath) => {
   const name = path.basename(dirPath);
-  const ts = path.join(dirPath, `${name}.tsx`);
-  const js = path.join(dirPath, `${name}.js`);
-  const readme = path.join(dirPath, `${name}.md`);
-  if (!fs.existsSync(readme) || excludedComponents.includes(name)) {
-    return null;
-  }
-
-  if (fs.existsSync(ts)) {
-    return ts;
-  }
-
-  if (fs.existsSync(js)) {
-    return js;
-  }
-
-  return null;
+  const surnamePattern = new RegExp(`${name}[a-zA-Z]*.tsx`);
+  const components = fs
+    .readdirSync(dirPath)
+    .filter((item) => surnamePattern.test(item))
+    .map((item) => path.join(dirPath, item))
+    .filter((item) => {
+      const fileName = path.basename(item).replace('.tsx', '');
+      const readme = path.join(dirPath, `${fileName}.md`);
+      if (!fs.existsSync(readme)) return false;
+      return true;
+    });
+  return components;
 };
 
 const findComponentsRecursively = (dirPath) => {
   if (!fs.statSync(dirPath).isDirectory()) {
     return [];
   }
-  const components = [findComponent(dirPath)];
+  const components = [...findComponents(dirPath)];
   fs.readdirSync(dirPath).forEach((name) => {
     components.push(...findComponentsRecursively(path.join(dirPath, name)));
   });

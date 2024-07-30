@@ -12,8 +12,12 @@ module.exports = {
   webpackConfig,
   components: ['../src/**/*.tsx'],
   sections: commonSections,
+  defaultExample: './MockReadme.md',
   moduleAliases: {
     'qmedia-ui': path.resolve(__dirname, '../src/'),
+  },
+  getExampleFilename(componentPath) {
+    return componentPath.replace(path.extname(componentPath), '.md');
   },
   styleguideDir: path.join(__dirname, './build'),
   styleguideComponents: {
