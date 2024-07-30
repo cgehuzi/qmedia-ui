@@ -100,6 +100,10 @@ export class Checkbox extends React.Component<CheckboxProps> {
       this.props.onChange(event);
       return;
     }
+
+    this.setState({
+      checked: event.target.checked,
+    });
   };
 
   componentDidUpdate(prevProps: Readonly<CheckboxProps>): void {
