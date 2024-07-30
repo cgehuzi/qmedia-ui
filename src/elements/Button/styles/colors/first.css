@@ -1,0 +1,23 @@
+@import './first-black.css';
+@import './first-white.css';
+@import './first-trans.css';
+
+/* button--first */
+
+.button--first {
+  --back-color: var(--color-first);
+  --text-color: var(--color-first-text);
+  --border-color: transparent;
+
+  &:hover {
+    --back-color: var(--color-first-black-10);
+    --text-color: var(--color-first-text);
+    --border-color: transparent;
+  }
+
+  &:active {
+    --back-color: var(--color-first);
+    --text-color: var(--color-first-text);
+    --border-color: transparent;
+  }
+}

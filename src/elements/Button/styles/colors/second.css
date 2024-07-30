@@ -1,0 +1,23 @@
+@import './second-black.css';
+@import './second-white.css';
+@import './second-trans.css';
+
+/* button--second */
+
+.button--second {
+  --back-color: var(--color-second);
+  --text-color: var(--color-second-text);
+  --border-color: transparent;
+
+  &:hover {
+    --back-color: var(--color-second-black-10);
+    --text-color: var(--color-second-text);
+    --border-color: transparent;
+  }
+
+  &:active {
+    --back-color: var(--color-second);
+    --text-color: var(--color-second-text);
+    --border-color: transparent;
+  }
+}

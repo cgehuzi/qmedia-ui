@@ -1,0 +1,23 @@
+@import './third-black.css';
+@import './third-white.css';
+@import './third-trans.css';
+
+/* button--third */
+
+.button--third {
+  --back-color: var(--color-third);
+  --text-color: var(--color-third-text);
+  --border-color: transparent;
+
+  &:hover {
+    --back-color: var(--color-third-black-10);
+    --text-color: var(--color-third-text);
+    --border-color: transparent;
+  }
+
+  &:active {
+    --back-color: var(--color-third);
+    --text-color: var(--color-third-text);
+    --border-color: transparent;
+  }
+}

@@ -1,0 +1,23 @@
+@import './error-black.css';
+@import './error-white.css';
+@import './error-trans.css';
+
+/* button--error */
+
+.button--error {
+  --back-color: var(--color-error);
+  --text-color: var(--color-error-text);
+  --border-color: transparent;
+
+  &:hover {
+    --back-color: var(--color-error-black-10);
+    --text-color: var(--color-error-text);
+    --border-color: transparent;
+  }
+
+  &:active {
+    --back-color: var(--color-error);
+    --text-color: var(--color-error-text);
+    --border-color: transparent;
+  }
+}

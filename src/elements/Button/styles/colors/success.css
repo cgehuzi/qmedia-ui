@@ -1,0 +1,23 @@
+@import './success-black.css';
+@import './success-white.css';
+@import './success-trans.css';
+
+/* button--success */
+
+.button--success {
+  --back-color: var(--color-success);
+  --text-color: var(--color-success-text);
+  --border-color: transparent;
+
+  &:hover {
+    --back-color: var(--color-success-black-10);
+    --text-color: var(--color-success-text);
+    --border-color: transparent;
+  }
+
+  &:active {
+    --back-color: var(--color-success);
+    --text-color: var(--color-success-text);
+    --border-color: transparent;
+  }
+}

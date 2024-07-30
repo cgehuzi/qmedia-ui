@@ -1,0 +1,145 @@
+/* button--second-white */
+
+.button--second-white-10,
+.button--second-white-20,
+.button--second-white-30 {
+  &:not(.button--outline) {
+    --text-color: var(--color-second-text);
+  }
+
+  &:hover {
+    --text-color: var(--color-second-text);
+  }
+
+  &:active {
+    --text-color: var(--color-second-text);
+  }
+}
+
+.button--second-white-40,
+.button--second-white-50,
+.button--second-white-60,
+.button--second-white-70,
+.button--second-white-80,
+.button--second-white-90 {
+  --text-color: var(--body-text-color);
+  --border-color: transparent;
+
+  &:hover {
+    --text-color: var(--body-text-color);
+    --border-color: transparent;
+  }
+
+  &:active {
+    --text-color: var(--body-text-color);
+    --border-color: transparent;
+  }
+}
+
+.button--second-white-10 {
+  --back-color: var(--color-second-white-10);
+
+  &:hover {
+    --back-color: var(--color-second);
+  }
+
+  &:active {
+    --back-color: var(--color-second-white-10);
+  }
+}
+
+.button--second-white-20 {
+  --back-color: var(--color-second-white-20);
+
+  &:hover {
+    --back-color: var(--color-second-white-10);
+  }
+
+  &:active {
+    --back-color: var(--color-second-white-20);
+  }
+}
+
+.button--second-white-30 {
+  --back-color: var(--color-second-white-30);
+
+  &:hover {
+    --back-color: var(--color-second-white-20);
+  }
+
+  &:active {
+    --back-color: var(--color-second-white-30);
+  }
+}
+
+.button--second-white-40 {
+  --back-color: var(--color-second-white-40);
+
+  &:hover {
+    --back-color: var(--color-second-white-30);
+  }
+
+  &:active {
+    --back-color: var(--color-second-white-40);
+  }
+}
+
+.button--second-white-50 {
+  --back-color: var(--color-second-white-50);
+
+  &:hover {
+    --back-color: var(--color-second-white-40);
+  }
+
+  &:active {
+    --back-color: var(--color-second-white-50);
+  }
+}
+
+.button--second-white-60 {
+  --back-color: var(--color-second-white-60);
+
+  &:hover {
+    --back-color: var(--color-second-white-50);
+  }
+
+  &:active {
+    --back-color: var(--color-second-white-60);
+  }
+}
+
+.button--second-white-70 {
+  --back-color: var(--color-second-white-70);
+
+  &:hover {
+    --back-color: var(--color-second-white-60);
+  }
+
+  &:active {
+    --back-color: var(--color-second-white-70);
+  }
+}
+
+.button--second-white-80 {
+  --back-color: var(--color-second-white-80);
+
+  &:hover {
+    --back-color: var(--color-second-white-70);
+  }
+
+  &:active {
+    --back-color: var(--color-second-white-80);
+  }
+}
+
+.button--second-white-90 {
+  --back-color: var(--color-second-white-90);
+
+  &:hover {
+    --back-color: var(--color-second-white-80);
+  }
+
+  &:active {
+    --back-color: var(--color-second-white-90);
+  }
+}

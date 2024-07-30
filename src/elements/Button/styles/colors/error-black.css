@@ -1,0 +1,145 @@
+/* button--error-black */
+
+.button--error-black-10,
+.button--error-black-20,
+.button--error-black-30 {
+  &:not(.button--outline) {
+    --text-color: var(--color-error-text);
+  }
+
+  &:hover {
+    --text-color: var(--color-error-text);
+  }
+
+  &:active {
+    --text-color: var(--color-error-text);
+  }
+}
+
+.button--error-black-40,
+.button--error-black-50,
+.button--error-black-60,
+.button--error-black-70,
+.button--error-black-80,
+.button--error-black-90 {
+  --text-color: white;
+  --border-color: transparent;
+
+  &:hover {
+    --text-color: white;
+    --border-color: transparent;
+  }
+
+  &:active {
+    --text-color: white;
+    --border-color: transparent;
+  }
+}
+
+.button--error-black-10 {
+  --back-color: var(--color-error-black-10);
+
+  &:hover {
+    --back-color: var(--color-error-black-20);
+  }
+
+  &:active {
+    --back-color: var(--color-error-black-10);
+  }
+}
+
+.button--error-black-20 {
+  --back-color: var(--color-error-black-20);
+
+  &:hover {
+    --back-color: var(--color-error-black-30);
+  }
+
+  &:active {
+    --back-color: var(--color-error-black-20);
+  }
+}
+
+.button--error-black-30 {
+  --back-color: var(--color-error-black-30);
+
+  &:hover {
+    --back-color: var(--color-error-black-40);
+  }
+
+  &:active {
+    --back-color: var(--color-error-black-30);
+  }
+}
+
+.button--error-black-40 {
+  --back-color: var(--color-error-black-40);
+
+  &:hover {
+    --back-color: var(--color-error-black-50);
+  }
+
+  &:active {
+    --back-color: var(--color-error-black-40);
+  }
+}
+
+.button--error-black-50 {
+  --back-color: var(--color-error-black-50);
+
+  &:hover {
+    --back-color: var(--color-error-black-60);
+  }
+
+  &:active {
+    --back-color: var(--color-error-black-50);
+  }
+}
+
+.button--error-black-60 {
+  --back-color: var(--color-error-black-60);
+
+  &:hover {
+    --back-color: var(--color-error-black-70);
+  }
+
+  &:active {
+    --back-color: var(--color-error-black-60);
+  }
+}
+
+.button--error-black-70 {
+  --back-color: var(--color-error-black-70);
+
+  &:hover {
+    --back-color: var(--color-error-black-80);
+  }
+
+  &:active {
+    --back-color: var(--color-error-black-70);
+  }
+}
+
+.button--error-black-80 {
+  --back-color: var(--color-error-black-80);
+
+  &:hover {
+    --back-color: var(--color-error-black-90);
+  }
+
+  &:active {
+    --back-color: var(--color-error-black-80);
+  }
+}
+
+.button--error-black-90 {
+  --back-color: var(--color-error-black-90);
+
+  &:hover {
+    --back-color: black;
+  }
+
+  &:active {
+    --back-color: var(--color-error-black-90);
+  }
+}

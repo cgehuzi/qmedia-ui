@@ -1,0 +1,151 @@
+/* button--error-trans */
+
+.button--error-trans-10,
+.button--error-trans-20,
+.button--error-trans-30 {
+  &:not(.button--transparent) {
+    &:not(.button--outline) {
+      color: var(--color-error-text);
+    }
+
+    &:hover {
+      color: var(--color-error-text);
+    }
+
+    &:active {
+      color: var(--color-error-text);
+    }
+  }
+}
+
+.button--error-trans-40,
+.button--error-trans-50,
+.button--error-trans-60,
+.button--error-trans-70,
+.button--error-trans-80,
+.button--error-trans-90 {
+  &:not(.button--transparent) {
+    &:not(.button--outline) {
+      color: inherit;
+      --border-color: transparent;
+    }
+
+    &:hover {
+      color: inherit;
+      --border-color: transparent;
+    }
+
+    &:active {
+      color: inherit;
+      --border-color: transparent;
+    }
+  }
+}
+
+.button--error-trans-10 {
+  --back-color: var(--color-error-trans-10);
+
+  &:hover {
+    --back-color: var(--color-error);
+  }
+
+  &:active {
+    --back-color: var(--color-error-trans-10);
+  }
+}
+
+.button--error-trans-20 {
+  --back-color: var(--color-error-trans-20);
+
+  &:hover {
+    --back-color: var(--color-error-trans-10);
+  }
+
+  &:active {
+    --back-color: var(--color-error-trans-20);
+  }
+}
+
+.button--error-trans-30 {
+  --back-color: var(--color-error-trans-30);
+
+  &:hover {
+    --back-color: var(--color-error-trans-20);
+  }
+
+  &:active {
+    --back-color: var(--color-error-trans-30);
+  }
+}
+
+.button--error-trans-40 {
+  --back-color: var(--color-error-trans-40);
+
+  &:hover {
+    --back-color: var(--color-error-trans-30);
+  }
+
+  &:active {
+    --back-color: var(--color-error-trans-40);
+  }
+}
+
+.button--error-trans-50 {
+  --back-color: var(--color-error-trans-50);
+
+  &:hover {
+    --back-color: var(--color-error-trans-40);
+  }
+
+  &:active {
+    --back-color: var(--color-error-trans-50);
+  }
+}
+
+.button--error-trans-60 {
+  --back-color: var(--color-error-trans-60);
+
+  &:hover {
+    --back-color: var(--color-error-trans-50);
+  }
+
+  &:active {
+    --back-color: var(--color-error-trans-60);
+  }
+}
+
+.button--error-trans-70 {
+  --back-color: var(--color-error-trans-70);
+
+  &:hover {
+    --back-color: var(--color-error-trans-60);
+  }
+
+  &:active {
+    --back-color: var(--color-error-trans-70);
+  }
+}
+
+.button--error-trans-80 {
+  --back-color: var(--color-error-trans-80);
+
+  &:hover {
+    --back-color: var(--color-error-trans-70);
+  }
+
+  &:active {
+    --back-color: var(--color-error-trans-80);
+  }
+}
+
+.button--error-trans-90 {
+  --back-color: var(--color-error-trans-90);
+
+  &:hover {
+    --back-color: var(--color-error-trans-80);
+  }
+
+  &:active {
+    --back-color: var(--color-error-trans-90);
+  }
+}

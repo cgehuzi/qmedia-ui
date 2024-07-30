@@ -1,0 +1,23 @@
+@import './grey-black.css';
+@import './grey-white.css';
+@import './grey-trans.css';
+
+/* button--grey */
+
+.button--grey {
+  --back-color: var(--color-grey);
+  --text-color: var(--color-grey-text);
+  --border-color: transparent;
+
+  &:hover {
+    --back-color: var(--color-grey-black-10);
+    --text-color: var(--color-grey-text);
+    --border-color: transparent;
+  }
+
+  &:active {
+    --back-color: var(--color-grey);
+    --text-color: var(--color-grey-text);
+    --border-color: transparent;
+  }
+}

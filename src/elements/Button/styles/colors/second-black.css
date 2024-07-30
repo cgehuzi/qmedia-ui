@@ -1,0 +1,145 @@
+/* button--second-black */
+
+.button--second-black-10,
+.button--second-black-20,
+.button--second-black-30 {
+  &:not(.button--outline) {
+    --text-color: var(--color-second-text);
+  }
+
+  &:hover {
+    --text-color: var(--color-second-text);
+  }
+
+  &:active {
+    --text-color: var(--color-second-text);
+  }
+}
+
+.button--second-black-40,
+.button--second-black-50,
+.button--second-black-60,
+.button--second-black-70,
+.button--second-black-80,
+.button--second-black-90 {
+  --text-color: white;
+  --border-color: transparent;
+
+  &:hover {
+    --text-color: white;
+    --border-color: transparent;
+  }
+
+  &:active {
+    --text-color: white;
+    --border-color: transparent;
+  }
+}
+
+.button--second-black-10 {
+  --back-color: var(--color-second-black-10);
+
+  &:hover {
+    --back-color: var(--color-second-black-20);
+  }
+
+  &:active {
+    --back-color: var(--color-second-black-10);
+  }
+}
+
+.button--second-black-20 {
+  --back-color: var(--color-second-black-20);
+
+  &:hover {
+    --back-color: var(--color-second-black-30);
+  }
+
+  &:active {
+    --back-color: var(--color-second-black-20);
+  }
+}
+
+.button--second-black-30 {
+  --back-color: var(--color-second-black-30);
+
+  &:hover {
+    --back-color: var(--color-second-black-40);
+  }
+
+  &:active {
+    --back-color: var(--color-second-black-30);
+  }
+}
+
+.button--second-black-40 {
+  --back-color: var(--color-second-black-40);
+
+  &:hover {
+    --back-color: var(--color-second-black-50);
+  }
+
+  &:active {
+    --back-color: var(--color-second-black-40);
+  }
+}
+
+.button--second-black-50 {
+  --back-color: var(--color-second-black-50);
+
+  &:hover {
+    --back-color: var(--color-second-black-60);
+  }
+
+  &:active {
+    --back-color: var(--color-second-black-50);
+  }
+}
+
+.button--second-black-60 {
+  --back-color: var(--color-second-black-60);
+
+  &:hover {
+    --back-color: var(--color-second-black-70);
+  }
+
+  &:active {
+    --back-color: var(--color-second-black-60);
+  }
+}
+
+.button--second-black-70 {
+  --back-color: var(--color-second-black-70);
+
+  &:hover {
+    --back-color: var(--color-second-black-80);
+  }
+
+  &:active {
+    --back-color: var(--color-second-black-70);
+  }
+}
+
+.button--second-black-80 {
+  --back-color: var(--color-second-black-80);
+
+  &:hover {
+    --back-color: var(--color-second-black-90);
+  }
+
+  &:active {
+    --back-color: var(--color-second-black-80);
+  }
+}
+
+.button--second-black-90 {
+  --back-color: var(--color-second-black-90);
+
+  &:hover {
+    --back-color: black;
+  }
+
+  &:active {
+    --back-color: var(--color-second-black-90);
+  }
+}
