@@ -19,6 +19,7 @@ module.exports = {
   styleguideComponents: {
     ComplexType: '/guide/components/ComplexType',
     StyleGuideRenderer: '/guide/components/StyleGuideRenderer',
+    Preview: '/guide/components/Preview',
   },
   theme: {
     fontFamily: {

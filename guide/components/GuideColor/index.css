@@ -6,7 +6,7 @@
 
 .guide-color__group {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
 }
 
@@ -20,31 +20,15 @@
   position: relative;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.guide-color__item-square {
-  height: 35px;
-  width: 100%;
-  border-radius: 6px;
-}
-
-.guide-color__item-title {
-  white-space: nowrap;
-  font-weight: var(--font-weight-semibold);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
-}
+  height: 35px;
+  border-radius: 6px;
+  font-size: var(--font-size-small);
 
-.guide-color__item-lvl {
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-micro);
-  text-align: center;
+  .guide-color__header & {
+    font-size: var(--font-size-base);
+    white-space: nowrap;
+    font-weight: var(--font-weight-semibold);
+  }
 }
