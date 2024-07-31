@@ -8,7 +8,13 @@ const Preview = ({ ...props }) => {
   const [hasGrid, setHasGrid] = React.useState(false);
 
   return (
-    <div className={classNames('guide-preview', `_${background}`, hasGrid && '_has-grid')}>
+    <div
+      className={classNames(
+        'guide-preview',
+        `guide-preview--${background}`,
+        hasGrid && 'guide-preview--with-grid',
+      )}
+    >
       <div className="guide-preview__switcher">
         <button
           className={classNames('guide-preview__switcher-button', {

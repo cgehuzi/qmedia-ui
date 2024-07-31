@@ -5,26 +5,23 @@
   background-size: 16px 16px;
   background-position: center;
   padding: 15px;
+}
 
-  &._white {
-    background-color: white;
-    color: var(--body-text-color);
+.guide-preview--white {
+  --this-grid-color: rgba(0, 0, 0, 0.075);
+  background-color: white;
+  color: var(--body-text-color);
+}
 
-    &._has-grid {
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.075) 1px, transparent 1px),
-        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px);
-    }
-  }
+.guide-preview--black {
+  --this-grid-color: rgba(255, 255, 255, 0.15);
+  background-color: black;
+  color: white;
+}
 
-  &._black {
-    background-color: black;
-    color: white;
-
-    &._has-grid {
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-        linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
-    }
-  }
+.guide-preview--with-grid {
+  background-image: linear-gradient(to right, var(--this-grid-color) 1px, transparent 1px),
+    linear-gradient(var(--this-grid-color) 1px, transparent 1px);
 }
 
 .guide-preview__switcher {
@@ -55,6 +52,9 @@
     font-weight: var(--font-weight-bold);
   }
 }
+
 .guide-preview__switcher-separator {
-  flex-grow: 1;
+  &::before {
+    content: '|';
+  }
 }
