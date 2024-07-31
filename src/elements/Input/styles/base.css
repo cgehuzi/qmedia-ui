@@ -1,0 +1,262 @@
+@keyframes input-spinner {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes input-waiting {
+  0% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.input {
+  --feather-width: 18px;
+  position: relative;
+  display: inline-flex;
+
+  &._disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+
+.input--micro {
+  --feather-width: 15px;
+}
+
+.input--small {
+  --feather-width: 16px;
+}
+
+.input--large {
+  --feather-width: 20px;
+}
+
+.input--extra {
+  --feather-width: 20px;
+}
+
+.input__field {
+  --background-color: var(--control-background-color);
+  --border-color: var(--control-border-color);
+  --text-color: var(--control-text-color);
+
+  display: block;
+  width: 100%;
+
+  line-height: 1.3;
+  font-family: var(--control-font-family);
+  font-weight: var(--control-font-weight);
+  font-size: var(--control-font-size);
+  padding: var(--control-padding);
+  border-style: solid;
+  border-width: var(--control-border-width);
+  border-radius: var(--control-border-radius);
+  transition: none;
+  text-shadow: none;
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+
+  &::placeholder {
+    color: var(--control-placeholder-color);
+    font-weight: var(--font-weight-thin);
+  }
+
+  &[type='number'] {
+    /* убираем стрелки */
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  .input--grey & {
+    --text-color: var(--color-grey);
+  }
+
+  .input--first & {
+    --text-color: var(--color-first);
+  }
+
+  .input--second & {
+    --text-color: var(--color-second);
+  }
+
+  .input--third & {
+    --text-color: var(--color-third);
+  }
+
+  .input--success & {
+    --text-color: var(--color-success);
+  }
+
+  .input--error & {
+    --text-color: var(--color-error);
+  }
+
+  &:hover {
+    outline: none;
+    --text-color: var(--control-hover-text-color);
+    --background-color: var(--control-hover-background-color);
+    --border-color: var(--control-hover-border-color);
+
+    .input--grey & {
+      --text-color: var(--color-grey);
+    }
+
+    .input--first & {
+      --text-color: var(--color-first);
+    }
+
+    .input--second & {
+      --text-color: var(--color-second);
+    }
+
+    .input--third & {
+      --text-color: var(--color-third);
+    }
+
+    .input--success & {
+      --text-color: var(--color-success);
+    }
+
+    .input--error & {
+      --text-color: var(--color-error);
+    }
+  }
+
+  &:focus {
+    --text-color: var(--control-focus-text-color);
+    --background-color: var(--control-focus-background-color);
+    --border-color: var(--control-focus-border-color);
+    outline: 1px solid var(--border-color);
+    outline-offset: 0;
+
+    .input--grey & {
+      --text-color: var(--color-grey);
+      --border-color: var(--color-grey);
+    }
+
+    .input--first & {
+      --text-color: var(--color-first);
+      --border-color: var(--color-first);
+    }
+
+    .input--second & {
+      --text-color: var(--color-second);
+      --border-color: var(--color-second);
+    }
+
+    .input--third & {
+      --text-color: var(--color-third);
+      --border-color: var(--color-third);
+    }
+
+    .input--success & {
+      --text-color: var(--color-success);
+      --border-color: var(--color-success);
+    }
+
+    .input--error & {
+      --text-color: var(--color-error);
+      --border-color: var(--color-error);
+    }
+  }
+
+  .input._invalid & {
+    --text-color: var(--control-invalid-text-color);
+    --background-color: var(--control-invalid-background-color);
+    --border-color: var(--control-invalid-border-color);
+  }
+
+  .input--micro & {
+    font-size: var(--control-micro-font-size);
+    padding: var(--control-micro-padding);
+    border-width: var(--control-micro-border-width);
+    border-radius: var(--control-micro-border-radius);
+  }
+
+  .input--small & {
+    font-size: var(--control-small-font-size);
+    padding: var(--control-small-padding);
+    border-width: var(--control-small-border-width);
+    border-radius: var(--control-small-border-radius);
+  }
+
+  .input--large & {
+    font-size: var(--control-large-font-size);
+    padding: var(--control-large-padding);
+    border-width: var(--control-large-border-width);
+    border-radius: var(--control-large-border-radius);
+  }
+
+  .input--extra & {
+    font-size: var(--control-extra-font-size);
+    padding: var(--control-extra-padding);
+    border-width: var(--control-extra-border-width);
+    border-radius: var(--control-extra-border-radius);
+  }
+
+  .input--has-feather & {
+    padding-left: calc(var(--feather-width) + 1em);
+  }
+}
+
+.input__feather {
+  position: absolute;
+  left: 0.675em;
+  top: 50%;
+  width: var(--feather-width);
+  margin-top: calc(-1 * var(--feather-width) / 2);
+  opacity: 0.5;
+  pointer-events: none;
+
+  &._spinner {
+    stroke-width: 2.5;
+    animation: input-spinner 1.5s infinite;
+  }
+
+  .input._invalid & {
+    color: var(--color-error);
+  }
+
+  .input--first & {
+    color: var(--color-first);
+  }
+
+  .input--second & {
+    color: var(--color-second);
+  }
+
+  .input--third & {
+    color: var(--color-third);
+  }
+
+  .input--success & {
+    color: var(--color-success);
+  }
+
+  .input--error & {
+    color: var(--color-error);
+  }
+}
+
+.input._waiting {
+  &:not(.input--has-feather) {
+    animation: input-waiting 1.5s linear infinite;
+  }
+}
