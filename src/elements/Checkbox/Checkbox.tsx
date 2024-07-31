@@ -95,13 +95,18 @@ export class Checkbox extends React.Component<CheckboxProps> {
   }
 
   handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // если передан обработчик, то используем его
     if (this.props.onChange) {
+      const nextChecked = this.props.onChange(event);
       this.setState({
-        checked: this.props.onChange(event),
+        // если обработчик передал значение, то используем его
+        // иначе отменяем изменение
+        checked: typeof nextChecked === 'boolean' ? nextChecked : !event.target.checked,
       });
       return;
     }
 
+    // если обработчик не передан, то используем состояние HTML-элемента
     this.setState({
       checked: event.target.checked,
     });

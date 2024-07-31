@@ -114,16 +114,16 @@ const handleChange = (e) => {
 ```js
 import { Gapped } from '../../components/Gapped';
 
-const [tryCount, setTruyCount] = React.useState(0);
+const [tryCount, setTryCount] = React.useState(0);
 
 const handleChange = (e) => {
-  setTruyCount(tryCount + 1);
-  if (tryCount < 5) return false;
+  setTryCount(tryCount + 1);
+  if (tryCount < 3) return false;
   return e.target.checked;
 };
 
 <Gapped isVertical>
-  <Checkbox onChange={handleChange}>Первые 5 попыток будут проигнорированы</Checkbox>
+  <Checkbox onChange={handleChange}>Первые 3 попытки будут проигнорированы</Checkbox>
   <small>Текущее количество попыток: {tryCount}</small>
 </Gapped>;
 ```
