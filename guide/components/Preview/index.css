@@ -8,16 +8,22 @@
 
   &._white {
     background-color: white;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.075) 1px, transparent 1px),
-      linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px);
     color: var(--body-text-color);
+
+    &._has-grid {
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.075) 1px, transparent 1px),
+        linear-gradient(rgba(0, 0, 0, 0.075) 1px, transparent 1px);
+    }
   }
 
   &._black {
     background-color: black;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
-      linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
     color: white;
+
+    &._has-grid {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    }
   }
 }
 
@@ -48,4 +54,7 @@
     opacity: 1;
     font-weight: var(--font-weight-bold);
   }
+}
+.guide-preview__switcher-separator {
+  flex-grow: 1;
 }
