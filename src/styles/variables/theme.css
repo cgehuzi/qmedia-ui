@@ -14,6 +14,34 @@
 
   /* Controls */
 
+  --control-background-color: white;
+  --control-border-color: var(--color-grey-white-40);
+  --control-text-color: var(--body-text-color);
+  --control-placeholder-color: var(--color-grey-trans-40);
+
+  --control-hover-background-color: var(--control-background-color);
+  --control-hover-border-color: var(--color-grey);
+  --control-hover-text-color: var(--body-text-color);
+
+  --control-focus-background-color: var(--control-background-color);
+  --control-focus-border-color: var(--control-hover-border-color);
+  --control-focus-text-color: var(--body-text-color);
+
+  --control-invalid-background-color: var(--color-error-white-90);
+  --control-invalid-border-color: var(--color-error);
+  --control-invalid-text-color: var(--body-text-color);
+
+  --control-font-family: var(--font-family-base);
+  --control-font-weight: var(--font-weight-regular);
+  --control-font-size: var(--font-size-base);
+  --control-padding-inline: 1rem;
+  --control-padding-block: 0.45rem;
+  --control-padding: var(--control-padding-block) var(--control-padding-inline);
+  --control-border-width: 1px;
+  --control-border-radius: 0.325rem;
+
+  /* Controls size */
+
   --control-micro-font-size: var(--font-size-micro);
   --control-micro-padding-inline: 0.6rem;
   --control-micro-padding-block: 0.25rem;
@@ -27,13 +55,6 @@
   --control-small-padding: var(--control-small-padding-block) var(--control-small-padding-inline);
   --control-small-border-width: 1px;
   --control-small-border-radius: 0.3rem;
-
-  --control-font-size: var(--font-size-base);
-  --control-padding-inline: 1rem;
-  --control-padding-block: 0.45rem;
-  --control-padding: var(--control-padding-block) var(--control-padding-inline);
-  --control-border-width: 1px;
-  --control-border-radius: 0.325rem;
 
   --control-large-font-size: var(--font-size-base);
   --control-large-padding-inline: 1.25rem;
