@@ -1,62 +1,76 @@
 .alert {
-  background-color: var(--background-color, transparent);
+  --this-text-color: inherit;
+  --this-background-color: transparent;
+  --this-border-color: var(--color-grey-trans-80);
+  --this-font-size: var(--font-size-base);
+
+  background-color: var(--this-background-color);
   border-radius: var(--control-border-radius);
-  font-size: var(--font-size-base);
+  font-size: var(--this-font-size);
   white-space: pre-wrap;
   padding: 0.75em 1.5em;
-  color: inherit;
-  font-size: var(--font-size-small);
+  color: var(--this-text-color);
   display: grid;
   gap: 0.5em;
-  border: 2px solid var(--background-color, var(--color-grey-white-80));
+  border: 2px solid var(--this-border-color);
 
   & > * {
     margin: 0;
   }
 }
 
+/* Размеры */
+
 .alert--micro {
-  font-size: var(--font-size-micro);
+  --this-font-size: var(--font-size-micro);
 }
 
 .alert--small {
-  font-size: var(--font-size-small);
+  --this-font-size: var(--font-size-small);
 }
 
 .alert--large {
-  font-size: var(--font-size-large);
+  --this-font-size: var(--font-size-large);
 }
 
 .alert--extra {
-  font-size: var(--font-size-extra);
+  --this-font-size: var(--font-size-extra);
 }
 
+/* Цвета */
+
 .alert--grey {
-  --background-color: var(--color-grey-trans-80);
-  color: var(--color-grey);
+  --this-text-color: var(--color-grey);
+  --this-background-color: var(--color-grey-trans-80);
+  --this-border-color: var(--color-grey-trans-90);
 }
 
 .alert--first {
-  --background-color: var(--color-first-trans-80);
-  color: var(--color-first);
+  --this-text-color: var(--color-first);
+  --this-background-color: var(--color-first-trans-80);
+  --this-border-color: var(--color-first-trans-90);
 }
 
 .alert--second {
-  --background-color: var(--color-second-trans-80);
-  color: var(--color-second);
+  --this-text-color: var(--color-second);
+  --this-background-color: var(--color-second-trans-80);
+  --this-border-color: var(--color-second-trans-90);
 }
 
 .alert--third {
-  --background-color: var(--color-third-trans-80);
-  color: var(--color-third);
+  --this-text-color: var(--color-third);
+  --this-background-color: var(--color-third-trans-80);
+  --this-border-color: var(--color-third-trans-90);
 }
 
 .alert--success {
-  --background-color: var(--color-success-trans-80);
-  color: var(--color-success);
+  --this-text-color: var(--color-success);
+  --this-background-color: var(--color-success-trans-80);
+  --this-border-color: var(--color-success-trans-90);
 }
 
 .alert--error {
-  --background-color: var(--color-error-trans-80);
-  color: var(--color-error);
+  --this-text-color: var(--color-error);
+  --this-background-color: var(--color-error-trans-80);
+  --this-border-color: var(--color-error-trans-90);
 }

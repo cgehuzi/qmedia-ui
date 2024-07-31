@@ -1,19 +1,7 @@
 /* button--white */
 
 .button--white {
-  --back-color: white;
-  --text-color: var(--body-text-color);
-  --border-color: transparent;
-
-  &:hover {
-    --back-color: color-mix(in srgb, white 80%, transparent);
-    --text-color: var(--body-text-color);
-    --border-color: transparent;
-  }
-
-  &:active {
-    --back-color: white;
-    --text-color: var(--body-text-color);
-    --border-color: transparent;
-  }
+  --this-text-color: var(--body-text-color);
+  --this-background-color: white;
+  --this-hover-background-color: var(--color-grey-white-90);
 }

@@ -76,10 +76,10 @@ export class CheckboxSmart extends React.Component<CheckboxSmartProps> {
       <label
         className={classNames(
           'checkbox-smart',
-          isInvalid && '_invalid',
-          disabled && '_disabled',
-          this.state.checked && '_checked',
-          isWaiting && '_waiting',
+          isInvalid && 'checkbox-smart--invalid',
+          disabled && 'checkbox-smart--disabled',
+          this.state.checked && 'checkbox-smart--checked',
+          isWaiting && 'checkbox-smart--waiting',
           color && `checkbox-smart--${color}`,
           size !== 'base' && `checkbox-smart--${size}`,
           className
@@ -97,7 +97,7 @@ export class CheckboxSmart extends React.Component<CheckboxSmartProps> {
         {isWaiting ? (
           <FeatherIcon icon="loader" className="checkbox-smart__spinner" />
         ) : (
-          <div className={classNames('checkbox-smart__icon', color && `_color-${color}`)} />
+          <div className="checkbox-smart__icon" />
         )}
         <div className="checkbox-smart__body">{children || value}</div>
       </label>
@@ -108,11 +108,14 @@ export class CheckboxSmart extends React.Component<CheckboxSmartProps> {
     // если передан обработчик, то используем его
     if (this.props.onChange) {
       const nextChecked = this.props.onChange(event);
-      this.setState({
-        // если обработчик передал значение, то используем его
-        // иначе отменяем изменение
-        checked: typeof nextChecked === 'boolean' ? nextChecked : !event.target.checked,
-      });
+      // если обработчик передал значение
+      if (typeof nextChecked === 'boolean') {
+        // сохраняем изменение
+        this.setState({
+          checked: nextChecked,
+        });
+      }
+      // иначе отменяем изменение
       return;
     }
 

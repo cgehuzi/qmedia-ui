@@ -95,9 +95,12 @@ import { Gapped } from '../../components/Gapped';
 ```js
 import { Gapped } from '../../components/Gapped';
 
-<Gapped isWrap>
-  <Button size="small" feather="home" />
+<Gapped align="center">
+  <Button size="micro" feather="home" isSquare />
   <Button size="small" feather="home" isSquare />
+  <Button size="base" feather="home" isSquare />
+  <Button size="large" feather="home" isSquare />
+  <Button size="extra" feather="home" isSquare />
 </Gapped>;
 ```
 
@@ -178,10 +181,8 @@ const ColorSwitcher = ({ colorName }) => {
 
   return (
     <Button
-      size="small"
-      color={colorName}
-      variant={variant}
-      featherRight={isActive ? 'chevron-up' : 'chevron-down'}
+      size="micro"
+      variant={isActive ? 'filled' : 'outline'}
       onClick={() => {
         setColor(colorName);
       }}
@@ -194,15 +195,22 @@ const ColorSwitcher = ({ colorName }) => {
 const ColorGroup = ({ colorName }) => {
   return (
     <Gapped align="stretch" isVertical>
-      <Button variant={variant} color={`${colorName}-10`}>{`${colorName}-10`}</Button>
-      <Button variant={variant} color={`${colorName}-20`}>{`${colorName}-20`}</Button>
-      <Button variant={variant} color={`${colorName}-30`}>{`${colorName}-30`}</Button>
-      <Button variant={variant} color={`${colorName}-40`}>{`${colorName}-40`}</Button>
-      <Button variant={variant} color={`${colorName}-50`}>{`${colorName}-50`}</Button>
-      <Button variant={variant} color={`${colorName}-60`}>{`${colorName}-60`}</Button>
-      <Button variant={variant} color={`${colorName}-70`}>{`${colorName}-70`}</Button>
-      <Button variant={variant} color={`${colorName}-80`}>{`${colorName}-80`}</Button>
-      <Button variant={variant} color={`${colorName}-90`}>{`${colorName}-90`}</Button>
+      <Button variant={variant} color={`${color}`}>
+        {color}
+      </Button>
+      {color !== 'black' && color !== 'white' && (
+        <>
+          <Button variant={variant} color={`${colorName}-10`}>{`${colorName}-10`}</Button>
+          <Button variant={variant} color={`${colorName}-20`}>{`${colorName}-20`}</Button>
+          <Button variant={variant} color={`${colorName}-30`}>{`${colorName}-30`}</Button>
+          <Button variant={variant} color={`${colorName}-40`}>{`${colorName}-40`}</Button>
+          <Button variant={variant} color={`${colorName}-50`}>{`${colorName}-50`}</Button>
+          <Button variant={variant} color={`${colorName}-60`}>{`${colorName}-60`}</Button>
+          <Button variant={variant} color={`${colorName}-70`}>{`${colorName}-70`}</Button>
+          <Button variant={variant} color={`${colorName}-80`}>{`${colorName}-80`}</Button>
+          <Button variant={variant} color={`${colorName}-90`}>{`${colorName}-90`}</Button>
+        </>
+      )}
     </Gapped>
   );
 };
@@ -220,12 +228,8 @@ const ColorGroup = ({ colorName }) => {
     <ColorSwitcher colorName="third" />
     <ColorSwitcher colorName="success" />
     <ColorSwitcher colorName="error" />
-    <Button size="small" variant={variant} color="black">
-      black
-    </Button>
-    <Button size="small" variant={variant} color="white">
-      white
-    </Button>
+    <ColorSwitcher colorName="black" />
+    <ColorSwitcher colorName="white" />
   </Gapped>
 
   <Gapped justify="stretch">

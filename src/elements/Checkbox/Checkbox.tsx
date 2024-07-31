@@ -66,10 +66,10 @@ export class Checkbox extends React.Component<CheckboxProps> {
       <label
         className={classNames(
           'checkbox',
-          isInvalid && '_invalid',
-          disabled && '_disabled',
-          this.state.checked && '_checked',
-          isWaiting && '_waiting',
+          isInvalid && 'checkbox--invalid',
+          disabled && 'checkbox--disabled',
+          this.state.checked && 'checkbox--checked',
+          isWaiting && 'checkbox--waiting',
           color && `checkbox--${color}`,
           size !== 'base' && `checkbox--${size}`,
           className
@@ -87,7 +87,7 @@ export class Checkbox extends React.Component<CheckboxProps> {
         {isWaiting ? (
           <FeatherIcon icon="loader" className="checkbox__spinner" />
         ) : (
-          <div className={classNames('checkbox__icon', color && `_color-${color}`)} />
+          <div className="checkbox__icon" />
         )}
         <div className="checkbox__title">{children || value}</div>
       </label>
@@ -98,11 +98,14 @@ export class Checkbox extends React.Component<CheckboxProps> {
     // если передан обработчик, то используем его
     if (this.props.onChange) {
       const nextChecked = this.props.onChange(event);
-      this.setState({
-        // если обработчик передал значение, то используем его
-        // иначе отменяем изменение
-        checked: typeof nextChecked === 'boolean' ? nextChecked : !event.target.checked,
-      });
+      // если обработчик передал значение
+      if (typeof nextChecked === 'boolean') {
+        // сохраняем изменение
+        this.setState({
+          checked: nextChecked,
+        });
+      }
+      // иначе отменяем изменение
       return;
     }
 

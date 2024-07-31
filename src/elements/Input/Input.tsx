@@ -21,7 +21,7 @@ export interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
   /** Отключает компонент */
   disabled?: boolean;
   /** Обработчик изменения значения. Возвращаемое значение заменит `value` */
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => string | number;
 }
 
 /**
@@ -65,12 +65,12 @@ export class Input extends React.Component<InputProps> {
       <label
         className={classNames(
           'input',
-          isInvalid && '_invalid',
-          disabled && '_disabled',
-          isWaiting && '_waiting',
+          isInvalid && 'input--invalid',
+          disabled && 'input--disabled',
+          isWaiting && 'input--waiting',
           color && `input--${color}`,
           size !== 'base' && `input--${size}`,
-          feather && 'input--has-feather',
+          feather && 'input--with-icon',
           className
         )}
       >
@@ -85,7 +85,7 @@ export class Input extends React.Component<InputProps> {
         {feather && (
           <FeatherIcon
             icon={isWaiting ? 'loader' : feather}
-            className={classNames('input__feather', isWaiting && '_spinner')}
+            className={classNames('input__icon', isWaiting && 'input__icon--spinner')}
           />
         )}
       </label>
@@ -93,13 +93,21 @@ export class Input extends React.Component<InputProps> {
   }
 
   handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // если передан обработчик, то используем его
     if (this.props.onChange) {
-      this.setState({
-        value: this.props.onChange(event),
-      });
+      const nextValue = this.props.onChange(event);
+      // если обработчик передал значение
+      if (typeof nextValue === 'string' || typeof nextValue === 'number') {
+        // сохраняем изменение
+        this.setState({
+          value: String(nextValue),
+        });
+      }
+      // иначе отменяем изменение
       return;
     }
 
+    // если обработчик не передан, то используем состояние HTML-элемента
     this.setState({
       value: event.target.value,
     });

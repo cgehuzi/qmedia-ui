@@ -72,7 +72,7 @@ export class Button extends React.Component<ButtonProps> {
     const Component = isLink ? 'a' : 'button';
 
     const mappedChildren = React.Children.map(children, (child, index) => {
-      if (typeof child === 'string') return <span>{child}</span>;
+      if (typeof child === 'string') return <span className="button__text">{child}</span>;
       return child;
     });
 
@@ -86,7 +86,8 @@ export class Button extends React.Component<ButtonProps> {
           variant !== 'filled' && `button--${variant}`,
           underline !== 'none' && `button--underline-${underline}`,
           isFullwidth && 'button--fullwidth',
-          isWaiting && !feather && !featherRight && 'button--waiting',
+          isWaiting && 'button--waiting',
+          disabled && 'button--disabled',
           className
         )}
         disabled={isWaiting || disabled}
@@ -95,20 +96,22 @@ export class Button extends React.Component<ButtonProps> {
       >
         {isWaiting ? (
           <>
-            {feather && <FeatherIcon icon="loader" className="button__spinner" />}
+            {feather && (
+              <FeatherIcon icon="loader" className="button__icon button__icon--spinner" />
+            )}
             {mappedChildren}
             {featherRight &&
               (!feather ? (
-                <FeatherIcon icon="loader" className="button__spinner" />
+                <FeatherIcon icon="loader" className="button__icon button__icon--spinner" />
               ) : (
-                <FeatherIcon icon={featherRight} />
+                <FeatherIcon className="button__icon" icon={featherRight} />
               ))}
           </>
         ) : (
           <>
-            {feather && <FeatherIcon icon={feather} />}
+            {feather && <FeatherIcon className="button__icon" icon={feather} />}
             {mappedChildren}
-            {featherRight && <FeatherIcon icon={featherRight} />}
+            {featherRight && <FeatherIcon className="button__icon" icon={featherRight} />}
           </>
         )}
       </Component>

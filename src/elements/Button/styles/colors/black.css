@@ -1,19 +1,7 @@
 /* button--black */
 
 .button--black {
-  --back-color: black;
-  --text-color: white;
-  --border-color: transparent;
-
-  &:hover {
-    --back-color: color-mix(in srgb, black 80%, transparent);
-    --text-color: white;
-    --border-color: transparent;
-  }
-
-  &:active {
-    --back-color: black;
-    --text-color: white;
-    --border-color: transparent;
-  }
+  --this-text-color: white;
+  --this-background-color: black;
+  --this-hover-background-color: var(--color-grey-black-80);
 }

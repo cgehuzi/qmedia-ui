@@ -35,19 +35,11 @@ export class Badge extends React.Component<BadgeProps> {
       <div
         className={classNames(
           'badge',
-          size !== 'base' && `badge--size-${size}`,
+          size !== 'base' && `badge--${size}`,
+          color && `badge--${color}`,
           position && `badge--${position}`,
           className
         )}
-        style={
-          color
-            ? {
-                backgroundColor: `var(--color-${color})`,
-                color: `var(--color-${color}-text)`,
-                ...style,
-              }
-            : style
-        }
         {...props}
         ref={this.myRef}
       >

@@ -1,23 +1,175 @@
-@import './success-black.css';
-@import './success-white.css';
-@import './success-trans.css';
-
 /* button--success */
 
 .button--success {
-  --back-color: var(--color-success);
-  --text-color: var(--color-success-text);
-  --border-color: transparent;
+  --this-text-color: var(--color-success-text);
+  --this-background-color: var(--color-success);
+  --this-hover-background-color: var(--color-success-black-10);
+}
 
-  &:hover {
-    --back-color: var(--color-success-black-10);
-    --text-color: var(--color-success-text);
-    --border-color: transparent;
-  }
+/* button--success-black */
 
-  &:active {
-    --back-color: var(--color-success);
-    --text-color: var(--color-success-text);
-    --border-color: transparent;
-  }
+.button--success-black-10 {
+  --this-text-color: var(--color-success-text);
+  --this-background-color: var(--color-success-black-10);
+  --this-hover-background-color: var(--color-success-black-20);
+}
+
+.button--success-black-20 {
+  --this-text-color: var(--color-success-text);
+  --this-background-color: var(--color-success-black-20);
+  --this-hover-background-color: var(--color-success-black-30);
+}
+
+.button--success-black-30 {
+  --this-text-color: var(--color-success-text);
+  --this-background-color: var(--color-success-black-30);
+  --this-hover-background-color: var(--color-success-black-40);
+}
+
+.button--success-black-40 {
+  --this-text-color: white;
+  --this-background-color: var(--color-success-black-40);
+  --this-hover-background-color: var(--color-success-black-50);
+}
+
+.button--success-black-50 {
+  --this-text-color: white;
+  --this-background-color: var(--color-success-black-50);
+  --this-hover-background-color: var(--color-success-black-60);
+}
+
+.button--success-black-60 {
+  --this-text-color: white;
+  --this-background-color: var(--color-success-black-60);
+  --this-hover-background-color: var(--color-success-black-70);
+}
+
+.button--success-black-70 {
+  --this-text-color: white;
+  --this-background-color: var(--color-success-black-70);
+  --this-hover-background-color: var(--color-success-black-80);
+}
+
+.button--success-black-80 {
+  --this-text-color: white;
+  --this-background-color: var(--color-success-black-80);
+  --this-hover-background-color: var(--color-success-black-90);
+}
+
+.button--success-black-90 {
+  --this-text-color: white;
+  --this-background-color: var(--color-success-black-90);
+  --this-hover-background-color: black;
+}
+
+/* button--success-white */
+
+.button--success-white-10 {
+  --this-text-color: var(--color-success-text);
+  --this-background-color: var(--color-success-white-10);
+  --this-hover-background-color: var(--color-success);
+}
+
+.button--success-white-20 {
+  --this-text-color: var(--color-success-text);
+  --this-background-color: var(--color-success-white-20);
+  --this-hover-background-color: var(--color-success-white-10);
+}
+
+.button--success-white-30 {
+  --this-text-color: var(--color-success-text);
+  --this-background-color: var(--color-success-white-30);
+  --this-hover-background-color: var(--color-success-white-20);
+}
+
+.button--success-white-40 {
+  --this-text-color: var(--body-text-color);
+  --this-background-color: var(--color-success-white-40);
+  --this-hover-background-color: var(--color-success-white-30);
+}
+
+.button--success-white-50 {
+  --this-text-color: var(--body-text-color);
+  --this-background-color: var(--color-success-white-50);
+  --this-hover-background-color: var(--color-success-white-40);
+}
+
+.button--success-white-60 {
+  --this-text-color: var(--body-text-color);
+  --this-background-color: var(--color-success-white-60);
+  --this-hover-background-color: var(--color-success-white-50);
+}
+
+.button--success-white-70 {
+  --this-text-color: var(--body-text-color);
+  --this-background-color: var(--color-success-white-70);
+  --this-hover-background-color: var(--color-success-white-60);
+}
+
+.button--success-white-80 {
+  --this-text-color: var(--body-text-color);
+  --this-background-color: var(--color-success-white-80);
+  --this-hover-background-color: var(--color-success-white-70);
+}
+
+.button--success-white-90 {
+  --this-text-color: var(--body-text-color);
+  --this-background-color: var(--color-success-white-90);
+  --this-hover-background-color: var(--color-success-white-80);
+}
+
+/* button--success-trans */
+
+.button--success-trans-10 {
+  --this-text-color: var(--color-success-text);
+  --this-background-color: var(--color-success-trans-10);
+  --this-hover-background-color: var(--color-success);
+}
+
+.button--success-trans-20 {
+  --this-text-color: var(--color-success-text);
+  --this-background-color: var(--color-success-trans-20);
+  --this-hover-background-color: var(--color-success-trans-10);
+}
+
+.button--success-trans-30 {
+  --this-text-color: var(--color-success-text);
+  --this-background-color: var(--color-success-trans-30);
+  --this-hover-background-color: var(--color-success-trans-20);
+}
+
+.button--success-trans-40 {
+  --this-text-color: inherit;
+  --this-background-color: var(--color-success-trans-40);
+  --this-hover-background-color: var(--color-success-trans-30);
+}
+
+.button--success-trans-50 {
+  --this-text-color: inherit;
+  --this-background-color: var(--color-success-trans-50);
+  --this-hover-background-color: var(--color-success-trans-40);
+}
+
+.button--success-trans-60 {
+  --this-text-color: inherit;
+  --this-background-color: var(--color-success-trans-60);
+  --this-hover-background-color: var(--color-success-trans-50);
+}
+
+.button--success-trans-70 {
+  --this-text-color: inherit;
+  --this-background-color: var(--color-success-trans-70);
+  --this-hover-background-color: var(--color-success-trans-60);
+}
+
+.button--success-trans-80 {
+  --this-text-color: inherit;
+  --this-background-color: var(--color-success-trans-80);
+  --this-hover-background-color: var(--color-success-trans-70);
+}
+
+.button--success-trans-90 {
+  --this-text-color: inherit;
+  --this-background-color: var(--color-success-trans-90);
+  --this-hover-background-color: var(--color-success-trans-80);
 }

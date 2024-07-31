@@ -1,14 +1,15 @@
 .badge {
-  --background-color: var(--badge-color, red);
-  --text-color: var(--badge-text-color, white);
+  --this-text-color: var(--badge-text-color, white);
+  --this-background-color: var(--badge-color, red);
+  --this-font-size: 0.7rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--this-background-color);
+  color: var(--this-text-color);
   line-height: 1;
-  font-size: 0.7rem;
+  font-size: var(--this-font-size);
   font-weight: var(--font-weight-bold);
   height: 1em;
   width: 1em;
@@ -21,22 +22,6 @@
     min-width: 1.5em;
     padding: 0 0.375em;
   }
-}
-
-.badge--size-micro {
-  font-size: 0.5rem;
-}
-
-.badge--size-small {
-  font-size: 0.6rem;
-}
-
-.badge--size-large {
-  font-size: 0.8rem;
-}
-
-.badge--size-extra {
-  font-size: 0.9rem;
 }
 
 .badge--left,
@@ -60,4 +45,54 @@
   right: -0.35em;
   bottom: auto;
   left: auto;
+}
+
+/* Размеры */
+
+.badge--micro {
+  --this-font-size: 0.5rem;
+}
+
+.badge--small {
+  --this-font-size: 0.6rem;
+}
+
+.badge--large {
+  --this-font-size: 0.8rem;
+}
+
+.badge--extra {
+  --this-font-size: 0.9rem;
+}
+
+/* Цвета */
+
+.badge--grey {
+  --this-text-color: var(--color-grey-text);
+  --this-background-color: var(--color-grey);
+}
+
+.badge--first {
+  --this-text-color: var(--color-first-text);
+  --this-background-color: var(--color-first);
+}
+
+.badge--second {
+  --this-text-color: var(--color-second-text);
+  --this-background-color: var(--color-second);
+}
+
+.badge--third {
+  --this-text-color: var(--color-third-text);
+  --this-background-color: var(--color-third);
+}
+
+.badge--success {
+  --this-text-color: var(--color-success-text);
+  --this-background-color: var(--color-success);
+}
+
+.badge--error {
+  --this-text-color: var(--color-error-text);
+  --this-background-color: var(--color-error);
 }
