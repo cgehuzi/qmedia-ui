@@ -20,6 +20,8 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
   disabled?: boolean;
   /** Отмечен ли компонент */
   checked?: boolean;
+  /** Обработчик изменения. Возвращаемое значение будет передано в состояние `checked` */
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => boolean;
 }
 
 /**
@@ -41,10 +43,7 @@ export class Checkbox extends React.Component<CheckboxProps> {
   };
 
   state = {
-    checked: this.props.checked,
-    disabled: this.props.disabled,
-    invalid: this.props.isInvalid,
-    waiting: this.props.isWaiting,
+    checked: this.props.checked || this.props.defaultChecked || false,
   };
 
   render() {
@@ -67,26 +66,25 @@ export class Checkbox extends React.Component<CheckboxProps> {
       <label
         className={classNames(
           'checkbox',
-          this.state.invalid && '_invalid',
-          this.state.disabled && '_disabled',
+          isInvalid && '_invalid',
+          disabled && '_disabled',
           this.state.checked && '_checked',
-          this.state.waiting && '_waiting',
+          isWaiting && '_waiting',
           color && `checkbox--${color}`,
           size !== 'base' && `checkbox--${size}`,
           className
         )}
       >
         <input
-          className="checkbox__input"
+          className="checkbox__field"
           type="checkbox"
-          value={value}
-          disabled={this.state.disabled || this.state.waiting}
-          defaultChecked={this.state.checked}
+          disabled={disabled || isWaiting}
+          checked={this.state.checked}
           onChange={this.handleChange}
           {...props}
           ref={this.myRef}
         />
-        {this.state.waiting ? (
+        {isWaiting ? (
           <FeatherIcon icon="loader" className="checkbox__spinner" />
         ) : (
           <div className={classNames('checkbox__icon', color && `_color-${color}`)} />
@@ -98,7 +96,9 @@ export class Checkbox extends React.Component<CheckboxProps> {
 
   handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (this.props.onChange) {
-      this.props.onChange(event);
+      this.setState({
+        checked: this.props.onChange(event),
+      });
       return;
     }
 
@@ -111,12 +111,6 @@ export class Checkbox extends React.Component<CheckboxProps> {
     if (prevProps.checked !== this.props.checked) {
       this.setState({
         checked: this.props.checked,
-      });
-    }
-
-    if (prevProps.isWaiting !== this.props.isWaiting) {
-      this.setState({
-        waiting: this.props.isWaiting,
       });
     }
   }

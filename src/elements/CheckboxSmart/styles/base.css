@@ -7,26 +7,29 @@
 .checkbox-smart {
   --icon-size: 1.1em;
   --icon-background-color: rgba(255, 255, 255, 0.25);
-  --icon-border-color: var(--color-grey-white-70);
-  --element-border-color: var(--color-grey-white-70);
+  --icon-border-color: var(--control-border-color);
+  --element-border-color: var(--control-border-color);
 
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: flex-start;
   margin: 0;
   padding: 0.75em 1em;
   gap: 0.5em;
   font-size: var(--font-size-base);
   line-height: 1.3em;
-  color: inherit;
+  color: var(--control-text-color);
   cursor: pointer;
+  border-style: solid;
+  border-width: var(--control-border-width);
   border-radius: var(--control-border-radius);
-  box-shadow: 0 0 0 1px var(--element-border-color);
-  background-color: transparent;
+  border-color: var(--element-border-color);
+  background-color: var(--control-background-color);
 
   &._checked {
     --element-border-color: var(--color-first);
-    box-shadow: 0 0 0 1.5px var(--element-border-color);
+    outline: 1px solid var(--element-border-color);
+    outline-offset: 0;
 
     &.checkbox-smart--grey {
       --element-border-color: var(--color-grey);
@@ -50,8 +53,7 @@
   }
 
   &._disabled {
-    opacity: 0.4;
-    cursor: default;
+    opacity: 0.6;
     pointer-events: none;
   }
 
@@ -77,13 +79,18 @@
   font-size: var(--font-size-extra);
 }
 
-.checkbox-smart__input {
+.checkbox-smart__field {
   font-size: inherit;
   position: absolute;
+  left: 1em;
+  top: 0.75em;
   width: var(--icon-size);
   height: var(--icon-size);
   margin: 0;
-  opacity: 0;
+
+  .checkbox-smart._waiting & {
+    display: none;
+  }
 }
 
 .checkbox-smart__icon {

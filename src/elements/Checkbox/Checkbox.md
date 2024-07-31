@@ -79,7 +79,7 @@ import { Gapped } from '../../components/Gapped';
 const [isWaiting, setIsWaiting] = React.useState(false);
 const [checked, setChecked] = React.useState(false);
 
-const handleWaiting = (e) => {
+const handleChange = (e) => {
   setIsWaiting(true);
   setTimeout(() => {
     setIsWaiting(false);
@@ -97,8 +97,33 @@ const handleWaiting = (e) => {
   <Checkbox checked isWaiting>
     в режиме ожидания
   </Checkbox>
-  <Checkbox checked={checked} isWaiting={isWaiting} onChange={handleWaiting}>
+  <Checkbox checked={checked} isWaiting={isWaiting} onChange={handleChange}>
     действие после ожидания
   </Checkbox>
+</Gapped>;
+```
+
+#### Обработка событий
+
+Компонент поддерживает все стандарные обработчики нативного `input`. Но есть исключения...
+
+##### onChange
+
+Этот обработчик не только вызывает коллбэк, но и требует явно передать итоговое значение `checked`.
+
+```js
+import { Gapped } from '../../components/Gapped';
+
+const [tryCount, setTruyCount] = React.useState(0);
+
+const handleChange = (e) => {
+  setTruyCount(tryCount + 1);
+  if (tryCount < 5) return false;
+  return e.target.checked;
+};
+
+<Gapped isVertical>
+  <Checkbox onChange={handleChange}>Первые 5 попыток будут проигнорированы</Checkbox>
+  <small>Текущее количество попыток: {tryCount}</small>
 </Gapped>;
 ```

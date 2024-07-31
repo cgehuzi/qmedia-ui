@@ -10,7 +10,7 @@
   --icon-border-color: var(--color-grey-white-70);
 
   position: relative;
-  display: flex;
+  display: inline-flex;
   margin: 0;
   gap: 0.5em;
   font-size: var(--font-size-base);
@@ -19,8 +19,7 @@
   cursor: pointer;
 
   &._disabled {
-    opacity: 0.4;
-    cursor: default;
+    opacity: 0.6;
     pointer-events: none;
   }
 
@@ -46,7 +45,7 @@
   font-size: var(--font-size-extra);
 }
 
-.checkbox__input {
+.checkbox__field {
   font-size: inherit;
   position: absolute;
   width: var(--icon-size);

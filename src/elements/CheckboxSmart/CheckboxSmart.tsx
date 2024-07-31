@@ -22,10 +22,14 @@ export interface CheckboxSmartProps extends React.HTMLAttributes<HTMLInputElemen
   disabled?: boolean;
   /** Отмечен ли компонент */
   checked?: boolean;
+  /** Обработчик изменения. Возвращаемое значение будет передано в состояние `checked` */
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => boolean;
 }
 
 /**
  * Стилизованный элемент `input` с типом `checkbox`. Оформлен в виде интерактивной плашки с заголовком и пояснением. Поддерживает все стандартные атрибуты и события элемента `input`.
+ *
+ * ---
  *
  * Содержит вложенные компоненты: `<CheckboxSmart.Title>` и `<CheckboxSmart.Caption>`
  */
@@ -45,10 +49,7 @@ export class CheckboxSmart extends React.Component<CheckboxSmartProps> {
   };
 
   state = {
-    checked: this.props.checked,
-    disabled: this.props.disabled,
-    invalid: this.props.isInvalid,
-    waiting: this.props.isWaiting,
+    checked: this.props.checked || this.props.defaultChecked || false,
   };
 
   static Title = CheckboxSmartTitle;
@@ -74,25 +75,25 @@ export class CheckboxSmart extends React.Component<CheckboxSmartProps> {
       <label
         className={classNames(
           'checkbox-smart',
-          this.state.invalid && '_invalid',
-          this.state.disabled && '_disabled',
+          isInvalid && '_invalid',
+          disabled && '_disabled',
           this.state.checked && '_checked',
-          this.state.waiting && '_waiting',
+          isWaiting && '_waiting',
           color && `checkbox-smart--${color}`,
           size !== 'base' && `checkbox-smart--${size}`,
           className
         )}
       >
         <input
-          className="checkbox-smart__input"
+          className="checkbox-smart__field"
           type="checkbox"
-          disabled={this.state.disabled || this.state.waiting}
-          defaultChecked={this.state.checked}
+          disabled={disabled || isWaiting}
+          checked={this.state.checked}
           onChange={this.handleChange}
           {...props}
           ref={this.myRef}
         />
-        {this.state.waiting ? (
+        {isWaiting ? (
           <FeatherIcon icon="loader" className="checkbox-smart__spinner" />
         ) : (
           <div className={classNames('checkbox-smart__icon', color && `_color-${color}`)} />
@@ -104,7 +105,9 @@ export class CheckboxSmart extends React.Component<CheckboxSmartProps> {
 
   handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (this.props.onChange) {
-      this.props.onChange(event);
+      this.setState({
+        checked: this.props.onChange(event),
+      });
       return;
     }
 
@@ -117,12 +120,6 @@ export class CheckboxSmart extends React.Component<CheckboxSmartProps> {
     if (prevProps.checked !== this.props.checked) {
       this.setState({
         checked: this.props.checked,
-      });
-    }
-
-    if (prevProps.isWaiting !== this.props.isWaiting) {
-      this.setState({
-        waiting: this.props.isWaiting,
       });
     }
   }

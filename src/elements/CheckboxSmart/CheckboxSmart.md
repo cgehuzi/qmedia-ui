@@ -135,7 +135,7 @@ import { Gapped } from '../../components/Gapped';
 const [isWaiting, setIsWaiting] = React.useState(false);
 const [checked, setChecked] = React.useState(false);
 
-const handleWaiting = (e) => {
+const handleChange = (e) => {
   setIsWaiting(true);
   setTimeout(() => {
     setIsWaiting(false);
@@ -159,9 +159,36 @@ const handleWaiting = (e) => {
     <CheckboxSmart.Caption>в режиме ожидания</CheckboxSmart.Caption>
   </CheckboxSmart>
 
-  <CheckboxSmart checked={checked} isWaiting={isWaiting} onChange={handleWaiting}>
+  <CheckboxSmart checked={checked} isWaiting={isWaiting} onChange={handleChange}>
     <CheckboxSmart.Title>Нажми на меня</CheckboxSmart.Title>
     <CheckboxSmart.Caption>действие после ожидания</CheckboxSmart.Caption>
+  </CheckboxSmart>
+</Gapped>;
+```
+
+#### Обработка событий
+
+Компонент поддерживает все стандарные обработчики нативного `input`. Но есть исключения...
+
+##### onChange
+
+Этот обработчик не только вызывает коллбэк, но и требует явно передать итоговое значение `checked`.
+
+```js
+import { Gapped } from '../../components/Gapped';
+
+const [tryCount, setTruyCount] = React.useState(0);
+
+const handleChange = (e) => {
+  setTruyCount(tryCount + 1);
+  if (tryCount < 5) return false;
+  return e.target.checked;
+};
+
+<Gapped isVertical>
+  <CheckboxSmart onChange={handleChange}>
+    <CheckboxSmart.Title>Первые 5 попыток будут проигнорированы</CheckboxSmart.Title>
+    <CheckboxSmart.Caption>Текущее количество попыток: {tryCount}</CheckboxSmart.Caption>
   </CheckboxSmart>
 </Gapped>;
 ```
