@@ -50,6 +50,21 @@ import { Gapped } from '../../components/Gapped';
 </Gapped>;
 ```
 
+#### Нужна ссылка?
+
+Компонент можно сделать ссылкой, чтобы при рендере был использован тег `<a>`. За это отвечает параметр `isLink`.
+
+```js
+import { Gapped } from '../../components/Gapped';
+
+<Gapped align="center">
+  <Button>Я кнопка</Button>
+  <Button isLink href="." target="_blank">
+    Я ссылка
+  </Button>
+</Gapped>;
+```
+
 #### Иконки
 
 Кнопке можно задать feather-иконку. [Feather](https://feathericons.com/) – библиотека интерфейсных SVG-иконок.
@@ -157,7 +172,7 @@ const handleWaiting = () => {
 import { Gapped } from '../../components/Gapped';
 
 const [variant, setVariant] = React.useState('filled');
-const [color, setColor] = React.useState('first');
+const [color, setColor] = React.useState('grey');
 
 const VariantSwitcher = ({ variantName }) => {
   const isActive = variantName === variant;

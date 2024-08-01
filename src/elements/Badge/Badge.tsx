@@ -14,7 +14,9 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 /**
- * Индикатор уведомления об активностях (счётчик)
+ * Индикатор уведомления об активностях (счётчик).
+ * 
+ * Поддерживает все стандартные атрибуты и события элемента `div`.
  */
 export class Badge extends React.Component<BadgeProps> {
   myRef: React.Ref<HTMLDivElement>;

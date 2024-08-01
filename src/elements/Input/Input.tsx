@@ -25,7 +25,9 @@ export interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
 }
 
 /**
- * Стилизованный элемент `input`. Поддерживает все стандартные атрибуты и события элемента `input`.
+ * Стилизованный `<input>`.
+ * 
+ * Поддерживает все стандартные атрибуты и события элемента `input`.
  */
 export class Input extends React.Component<InputProps> {
   myRef: React.Ref<HTMLInputElement>;

@@ -70,11 +70,15 @@
     background-color: var(--this-background-color);
     border-color: transparent;
   }
+}
 
-  &:disabled {
-    pointer-events: none;
-    opacity: 0.6;
-  }
+.button--disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.button--waiting {
+  pointer-events: none;
 }
 
 .button__text {

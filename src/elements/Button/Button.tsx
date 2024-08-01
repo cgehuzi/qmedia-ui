@@ -31,7 +31,9 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement & HT
 }
 
 /**
- * Информационное сообщение или предупреждение.
+ * Кнопка. Либо ссылка, визуально представляющая собой кнопку.
+ *
+ * Поддерживает все стандартные атрибуты и события элементов `button` и `а`.
  */
 export class Button extends React.Component<ButtonProps> {
   myRef: React.Ref<HTMLButtonElement & HTMLAnchorElement>;

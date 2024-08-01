@@ -24,7 +24,7 @@ export class Gapped extends React.Component<GappedProps> {
   myRef: React.Ref<HTMLDivElement>;
 
   static defaultProps = {
-    gap: 8,
+    gap: 10,
     isVertical: false,
     align: 'start',
     justify: 'start',

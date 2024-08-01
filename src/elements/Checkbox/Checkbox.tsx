@@ -25,7 +25,9 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
 }
 
 /**
- * Стилизованный элемент `input` с типом `checkbox`. Поддерживает все стандартные атрибуты и события элемента `input`.
+ * Стилизованный `<input type="checkbox">`.
+ * 
+ * Поддерживает все стандартные атрибуты и события элемента `input`.
  */
 export class Checkbox extends React.Component<CheckboxProps> {
   myRef: React.Ref<HTMLInputElement>;
