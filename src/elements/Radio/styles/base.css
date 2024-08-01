@@ -1,0 +1,274 @@
+@keyframes radio-spinner {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.radio {
+  --this-font-size: var(--font-size-base);
+  --this-icon-size: 1.1em;
+
+  --this-spinner-color: var(--color-first);
+
+  --unchecked-icon-background-color: var(--control-background-color);
+  --unchecked-icon-border-color: var(--control-border-color);
+
+  --unchecked-hover-icon-background-color: var(--color-first-white-90);
+  --unchecked-hover-icon-border-color: var(--color-first);
+
+  --unchecked-active-icon-background-color: var(--color-first-white-80);
+  --unchecked-active-icon-border-color: var(--color-first);
+
+  --checked-icon-background-color: var(--color-first);
+  --checked-icon-border-color: var(--color-first);
+
+  --checked-hover-icon-background-color: var(--color-first-white-10);
+  --checked-hover-icon-border-color: var(--color-first);
+
+  --checked-active-icon-background-color: var(--color-first-white-20);
+  --checked-active-icon-border-color: var(--color-first);
+
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  margin: 0;
+  gap: 0.5em;
+  font-size: var(--this-font-size);
+  line-height: 1.3em;
+  color: inherit;
+  cursor: pointer;
+}
+
+.radio--disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.radio--waiting {
+  cursor: default;
+  pointer-events: none;
+}
+
+.radio__field {
+  font-size: var(--this-font-size);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--this-icon-size);
+  height: var(--this-icon-size);
+  margin: 0;
+
+  .radio--waiting & {
+    display: none;
+  }
+}
+
+.radio__icon {
+  position: relative;
+  width: var(--this-icon-size);
+  height: var(--this-icon-size);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: var(--unchecked-icon-background-color);
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  border: 1.5px solid var(--unchecked-icon-border-color);
+  border-radius: 50%;
+  cursor: pointer;
+
+  .radio:hover & {
+    background-color: var(--unchecked-hover-icon-background-color);
+    border-color: var(--unchecked-hover-icon-border-color);
+  }
+
+  .radio:active & {
+    background-color: var(--unchecked-active-icon-background-color);
+    border-color: var(--unchecked-active-icon-border-color);
+  }
+
+  .radio--checked & {
+    background-color: var(--checked-icon-background-color);
+    border-color: var(--checked-icon-border-color);
+
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='white'/%3e%3c/svg%3e");
+  }
+
+  .radio--checked:hover & {
+    background-color: var(--checked-hover-icon-background-color);
+    border-color: var(--checked-hover-icon-border-color);
+  }
+
+  .radio--checked:active & {
+    background-color: var(--checked-active-icon-background-color);
+    border-color: var(--checked-active-icon-border-color);
+  }
+
+  .radio--invalid & {
+    --unchecked-icon-border-color: var(--color-error);
+    --unchecked-hover-icon-border-color: var(--color-error);
+    --unchecked-active-icon-border-color: var(--color-error);
+    --checked-icon-border-color: var(--color-error);
+    --checked-hover-icon-border-color: var(--color-error);
+    --checked-active-icon-border-color: var(--color-error);
+  }
+}
+
+.radio__spinner {
+  stroke-width: 2.5;
+  animation: radio-spinner 1.5s infinite;
+  color: var(--this-spinner-color);
+  width: var(--this-icon-size);
+}
+
+.radio__title {
+  flex-grow: 1;
+  margin-top: -0.125em;
+
+  & a[href] {
+    color: inherit;
+    text-decoration: underline;
+    pointer-events: all;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/* Размеры */
+
+.radio--micro {
+  --this-font-size: var(--font-size-micro);
+}
+
+.radio--small {
+  --this-font-size: var(--font-size-small);
+}
+
+.radio--large {
+  --this-font-size: var(--font-size-large);
+}
+
+.radio--extra {
+  --this-font-size: var(--font-size-extra);
+}
+
+/* Цвета */
+
+.radio--grey {
+  --this-spinner-color: var(--color-grey);
+
+  --unchecked-hover-icon-background-color: var(--color-grey-white-90);
+  --unchecked-hover-icon-border-color: var(--color-grey);
+
+  --unchecked-active-icon-background-color: var(--color-grey-white-80);
+  --unchecked-active-icon-border-color: var(--color-grey);
+
+  --checked-icon-background-color: var(--color-grey);
+  --checked-icon-border-color: var(--color-grey);
+
+  --checked-hover-icon-background-color: var(--color-grey-white-10);
+  --checked-hover-icon-border-color: var(--color-grey);
+
+  --checked-active-icon-background-color: var(--color-grey-white-20);
+  --checked-active-icon-border-color: var(--color-grey);
+}
+
+.radio--first {
+  --this-spinner-color: var(--color-first);
+
+  --unchecked-hover-icon-background-color: var(--color-first-white-90);
+  --unchecked-hover-icon-border-color: var(--color-first);
+
+  --unchecked-active-icon-background-color: var(--color-first-white-80);
+  --unchecked-active-icon-border-color: var(--color-first);
+
+  --checked-icon-background-color: var(--color-first);
+  --checked-icon-border-color: var(--color-first);
+
+  --checked-hover-icon-background-color: var(--color-first-white-10);
+  --checked-hover-icon-border-color: var(--color-first);
+
+  --checked-active-icon-background-color: var(--color-first-white-20);
+  --checked-active-icon-border-color: var(--color-first);
+}
+
+.radio--second {
+  --this-spinner-color: var(--color-second);
+
+  --unchecked-hover-icon-background-color: var(--color-second-white-90);
+  --unchecked-hover-icon-border-color: var(--color-second);
+
+  --unchecked-active-icon-background-color: var(--color-second-white-80);
+  --unchecked-active-icon-border-color: var(--color-second);
+
+  --checked-icon-background-color: var(--color-second);
+  --checked-icon-border-color: var(--color-second);
+
+  --checked-hover-icon-background-color: var(--color-second-white-10);
+  --checked-hover-icon-border-color: var(--color-second);
+
+  --checked-active-icon-background-color: var(--color-second-white-20);
+  --checked-active-icon-border-color: var(--color-second);
+}
+
+.radio--third {
+  --this-spinner-color: var(--color-third);
+
+  --unchecked-hover-icon-background-color: var(--color-third-white-90);
+  --unchecked-hover-icon-border-color: var(--color-third);
+
+  --unchecked-active-icon-background-color: var(--color-third-white-80);
+  --unchecked-active-icon-border-color: var(--color-third);
+
+  --checked-icon-background-color: var(--color-third);
+  --checked-icon-border-color: var(--color-third);
+
+  --checked-hover-icon-background-color: var(--color-third-white-10);
+  --checked-hover-icon-border-color: var(--color-third);
+
+  --checked-active-icon-background-color: var(--color-third-white-20);
+  --checked-active-icon-border-color: var(--color-third);
+}
+
+.radio--success {
+  --this-spinner-color: var(--color-success);
+
+  --unchecked-hover-icon-background-color: var(--color-success-white-90);
+  --unchecked-hover-icon-border-color: var(--color-success);
+
+  --unchecked-active-icon-background-color: var(--color-success-white-80);
+  --unchecked-active-icon-border-color: var(--color-success);
+
+  --checked-icon-background-color: var(--color-success);
+  --checked-icon-border-color: var(--color-success);
+
+  --checked-hover-icon-background-color: var(--color-success-white-10);
+  --checked-hover-icon-border-color: var(--color-success);
+
+  --checked-active-icon-background-color: var(--color-success-white-20);
+  --checked-active-icon-border-color: var(--color-success);
+}
+
+.radio--error {
+  --this-spinner-color: var(--color-error);
+
+  --unchecked-hover-icon-background-color: var(--color-error-white-90);
+  --unchecked-hover-icon-border-color: var(--color-error);
+
+  --unchecked-active-icon-background-color: var(--color-error-white-80);
+  --unchecked-active-icon-border-color: var(--color-error);
+
+  --checked-icon-background-color: var(--color-error);
+  --checked-icon-border-color: var(--color-error);
+
+  --checked-hover-icon-background-color: var(--color-error-white-10);
+  --checked-hover-icon-border-color: var(--color-error);
+
+  --checked-active-icon-background-color: var(--color-error-white-20);
+  --checked-active-icon-border-color: var(--color-error);
+}
