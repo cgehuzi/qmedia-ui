@@ -19,19 +19,19 @@
   --unchecked-icon-background-color: var(--control-background-color);
   --unchecked-icon-border-color: var(--control-border-color);
 
-  --unchecked-hover-icon-background-color: var(--color-first-trans-90);
+  --unchecked-hover-icon-background-color: var(--color-first-white-90);
   --unchecked-hover-icon-border-color: var(--color-first);
 
-  --unchecked-active-icon-background-color: var(--color-first-trans-80);
+  --unchecked-active-icon-background-color: var(--color-first-white-80);
   --unchecked-active-icon-border-color: var(--color-first);
 
   --checked-icon-background-color: var(--color-first);
   --checked-icon-border-color: var(--color-first);
 
-  --checked-hover-icon-background-color: var(--color-first-trans-10);
+  --checked-hover-icon-background-color: var(--color-first-white-10);
   --checked-hover-icon-border-color: var(--color-first);
 
-  --checked-active-icon-background-color: var(--color-first-trans-20);
+  --checked-active-icon-background-color: var(--color-first-white-20);
   --checked-active-icon-border-color: var(--color-first);
 
   position: relative;
@@ -198,19 +198,19 @@
   --this-spinner-color: var(--color-grey);
   --checked-border-color: var(--color-grey);
 
-  --unchecked-hover-icon-background-color: var(--color-grey-trans-90);
+  --unchecked-hover-icon-background-color: var(--color-grey-white-90);
   --unchecked-hover-icon-border-color: var(--color-grey);
 
-  --unchecked-active-icon-background-color: var(--color-grey-trans-80);
+  --unchecked-active-icon-background-color: var(--color-grey-white-80);
   --unchecked-active-icon-border-color: var(--color-grey);
 
   --checked-icon-background-color: var(--color-grey);
   --checked-icon-border-color: var(--color-grey);
 
-  --checked-hover-icon-background-color: var(--color-grey-trans-10);
+  --checked-hover-icon-background-color: var(--color-grey-white-10);
   --checked-hover-icon-border-color: var(--color-grey);
 
-  --checked-active-icon-background-color: var(--color-grey-trans-20);
+  --checked-active-icon-background-color: var(--color-grey-white-20);
   --checked-active-icon-border-color: var(--color-grey);
 }
 
@@ -218,19 +218,19 @@
   --this-spinner-color: var(--color-first);
   --checked-border-color: var(--color-first);
 
-  --unchecked-hover-icon-background-color: var(--color-first-trans-90);
+  --unchecked-hover-icon-background-color: var(--color-first-white-90);
   --unchecked-hover-icon-border-color: var(--color-first);
 
-  --unchecked-active-icon-background-color: var(--color-first-trans-80);
+  --unchecked-active-icon-background-color: var(--color-first-white-80);
   --unchecked-active-icon-border-color: var(--color-first);
 
   --checked-icon-background-color: var(--color-first);
   --checked-icon-border-color: var(--color-first);
 
-  --checked-hover-icon-background-color: var(--color-first-trans-10);
+  --checked-hover-icon-background-color: var(--color-first-white-10);
   --checked-hover-icon-border-color: var(--color-first);
 
-  --checked-active-icon-background-color: var(--color-first-trans-20);
+  --checked-active-icon-background-color: var(--color-first-white-20);
   --checked-active-icon-border-color: var(--color-first);
 }
 
@@ -238,19 +238,19 @@
   --this-spinner-color: var(--color-second);
   --checked-border-color: var(--color-second);
 
-  --unchecked-hover-icon-background-color: var(--color-second-trans-90);
+  --unchecked-hover-icon-background-color: var(--color-second-white-90);
   --unchecked-hover-icon-border-color: var(--color-second);
 
-  --unchecked-active-icon-background-color: var(--color-second-trans-80);
+  --unchecked-active-icon-background-color: var(--color-second-white-80);
   --unchecked-active-icon-border-color: var(--color-second);
 
   --checked-icon-background-color: var(--color-second);
   --checked-icon-border-color: var(--color-second);
 
-  --checked-hover-icon-background-color: var(--color-second-trans-10);
+  --checked-hover-icon-background-color: var(--color-second-white-10);
   --checked-hover-icon-border-color: var(--color-second);
 
-  --checked-active-icon-background-color: var(--color-second-trans-20);
+  --checked-active-icon-background-color: var(--color-second-white-20);
   --checked-active-icon-border-color: var(--color-second);
 }
 
@@ -258,19 +258,19 @@
   --this-spinner-color: var(--color-third);
   --checked-border-color: var(--color-third);
 
-  --unchecked-hover-icon-background-color: var(--color-third-trans-90);
+  --unchecked-hover-icon-background-color: var(--color-third-white-90);
   --unchecked-hover-icon-border-color: var(--color-third);
 
-  --unchecked-active-icon-background-color: var(--color-third-trans-80);
+  --unchecked-active-icon-background-color: var(--color-third-white-80);
   --unchecked-active-icon-border-color: var(--color-third);
 
   --checked-icon-background-color: var(--color-third);
   --checked-icon-border-color: var(--color-third);
 
-  --checked-hover-icon-background-color: var(--color-third-trans-10);
+  --checked-hover-icon-background-color: var(--color-third-white-10);
   --checked-hover-icon-border-color: var(--color-third);
 
-  --checked-active-icon-background-color: var(--color-third-trans-20);
+  --checked-active-icon-background-color: var(--color-third-white-20);
   --checked-active-icon-border-color: var(--color-third);
 }
 
@@ -278,19 +278,19 @@
   --this-spinner-color: var(--color-success);
   --checked-border-color: var(--color-success);
 
-  --unchecked-hover-icon-background-color: var(--color-success-trans-90);
+  --unchecked-hover-icon-background-color: var(--color-success-white-90);
   --unchecked-hover-icon-border-color: var(--color-success);
 
-  --unchecked-active-icon-background-color: var(--color-success-trans-80);
+  --unchecked-active-icon-background-color: var(--color-success-white-80);
   --unchecked-active-icon-border-color: var(--color-success);
 
   --checked-icon-background-color: var(--color-success);
   --checked-icon-border-color: var(--color-success);
 
-  --checked-hover-icon-background-color: var(--color-success-trans-10);
+  --checked-hover-icon-background-color: var(--color-success-white-10);
   --checked-hover-icon-border-color: var(--color-success);
 
-  --checked-active-icon-background-color: var(--color-success-trans-20);
+  --checked-active-icon-background-color: var(--color-success-white-20);
   --checked-active-icon-border-color: var(--color-success);
 }
 
@@ -298,18 +298,18 @@
   --this-spinner-color: var(--color-error);
   --checked-border-color: var(--color-error);
 
-  --unchecked-hover-icon-background-color: var(--color-error-trans-90);
+  --unchecked-hover-icon-background-color: var(--color-error-white-90);
   --unchecked-hover-icon-border-color: var(--color-error);
 
-  --unchecked-active-icon-background-color: var(--color-error-trans-80);
+  --unchecked-active-icon-background-color: var(--color-error-white-80);
   --unchecked-active-icon-border-color: var(--color-error);
 
   --checked-icon-background-color: var(--color-error);
   --checked-icon-border-color: var(--color-error);
 
-  --checked-hover-icon-background-color: var(--color-error-trans-10);
+  --checked-hover-icon-background-color: var(--color-error-white-10);
   --checked-hover-icon-border-color: var(--color-error);
 
-  --checked-active-icon-background-color: var(--color-error-trans-20);
+  --checked-active-icon-background-color: var(--color-error-white-20);
   --checked-active-icon-border-color: var(--color-error);
 }

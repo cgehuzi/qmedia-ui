@@ -47,7 +47,7 @@ import { Gapped } from '../../components/Gapped';
 
 #### Состояния
 
-У чекбоксов есть несколько состояний
+У инпутов есть несколько состояний
 
 ```js
 import { Gapped } from '../../components/Gapped';

@@ -5,7 +5,7 @@ import FeatherIcon from 'feather-icons-react';
 
 export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
   /** Значение `value` корневого `input` */
-  value: string;
+  value?: string;
   /** Размер компонента */
   size?: 'micro' | 'small' | 'base' | 'large' | 'extra';
   /** Цвет компонента */
@@ -26,7 +26,7 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
 
 /**
  * Стилизованный `<input type="checkbox">`.
- * 
+ *
  * Поддерживает все стандартные атрибуты и события элемента `input`.
  */
 export class Checkbox extends React.Component<CheckboxProps> {
@@ -80,8 +80,9 @@ export class Checkbox extends React.Component<CheckboxProps> {
         <input
           className="checkbox__field"
           type="checkbox"
-          disabled={disabled || isWaiting}
+          value={value}
           checked={this.state.checked}
+          disabled={disabled || isWaiting}
           onChange={this.handleChange}
           {...props}
           ref={this.myRef}

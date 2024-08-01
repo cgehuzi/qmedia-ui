@@ -57,10 +57,10 @@ import { Gapped } from '../../components/Gapped';
 import { Gapped } from '../../components/Gapped';
 
 <Gapped isVertical>
-  <CheckboxSmart checked value="Значение value">
-    Значение children
+  <CheckboxSmart checked value="value">
+    children
   </CheckboxSmart>
-  <CheckboxSmart checked value="Значение value" />
+  <CheckboxSmart checked value="value" />
 </Gapped>;
 ```
 

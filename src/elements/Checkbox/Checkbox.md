@@ -1,7 +1,12 @@
 Базовый пример
 
 ```js
-<Checkbox>Обычный чекбокс</Checkbox>
+import { Gapped } from '../../components/Gapped';
+
+<Gapped isVertical>
+  <Checkbox>Обычный чекбокс</Checkbox>
+  <Checkbox>Обычный чекбокс</Checkbox>
+</Gapped>;
 ```
 
 #### Контент
@@ -15,8 +20,8 @@
 import { Gapped } from '../../components/Gapped';
 
 <Gapped isVertical>
-  <Checkbox value="Значение value">Значение children</Checkbox>
-  <Checkbox value="Значение value" />
+  <Checkbox checked value="value">children</Checkbox>
+  <Checkbox checked value="value" />
 </Gapped>;
 ```
 

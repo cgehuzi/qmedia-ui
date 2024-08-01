@@ -7,7 +7,7 @@ import { CheckboxSmartCaption } from './CheckboxSmartCaption';
 
 export interface CheckboxSmartProps extends React.HTMLAttributes<HTMLInputElement> {
   /** Значение `value` корневого `input` */
-  value: string;
+  value?: string;
   /** Размер компонента */
   size?: 'micro' | 'small' | 'base' | 'large' | 'extra';
   /** Цвет компонента */
@@ -90,8 +90,9 @@ export class CheckboxSmart extends React.Component<CheckboxSmartProps> {
         <input
           className="checkbox-smart__field"
           type="checkbox"
-          disabled={disabled || isWaiting}
+          value={value}
           checked={this.state.checked}
+          disabled={disabled || isWaiting}
           onChange={this.handleChange}
           {...props}
           ref={this.myRef}
