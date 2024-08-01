@@ -1,0 +1,6 @@
+/* link--white */
+
+.link--white {
+  --this-text-color: white;
+  --this-hover-text-color: var(--color-grey-white-90);
+}

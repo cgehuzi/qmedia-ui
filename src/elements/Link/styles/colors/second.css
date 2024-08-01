@@ -1,0 +1,147 @@
+/* link--second */
+
+.link--second {
+  --this-text-color: var(--color-second);
+  --this-hover-text-color: var(--color-second-black-10);
+}
+
+/* link--second-black */
+
+.link--second-black-10 {
+  --this-text-color: var(--color-second-black-10);
+  --this-hover-text-color: var(--color-second-black-20);
+}
+
+.link--second-black-20 {
+  --this-text-color: var(--color-second-black-20);
+  --this-hover-text-color: var(--color-second-black-30);
+}
+
+.link--second-black-30 {
+  --this-text-color: var(--color-second-black-30);
+  --this-hover-text-color: var(--color-second-black-40);
+}
+
+.link--second-black-40 {
+  --this-text-color: var(--color-second-black-40);
+  --this-hover-text-color: var(--color-second-black-50);
+}
+
+.link--second-black-50 {
+  --this-text-color: var(--color-second-black-50);
+  --this-hover-text-color: var(--color-second-black-60);
+}
+
+.link--second-black-60 {
+  --this-text-color: var(--color-second-black-60);
+  --this-hover-text-color: var(--color-second-black-70);
+}
+
+.link--second-black-70 {
+  --this-text-color: var(--color-second-black-70);
+  --this-hover-text-color: var(--color-second-black-80);
+}
+
+.link--second-black-80 {
+  --this-text-color: var(--color-second-black-80);
+  --this-hover-text-color: var(--color-second-black-90);
+}
+
+.link--second-black-90 {
+  --this-text-color: var(--color-second-black-90);
+  --this-hover-text-color: black;
+}
+
+/* link--second-white */
+
+.link--second-white-10 {
+  --this-text-color: var(--color-second-white-10);
+  --this-hover-text-color: var(--color-second);
+}
+
+.link--second-white-20 {
+  --this-text-color: var(--color-second-white-20);
+  --this-hover-text-color: var(--color-second-white-10);
+}
+
+.link--second-white-30 {
+  --this-text-color: var(--color-second-white-30);
+  --this-hover-text-color: var(--color-second-white-20);
+}
+
+.link--second-white-40 {
+  --this-text-color: var(--color-second-white-40);
+  --this-hover-text-color: var(--color-second-white-30);
+}
+
+.link--second-white-50 {
+  --this-text-color: var(--color-second-white-50);
+  --this-hover-text-color: var(--color-second-white-40);
+}
+
+.link--second-white-60 {
+  --this-text-color: var(--color-second-white-60);
+  --this-hover-text-color: var(--color-second-white-50);
+}
+
+.link--second-white-70 {
+  --this-text-color: var(--color-second-white-70);
+  --this-hover-text-color: var(--color-second-white-60);
+}
+
+.link--second-white-80 {
+  --this-text-color: var(--color-second-white-80);
+  --this-hover-text-color: var(--color-second-white-70);
+}
+
+.link--second-white-90 {
+  --this-text-color: var(--color-second-white-90);
+  --this-hover-text-color: var(--color-second-white-80);
+}
+
+/* link--second-trans */
+
+.link--second-trans-10 {
+  --this-text-color: var(--color-second-trans-10);
+  --this-hover-text-color: var(--color-second);
+}
+
+.link--second-trans-20 {
+  --this-text-color: var(--color-second-trans-20);
+  --this-hover-text-color: var(--color-second-trans-10);
+}
+
+.link--second-trans-30 {
+  --this-text-color: var(--color-second-trans-30);
+  --this-hover-text-color: var(--color-second-trans-20);
+}
+
+.link--second-trans-40 {
+  --this-text-color: var(--color-second-trans-40);
+  --this-hover-text-color: var(--color-second-trans-30);
+}
+
+.link--second-trans-50 {
+  --this-text-color: var(--color-second-trans-50);
+  --this-hover-text-color: var(--color-second-trans-40);
+}
+
+.link--second-trans-60 {
+  --this-text-color: var(--color-second-trans-60);
+  --this-hover-text-color: var(--color-second-trans-50);
+}
+
+.link--second-trans-70 {
+  --this-text-color: var(--color-second-trans-70);
+  --this-hover-text-color: var(--color-second-trans-60);
+}
+
+.link--second-trans-80 {
+  --this-text-color: var(--color-second-trans-80);
+  --this-hover-text-color: var(--color-second-trans-70);
+}
+
+.link--second-trans-90 {
+  --this-text-color: var(--color-second-trans-90);
+  --this-hover-text-color: var(--color-second-trans-80);
+}

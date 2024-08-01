@@ -1,0 +1,147 @@
+/* link--success */
+
+.link--success {
+  --this-text-color: var(--color-success);
+  --this-hover-text-color: var(--color-success-black-10);
+}
+
+/* link--success-black */
+
+.link--success-black-10 {
+  --this-text-color: var(--color-success-black-10);
+  --this-hover-text-color: var(--color-success-black-20);
+}
+
+.link--success-black-20 {
+  --this-text-color: var(--color-success-black-20);
+  --this-hover-text-color: var(--color-success-black-30);
+}
+
+.link--success-black-30 {
+  --this-text-color: var(--color-success-black-30);
+  --this-hover-text-color: var(--color-success-black-40);
+}
+
+.link--success-black-40 {
+  --this-text-color: var(--color-success-black-40);
+  --this-hover-text-color: var(--color-success-black-50);
+}
+
+.link--success-black-50 {
+  --this-text-color: var(--color-success-black-50);
+  --this-hover-text-color: var(--color-success-black-60);
+}
+
+.link--success-black-60 {
+  --this-text-color: var(--color-success-black-60);
+  --this-hover-text-color: var(--color-success-black-70);
+}
+
+.link--success-black-70 {
+  --this-text-color: var(--color-success-black-70);
+  --this-hover-text-color: var(--color-success-black-80);
+}
+
+.link--success-black-80 {
+  --this-text-color: var(--color-success-black-80);
+  --this-hover-text-color: var(--color-success-black-90);
+}
+
+.link--success-black-90 {
+  --this-text-color: var(--color-success-black-90);
+  --this-hover-text-color: black;
+}
+
+/* link--success-white */
+
+.link--success-white-10 {
+  --this-text-color: var(--color-success-white-10);
+  --this-hover-text-color: var(--color-success);
+}
+
+.link--success-white-20 {
+  --this-text-color: var(--color-success-white-20);
+  --this-hover-text-color: var(--color-success-white-10);
+}
+
+.link--success-white-30 {
+  --this-text-color: var(--color-success-white-30);
+  --this-hover-text-color: var(--color-success-white-20);
+}
+
+.link--success-white-40 {
+  --this-text-color: var(--color-success-white-40);
+  --this-hover-text-color: var(--color-success-white-30);
+}
+
+.link--success-white-50 {
+  --this-text-color: var(--color-success-white-50);
+  --this-hover-text-color: var(--color-success-white-40);
+}
+
+.link--success-white-60 {
+  --this-text-color: var(--color-success-white-60);
+  --this-hover-text-color: var(--color-success-white-50);
+}
+
+.link--success-white-70 {
+  --this-text-color: var(--color-success-white-70);
+  --this-hover-text-color: var(--color-success-white-60);
+}
+
+.link--success-white-80 {
+  --this-text-color: var(--color-success-white-80);
+  --this-hover-text-color: var(--color-success-white-70);
+}
+
+.link--success-white-90 {
+  --this-text-color: var(--color-success-white-90);
+  --this-hover-text-color: var(--color-success-white-80);
+}
+
+/* link--success-trans */
+
+.link--success-trans-10 {
+  --this-text-color: var(--color-success-trans-10);
+  --this-hover-text-color: var(--color-success);
+}
+
+.link--success-trans-20 {
+  --this-text-color: var(--color-success-trans-20);
+  --this-hover-text-color: var(--color-success-trans-10);
+}
+
+.link--success-trans-30 {
+  --this-text-color: var(--color-success-trans-30);
+  --this-hover-text-color: var(--color-success-trans-20);
+}
+
+.link--success-trans-40 {
+  --this-text-color: var(--color-success-trans-40);
+  --this-hover-text-color: var(--color-success-trans-30);
+}
+
+.link--success-trans-50 {
+  --this-text-color: var(--color-success-trans-50);
+  --this-hover-text-color: var(--color-success-trans-40);
+}
+
+.link--success-trans-60 {
+  --this-text-color: var(--color-success-trans-60);
+  --this-hover-text-color: var(--color-success-trans-50);
+}
+
+.link--success-trans-70 {
+  --this-text-color: var(--color-success-trans-70);
+  --this-hover-text-color: var(--color-success-trans-60);
+}
+
+.link--success-trans-80 {
+  --this-text-color: var(--color-success-trans-80);
+  --this-hover-text-color: var(--color-success-trans-70);
+}
+
+.link--success-trans-90 {
+  --this-text-color: var(--color-success-trans-90);
+  --this-hover-text-color: var(--color-success-trans-80);
+}

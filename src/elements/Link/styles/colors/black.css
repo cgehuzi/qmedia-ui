@@ -1,0 +1,6 @@
+/* link--black */
+
+.link--black {
+  --this-text-color: black;
+  --this-hover-text-color: var(--color-grey-black-80);
+}
