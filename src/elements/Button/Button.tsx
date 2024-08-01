@@ -44,7 +44,7 @@ export class Button extends React.Component<ButtonProps> {
   static defaultProps = {
     isLink: false,
     size: 'base',
-    color: 'grey-black-50',
+    color: 'first',
     isSquare: false,
     variant: 'filled',
     isWaiting: false,

@@ -157,7 +157,7 @@ const handleWaiting = () => {
 import { Gapped } from '../../components/Gapped';
 
 const [variant, setVariant] = React.useState('filled');
-const [color, setColor] = React.useState('grey');
+const [color, setColor] = React.useState('first');
 
 const VariantSwitcher = ({ variantName }) => {
   const isActive = variantName === variant;
@@ -182,6 +182,7 @@ const ColorSwitcher = ({ colorName }) => {
   return (
     <Button
       size="micro"
+      color="grey-trans-10"
       variant={isActive ? 'filled' : 'outline'}
       onClick={() => {
         setColor(colorName);

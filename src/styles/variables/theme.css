@@ -29,7 +29,7 @@
 
   --control-invalid-background-color: var(--color-error-white-90);
   --control-invalid-border-color: var(--color-error);
-  --control-invalid-text-color: var(--body-text-color);
+  --control-invalid-text-color: var(--color-error);
 
   --control-font-family: var(--font-family-base);
   --control-font-weight: var(--font-weight-regular);

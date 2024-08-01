@@ -128,9 +128,9 @@
   top: 50%;
   width: var(--this-icon-size);
   margin-top: calc(-1 * var(--this-icon-size) / 2);
-  opacity: 0.5;
+  opacity: 0.4;
   pointer-events: none;
-  color: var(--this-icon-color);
+  color: var(--this-text-color);
 }
 
 .input__icon--spinner {
@@ -178,49 +178,31 @@
 
 .input--grey {
   --this-icon-color: var(--color-grey);
-  --this-text-color: var(--color-grey);
-  --this-hover-text-color: var(--color-grey);
-  --this-focus-text-color: var(--color-grey);
   --this-focus-border-color: var(--color-grey);
 }
 
 .input--first {
   --this-icon-color: var(--color-first);
-  --this-text-color: var(--color-first);
-  --this-hover-text-color: var(--color-first);
-  --this-focus-text-color: var(--color-first);
   --this-focus-border-color: var(--color-first);
 }
 
 .input--second {
   --this-icon-color: var(--color-second);
-  --this-text-color: var(--color-second);
-  --this-hover-text-color: var(--color-second);
-  --this-focus-text-color: var(--color-second);
   --this-focus-border-color: var(--color-second);
 }
 
 .input--third {
   --this-icon-color: var(--color-third);
-  --this-text-color: var(--color-third);
-  --this-hover-text-color: var(--color-third);
-  --this-focus-text-color: var(--color-third);
   --this-focus-border-color: var(--color-third);
 }
 
 .input--success {
   --this-icon-color: var(--color-success);
-  --this-text-color: var(--color-success);
-  --this-hover-text-color: var(--color-success);
-  --this-focus-text-color: var(--color-success);
   --this-focus-border-color: var(--color-success);
 }
 
 .input--error {
   --this-icon-color: var(--color-error);
-  --this-text-color: var(--color-error);
-  --this-hover-text-color: var(--color-error);
-  --this-focus-text-color: var(--color-error);
   --this-focus-border-color: var(--color-error);
 }
 

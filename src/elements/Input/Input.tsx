@@ -37,6 +37,7 @@ export class Input extends React.Component<InputProps> {
 
   static defaultProps = {
     size: 'base',
+    color: 'first',
     isInvalid: false,
     isWaiting: false,
   };
