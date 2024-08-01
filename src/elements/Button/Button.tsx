@@ -25,7 +25,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement & HT
   /** Название иконки Feather для отображения в правой части компонента */
   featherRight?: string;
   /** Ссылка на HTML-элемент */
-  myRef?: React.Ref<HTMLButtonElement & HTMLAnchorElement>;
+  myRef?: React.RefObject<HTMLButtonElement & HTMLAnchorElement>;
   /** Отключает компонент */
   disabled?: boolean;
 }
@@ -36,7 +36,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement & HT
  * Поддерживает все стандартные атрибуты и события элементов `button` и `а`.
  */
 export class Button extends React.Component<ButtonProps> {
-  myRef: React.Ref<HTMLButtonElement & HTMLAnchorElement>;
+  myRef: React.RefObject<HTMLButtonElement & HTMLAnchorElement>;
 
   constructor(props: ButtonProps) {
     super(props);

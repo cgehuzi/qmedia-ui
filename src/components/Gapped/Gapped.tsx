@@ -14,14 +14,14 @@ export interface GappedProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Перенос элементов на новую строку */
   isWrap?: boolean;
   /** Ссылка на HTML-элемент */
-  myRef?: React.Ref<HTMLDivElement>;
+  myRef?: React.RefObject<HTMLDivElement>;
 }
 
 /**
  * Блок, расстояние между элементами в котором равно `gap`
  */
 export class Gapped extends React.Component<GappedProps> {
-  myRef: React.Ref<HTMLDivElement>;
+  myRef: React.RefObject<HTMLDivElement>;
 
   static defaultProps = {
     gap: 10,

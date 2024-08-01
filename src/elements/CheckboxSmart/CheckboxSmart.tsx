@@ -17,7 +17,7 @@ export interface CheckboxSmartProps extends React.HTMLAttributes<HTMLInputElemen
   /** Состояние ожидания */
   isWaiting?: boolean;
   /** Ссылка на HTML-элемент */
-  myRef?: React.Ref<HTMLInputElement>;
+  myRef?: React.RefObject<HTMLInputElement>;
   /** Отключает компонент */
   disabled?: boolean;
   /** Отмечен ли компонент */
@@ -36,7 +36,7 @@ export interface CheckboxSmartProps extends React.HTMLAttributes<HTMLInputElemen
  * Содержит вложенные компоненты: `<CheckboxSmart.Title>` и `<CheckboxSmart.Caption>`
  */
 export class CheckboxSmart extends React.Component<CheckboxSmartProps> {
-  myRef: React.Ref<HTMLInputElement>;
+  myRef: React.RefObject<HTMLInputElement>;
 
   constructor(props: CheckboxSmartProps) {
     super(props);

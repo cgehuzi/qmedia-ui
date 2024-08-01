@@ -17,7 +17,7 @@ export interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
   /** Состояние ожидания */
   isWaiting?: boolean;
   /** Ссылка на HTML-элемент */
-  myRef?: React.Ref<HTMLInputElement>;
+  myRef?: React.RefObject<HTMLInputElement>;
   /** Отключает компонент */
   disabled?: boolean;
   /** Обработчик изменения значения. Возвращаемое значение заменит `value` */
@@ -26,11 +26,11 @@ export interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
 
 /**
  * Стилизованный `<input>`.
- * 
+ *
  * Поддерживает все стандартные атрибуты и события элемента `input`.
  */
 export class Input extends React.Component<InputProps> {
-  myRef: React.Ref<HTMLInputElement>;
+  myRef: React.RefObject<HTMLInputElement>;
 
   constructor(props: InputProps) {
     super(props);
@@ -57,9 +57,7 @@ export class Input extends React.Component<InputProps> {
       isWaiting,
       value,
       disabled,
-      defaultChecked,
       className,
-      children,
       onChange,
       ...props
     } = this.props;

@@ -139,6 +139,8 @@
 }
 
 .input--waiting {
+  pointer-events: none;
+
   &:not(.input--with-icon) {
     animation: input-waiting 1.5s linear infinite;
   }

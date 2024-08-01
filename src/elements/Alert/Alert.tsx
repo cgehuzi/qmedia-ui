@@ -10,7 +10,7 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
   /** HTML-контент для отображения внутри компонента.<br> Если указан, то `children` игнорируется */
   content?: string;
   /** Ссылка на HTML-элемент */
-  myRef?: React.Ref<HTMLDivElement>;
+  myRef?: React.RefObject<HTMLDivElement>;
 }
 
 /**
@@ -19,7 +19,7 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
  * Поддерживает все стандартные атрибуты и события элемента `div`.
  */
 export class Alert extends React.Component<AlertProps> {
-  myRef: React.Ref<HTMLDivElement>;
+  myRef: React.RefObject<HTMLDivElement>;
 
   constructor(props: AlertProps) {
     super(props);

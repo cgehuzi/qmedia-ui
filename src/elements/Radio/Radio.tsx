@@ -15,7 +15,7 @@ export interface RadioProps extends React.HTMLAttributes<HTMLInputElement> {
   /** Состояние ожидания */
   isWaiting?: boolean;
   /** Ссылка на HTML-элемент */
-  myRef?: React.Ref<HTMLInputElement>;
+  myRef?: React.RefObject<HTMLInputElement>;
   /** Отключает компонент */
   disabled?: boolean;
   /** Отмечен ли компонент */
@@ -30,7 +30,7 @@ export interface RadioProps extends React.HTMLAttributes<HTMLInputElement> {
  * Поддерживает все стандартные атрибуты и события элемента `input`.
  */
 export class Radio extends React.Component<RadioProps> {
-  myRef: React.Ref<HTMLInputElement>;
+  myRef: React.RefObject<HTMLInputElement>;
 
   constructor(props: RadioProps) {
     super(props);

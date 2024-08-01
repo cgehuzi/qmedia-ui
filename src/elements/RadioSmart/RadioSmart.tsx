@@ -17,7 +17,7 @@ export interface RadioSmartProps extends React.HTMLAttributes<HTMLInputElement> 
   /** Состояние ожидания */
   isWaiting?: boolean;
   /** Ссылка на HTML-элемент */
-  myRef?: React.Ref<HTMLInputElement>;
+  myRef?: React.RefObject<HTMLInputElement>;
   /** Отключает компонент */
   disabled?: boolean;
   /** Отмечен ли компонент */
@@ -36,7 +36,7 @@ export interface RadioSmartProps extends React.HTMLAttributes<HTMLInputElement> 
  * Содержит вложенные компоненты: `<RadioSmart.Title>` и `<RadioSmart.Caption>`
  */
 export class RadioSmart extends React.Component<RadioSmartProps> {
-  myRef: React.Ref<HTMLInputElement>;
+  myRef: React.RefObject<HTMLInputElement>;
 
   constructor(props: RadioSmartProps) {
     super(props);

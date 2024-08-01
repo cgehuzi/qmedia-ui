@@ -19,7 +19,7 @@ export interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement & HTML
   /** Название иконки Feather для отображения в правой части компонента */
   featherRight?: string;
   /** Ссылка на HTML-элемент */
-  myRef?: React.Ref<HTMLAnchorElement & HTMLButtonElement>;
+  myRef?: React.RefObject<HTMLAnchorElement & HTMLButtonElement>;
   /** Отключает компонент */
   disabled?: boolean;
 }
@@ -30,7 +30,7 @@ export interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement & HTML
  * Поддерживает все стандартные атрибуты и события элементов `а` и `button`.
  */
 export class Link extends React.Component<LinkProps> {
-  myRef: React.Ref<HTMLAnchorElement & HTMLButtonElement>;
+  myRef: React.RefObject<HTMLAnchorElement & HTMLButtonElement>;
 
   constructor(props: LinkProps) {
     super(props);

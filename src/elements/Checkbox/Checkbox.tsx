@@ -15,7 +15,7 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
   /** Состояние ожидания */
   isWaiting?: boolean;
   /** Ссылка на HTML-элемент */
-  myRef?: React.Ref<HTMLInputElement>;
+  myRef?: React.RefObject<HTMLInputElement>;
   /** Отключает компонент */
   disabled?: boolean;
   /** Отмечен ли компонент */
@@ -30,7 +30,7 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
  * Поддерживает все стандартные атрибуты и события элемента `input`.
  */
 export class Checkbox extends React.Component<CheckboxProps> {
-  myRef: React.Ref<HTMLInputElement>;
+  myRef: React.RefObject<HTMLInputElement>;
 
   constructor(props: CheckboxProps) {
     super(props);

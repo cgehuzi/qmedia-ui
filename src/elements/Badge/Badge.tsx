@@ -10,7 +10,7 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Позиционирование компонента */
   position?: 'left' | 'right';
   /** Ссылка на HTML-элемент */
-  myRef?: React.Ref<HTMLDivElement>;
+  myRef?: React.RefObject<HTMLDivElement>;
 }
 
 /**
@@ -19,7 +19,7 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
  * Поддерживает все стандартные атрибуты и события элемента `div`.
  */
 export class Badge extends React.Component<BadgeProps> {
-  myRef: React.Ref<HTMLDivElement>;
+  myRef: React.RefObject<HTMLDivElement>;
 
   constructor(props: BadgeProps) {
     super(props);
