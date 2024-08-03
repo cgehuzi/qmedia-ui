@@ -19,13 +19,14 @@
 }
 
 .link {
-  --this-icon-size: 17px;
   --this-font-size: inherit;
 
   --this-text-color: var(--color-first);
   --this-hover-text-color: var(--color-first-black-10);
 
-  display: inline;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.325em;
 
   font-weight: var(--font-weight-medium);
   font-size: var(--this-font-size);
@@ -64,17 +65,8 @@
 }
 
 .link__icon {
-  display: inline-block;
-  vertical-align: middle;
-  width: var(--this-icon-size);
-
-  &:first-child {
-    margin-right: 0.325em;
-  }
-
-  &:last-child {
-    margin-left: 0.325em;
-  }
+  flex-shrink: 0;
+  width: max(16px, 1.1em);
 }
 
 .link__icon--spinner {
@@ -93,22 +85,18 @@
 /* Размеры */
 
 .link--micro {
-  --this-icon-size: 15px;
   --this-font-size: var(--font-size-micro);
 }
 
 .link--small {
-  --this-icon-size: 16px;
   --this-font-size: var(--font-size-small);
 }
 
 .link--large {
-  --this-icon-size: 18px;
   --this-font-size: var(--font-size-large);
 }
 
 .link--extra {
-  --this-icon-size: 18px;
   --this-font-size: var(--font-size-extra);
 }
 

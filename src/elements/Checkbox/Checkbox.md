@@ -25,33 +25,6 @@ import { Gapped } from '../../components/Gapped';
 </Gapped>;
 ```
 
-#### Цвета
-
-```js
-import { Gapped } from '../../components/Gapped';
-
-<Gapped isVertical>
-  <Checkbox color="grey" checked>
-    Цвет grey
-  </Checkbox>
-  <Checkbox color="first" checked>
-    Цвет first (по умолчанию)
-  </Checkbox>
-  <Checkbox color="second" checked>
-    Цвет second
-  </Checkbox>
-  <Checkbox color="third" checked>
-    Цвет third
-  </Checkbox>
-  <Checkbox color="success" checked>
-    Цвет success
-  </Checkbox>
-  <Checkbox color="error" checked>
-    Цвет error
-  </Checkbox>
-</Gapped>;
-```
-
 #### Размеры
 
 ```js

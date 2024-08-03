@@ -75,34 +75,6 @@ import { Gapped } from '../../components/Gapped';
 </Gapped>;
 ```
 
-#### Цвета
-
-```js
-import { Gapped } from '../../components/Gapped';
-
-<Gapped isVertical>
-  <RadioSmart color="grey" checked>
-    <RadioSmart.Title>Цвет grey</RadioSmart.Title>
-  </RadioSmart>
-  <RadioSmart color="first" checked>
-    <RadioSmart.Title>Цвет first</RadioSmart.Title>
-    <RadioSmart.Caption> Цвет по умолчанию</RadioSmart.Caption>
-  </RadioSmart>
-  <RadioSmart color="second" checked>
-    <RadioSmart.Title>Цвет second</RadioSmart.Title>
-  </RadioSmart>
-  <RadioSmart color="third" checked>
-    <RadioSmart.Title>Цвет third</RadioSmart.Title>
-  </RadioSmart>
-  <RadioSmart color="success" checked>
-    <RadioSmart.Title>Цвет success</RadioSmart.Title>
-  </RadioSmart>
-  <RadioSmart color="error" checked>
-    <RadioSmart.Title>Цвет error</RadioSmart.Title>
-  </RadioSmart>
-</Gapped>;
-```
-
 #### Размеры
 
 ```js

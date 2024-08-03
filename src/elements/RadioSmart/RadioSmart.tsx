@@ -10,8 +10,6 @@ export interface RadioSmartProps extends React.HTMLAttributes<HTMLInputElement> 
   value: string;
   /** Размер компонента */
   size?: 'micro' | 'small' | 'base' | 'large' | 'extra';
-  /** Цвет компонента */
-  color?: 'grey' | 'first' | 'second' | 'third' | 'success' | 'error';
   /** Состояние ошибки */
   isInvalid?: boolean;
   /** Состояние ожидания */
@@ -44,7 +42,6 @@ export class RadioSmart extends React.Component<RadioSmartProps> {
   }
 
   static defaultProps = {
-    color: 'first',
     size: 'base',
     isInvalid: false,
     isWaiting: false,
@@ -56,7 +53,6 @@ export class RadioSmart extends React.Component<RadioSmartProps> {
   render() {
     const {
       size,
-      color,
       isInvalid,
       isWaiting,
       value,
@@ -77,7 +73,6 @@ export class RadioSmart extends React.Component<RadioSmartProps> {
           disabled && 'radio-smart--disabled',
           checked && 'radio-smart--checked',
           isWaiting && 'radio-smart--waiting',
-          color && `radio-smart--${color}`,
           size !== 'base' && `radio-smart--${size}`,
           className
         )}

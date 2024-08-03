@@ -1,17 +1,27 @@
 Базовый пример
 
 ```js
-<Input placeholder="Иванов Иван" />
+<Textarea placeholder="Ваше мнение важно для нас" />
 ```
 
-#### Иконка
+#### Количество символов
 
-Инпуту можно задать feather-иконку. [Feather](https://feathericons.com/) – библиотека интерфейсных SVG-иконок.
+Для отображения текущего количества символов предусмотрен флаг `showCounter`. Ограничить количество символов можно стандартным параметром `maxLength`.
 
-Иконка будет находиться слева от текста.
+При установке ограничения по умолчанию счётчик выводится. Чтобы его скрыть, нужно явно передать `showCounter={false}`
 
 ```js
-<Input feather="search" placeholder="Поиск по сайту..." />
+import { Gapped } from '../../components/Gapped';
+
+<Gapped justify="stretch">
+  <Textarea showCounter placeholder="Простой счётчик" />
+  <Textarea maxLength={10} placeholder="Количество ограничено" />
+  <Textarea
+    maxLength={10}
+    showCounter={false}
+    placeholder="Количество ограничено, но счётчик отключён"
+  />
+</Gapped>;
 ```
 
 #### Размер
@@ -20,11 +30,11 @@
 import { Gapped } from '../../components/Gapped';
 
 <Gapped isVertical>
-  <Input value="Размер micro" size="micro" />
-  <Input value="Размер small" size="small" />
-  <Input value="Размер base" />
-  <Input value="Размер large" size="large" />
-  <Input value="Размер extra" size="extra" />
+  <Textarea value="Размер micro" size="micro" />
+  <Textarea value="Размер small" size="small" />
+  <Textarea value="Размер base" />
+  <Textarea value="Размер large" size="large" />
+  <Textarea value="Размер extra" size="extra" />
 </Gapped>;
 ```
 
@@ -65,10 +75,10 @@ const handleKeyDown = (e) => {
 };
 
 <Gapped align="stretch" isVertical>
-  <Input value="в отключенном состоянии" disabled />
-  <Input value="в состоянии ошибки" isInvalid />
-  <Input value="в режиме ожидания" isWaiting />
-  <Input
+  <Textarea value="в отключенном состоянии" disabled />
+  <Textarea value="в состоянии ошибки" isInvalid />
+  <Textarea value="в режиме ожидания" isWaiting />
+  <Textarea
     feather={feather}
     placeholder="2 + 2 * 2"
     isWaiting={isWaiting}
@@ -96,7 +106,7 @@ const handleKeyDown = (e) => {
 ```js
 const removeJo = (value) => value.replaceAll('ё', 'е').replaceAll('Ё', 'Е');
 
-<Input
+<Textarea
   placeholder="Никаких букв ё!"
   onChange={(e) => {
     const { value } = e.target;

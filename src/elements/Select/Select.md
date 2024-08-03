@@ -36,25 +36,6 @@
 </Select>
 ```
 
-#### Цвет
-
-Цвет компонента влияет на цвет обводки при фокусировке.
-
-```js
-import { Gapped } from '../../components/Gapped';
-
-const [color, setColor] = React.useState('');
-
-<Gapped isVertical>
-  <Select feather="pen-tool" placeholder="grey" color="grey" />
-  <Select feather="pen-tool" placeholder="first" color="first" />
-  <Select feather="pen-tool" placeholder="second" color="second" />
-  <Select feather="pen-tool" placeholder="third" color="third" />
-  <Select feather="pen-tool" placeholder="success" color="success" />
-  <Select feather="pen-tool" placeholder="error" color="error" />
-</Gapped>;
-```
-
 #### Размер
 
 ```js

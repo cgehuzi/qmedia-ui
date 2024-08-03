@@ -10,8 +10,6 @@ export interface CheckboxSmartProps extends React.HTMLAttributes<HTMLInputElemen
   value?: string;
   /** Размер компонента */
   size?: 'micro' | 'small' | 'base' | 'large' | 'extra';
-  /** Цвет компонента */
-  color?: 'grey' | 'first' | 'second' | 'third' | 'success' | 'error';
   /** Состояние ошибки */
   isInvalid?: boolean;
   /** Состояние ожидания */
@@ -44,7 +42,6 @@ export class CheckboxSmart extends React.Component<CheckboxSmartProps> {
   }
 
   static defaultProps = {
-    color: 'first',
     size: 'base',
     isInvalid: false,
     isWaiting: false,
@@ -61,7 +58,6 @@ export class CheckboxSmart extends React.Component<CheckboxSmartProps> {
   render() {
     const {
       size,
-      color,
       isInvalid,
       isWaiting,
       value,
@@ -82,7 +78,6 @@ export class CheckboxSmart extends React.Component<CheckboxSmartProps> {
           disabled && 'checkbox-smart--disabled',
           this.state.checked && 'checkbox-smart--checked',
           isWaiting && 'checkbox-smart--waiting',
-          color && `checkbox-smart--${color}`,
           size !== 'base' && `checkbox-smart--${size}`,
           className
         )}

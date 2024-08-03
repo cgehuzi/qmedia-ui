@@ -13,7 +13,7 @@ import { Gapped } from '../../components/Gapped';
   <Link feather="home" size="micro">Размер micro</Link>
   <Link feather="home" size="small">Размер small</Link>
   <Link feather="home">Размер base</Link>
-  <Link feather="home" size="large">Размерv large</Link>
+  <Link feather="home" size="large">Размер large</Link>
   <Link feather="home" size="extra">Размер extra</Link>
 </Gapped>;
 ```

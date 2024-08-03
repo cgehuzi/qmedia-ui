@@ -39,35 +39,6 @@ import { Gapped } from '../../components/Gapped';
 </Gapped>;
 ```
 
-#### Цвета
-
-```js
-import { Gapped } from '../../components/Gapped';
-
-<Gapped align="center">
-  <Badge />
-  <Badge>10</Badge>
-
-  <Badge color="grey" />
-  <Badge color="grey">10</Badge>
-
-  <Badge color="first" />
-  <Badge color="first">10</Badge>
-
-  <Badge color="second" />
-  <Badge color="second">10</Badge>
-
-  <Badge color="third" />
-  <Badge color="third">10</Badge>
-
-  <Badge color="success" />
-  <Badge color="success">10</Badge>
-
-  <Badge color="error" />
-  <Badge color="error">10</Badge>
-</Gapped>;
-```
-
 #### Позиционирование
 
 Доступно 2 варианта абсолютного позиционарования: `left` (вверху слева) и `right` (верху справа).

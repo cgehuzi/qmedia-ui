@@ -1,10 +1,4 @@
-@keyframes input-spinner {
-  100% {
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes input-waiting {
+@keyframes textarea-waiting {
   0% {
     opacity: 0.8;
   }
@@ -18,15 +12,12 @@
   }
 }
 
-.input {
+.textarea {
   --this-font-size: var(--control-font-size);
   --this-padding-inline: var(--control-padding-inline);
   --this-padding-block: var(--control-padding-block);
   --this-border-width: var(--control-border-width);
   --this-border-radius: var(--control-border-radius);
-
-  --this-icon-size: max(16px, 1.1em);
-  --this-icon-color: var(--control-text-color);
 
   --this-text-color: var(--control-text-color);
   --this-background-color: var(--control-background-color);
@@ -41,30 +32,44 @@
   --this-focus-border-color: var(--control-focus-border-color);
 
   position: relative;
-  display: inline-flex;
+  display: inline-grid;
+  grid-template-areas: 'field';
 }
 
-.input--disabled {
+.textarea--disabled {
   opacity: 0.6;
   pointer-events: none;
 }
 
-.input__field {
+.textarea__field,
+.textarea__counter {
+  grid-area: field;
+
+  line-height: 1.3;
+  padding-inline: var(--this-padding-inline);
+  padding-block: var(--this-padding-block);
+  border-radius: var(--this-border-radius);
+  text-shadow: none;
+}
+
+.textarea__field {
   display: block;
   width: 100%;
 
-  line-height: 1.3;
   font-family: var(--control-font-family);
-  font-weight: var(--control-font-weight);
   font-size: var(--this-font-size);
-  padding-inline: var(--this-padding-inline);
-  padding-block: var(--this-padding-block);
+  font-weight: var(--control-font-weight);
   border-style: solid;
   border-width: var(--this-border-width);
-  border-radius: var(--this-border-radius);
   transition: none;
-  text-shadow: none;
   outline-offset: 0;
+  text-wrap: balance;
+
+  resize: vertical;
+  height: auto;
+  min-height: calc(
+    var(--this-font-size) * 3 * 1.3 + 2 * (var(--this-padding-block) + var(--this-border-width))
+  );
 
   color: var(--this-text-color);
   background-color: var(--this-background-color);
@@ -73,18 +78,6 @@
   &::placeholder {
     color: var(--control-placeholder-color);
     font-weight: var(--font-weight-thin);
-  }
-
-  &[type='number'] {
-    /* убираем стрелки */
-    -moz-appearance: textfield;
-    appearance: textfield;
-
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
   }
 
   &:hover {
@@ -100,37 +93,25 @@
     background-color: var(--this-focus-background-color);
     border-color: var(--this-focus-border-color);
   }
-
-  .input--with-icon & {
-    padding-left: calc(var(--this-icon-size) + 1em);
-  }
 }
 
-.input__icon {
-  position: absolute;
-  left: 0.675em;
-  top: 50%;
-  width: var(--this-icon-size);
-  margin-top: calc(-1 * var(--this-icon-size) / 2);
-  opacity: 0.4;
+.textarea__counter {
+  font-weight: var(--font-weight-thin);
+  margin: var(--this-border-width);
+  color: var(--control-placeholder-color);
   pointer-events: none;
-  color: var(--this-text-color);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: max(0.8em, var(--font-size-micro));
 }
 
-.input__icon--spinner {
-  stroke-width: 2.5;
-  animation: input-spinner 1.5s infinite;
-}
-
-.input--waiting {
+.textarea--waiting {
   pointer-events: none;
-
-  &:not(.input--with-icon) {
-    animation: input-waiting 1.5s linear infinite;
-  }
+  animation: textarea-waiting 1.5s linear infinite;
 }
 
-.input--micro {
+.textarea--micro {
   --this-font-size: var(--control-micro-font-size);
   --this-padding-inline: var(--control-micro-padding-inline);
   --this-padding-block: var(--control-micro-padding-block);
@@ -138,7 +119,7 @@
   --this-border-radius: var(--control-micro-border-radius);
 }
 
-.input--small {
+.textarea--small {
   --this-font-size: var(--control-small-font-size);
   --this-padding-inline: var(--control-small-padding-inline);
   --this-padding-block: var(--control-small-padding-block);
@@ -146,7 +127,7 @@
   --this-border-radius: var(--control-small-border-radius);
 }
 
-.input--large {
+.textarea--large {
   --this-font-size: var(--control-large-font-size);
   --this-padding-inline: var(--control-large-padding-inline);
   --this-padding-block: var(--control-large-padding-block);
@@ -154,7 +135,7 @@
   --this-border-radius: var(--control-large-border-radius);
 }
 
-.input--extra {
+.textarea--extra {
   --this-font-size: var(--control-extra-font-size);
   --this-padding-inline: var(--control-extra-padding-inline);
   --this-padding-block: var(--control-extra-padding-block);
@@ -162,8 +143,7 @@
   --this-border-radius: var(--control-extra-border-radius);
 }
 
-.input--invalid {
-  --this-icon-color: var(--color-error);
+.textarea--invalid {
   --this-text-color: var(--control-invalid-text-color);
   --this-background-color: var(--control-invalid-background-color);
   --this-border-color: var(--control-invalid-border-color);

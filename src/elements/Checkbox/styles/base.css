@@ -10,23 +10,23 @@
 
   --this-spinner-color: var(--color-first);
 
-  --unchecked-icon-background-color: var(--control-background-color);
-  --unchecked-icon-border-color: var(--control-border-color);
+  --this-icon-background-color: var(--control-background-color);
+  --this-icon-border-color: var(--control-border-color);
 
-  --unchecked-hover-icon-background-color: var(--color-first-white-90);
-  --unchecked-hover-icon-border-color: var(--color-first);
+  --this-hover-icon-background-color: var(--color-first-white-90);
+  --this-hover-icon-border-color: var(--color-first);
 
-  --unchecked-active-icon-background-color: var(--color-first-white-80);
-  --unchecked-active-icon-border-color: var(--color-first);
+  --this-active-icon-background-color: var(--color-first-white-80);
+  --this-active-icon-border-color: var(--color-first);
 
-  --checked-icon-background-color: var(--color-first);
-  --checked-icon-border-color: var(--color-first);
+  --this-checked-icon-background-color: var(--color-first);
+  --this-checked-icon-border-color: var(--color-first);
 
-  --checked-hover-icon-background-color: var(--color-first-white-10);
-  --checked-hover-icon-border-color: var(--color-first);
+  --this-checked-hover-icon-background-color: var(--color-first-white-10);
+  --this-checked-hover-icon-border-color: var(--color-first);
 
-  --checked-active-icon-background-color: var(--color-first-white-20);
-  --checked-active-icon-border-color: var(--color-first);
+  --this-checked-active-icon-background-color: var(--color-first-white-20);
+  --this-checked-active-icon-border-color: var(--color-first);
 
   position: relative;
   display: inline-flex;
@@ -72,48 +72,48 @@
   align-items: center;
   justify-content: center;
   color: white;
-  background-color: var(--unchecked-icon-background-color);
+  background-color: var(--this-icon-background-color);
   background-position: center;
   background-size: 50%;
   background-repeat: no-repeat;
-  border: 1.5px solid var(--unchecked-icon-border-color);
+  border: 1.5px solid var(--this-icon-border-color);
   border-radius: 3px;
   cursor: pointer;
 
   .checkbox:hover & {
-    background-color: var(--unchecked-hover-icon-background-color);
-    border-color: var(--unchecked-hover-icon-border-color);
+    background-color: var(--this-hover-icon-background-color);
+    border-color: var(--this-hover-icon-border-color);
   }
 
   .checkbox:active & {
-    background-color: var(--unchecked-active-icon-background-color);
-    border-color: var(--unchecked-active-icon-border-color);
+    background-color: var(--this-active-icon-background-color);
+    border-color: var(--this-active-icon-border-color);
   }
 
   .checkbox--checked & {
-    background-color: var(--checked-icon-background-color);
-    border-color: var(--checked-icon-border-color);
+    background-color: var(--this-checked-icon-background-color);
+    border-color: var(--this-checked-icon-border-color);
 
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='white' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
   }
 
   .checkbox--checked:hover & {
-    background-color: var(--checked-hover-icon-background-color);
-    border-color: var(--checked-hover-icon-border-color);
+    background-color: var(--this-checked-hover-icon-background-color);
+    border-color: var(--this-checked-hover-icon-border-color);
   }
 
   .checkbox--checked:active & {
-    background-color: var(--checked-active-icon-background-color);
-    border-color: var(--checked-active-icon-border-color);
+    background-color: var(--this-checked-active-icon-background-color);
+    border-color: var(--this-checked-active-icon-border-color);
   }
 
   .checkbox--invalid & {
-    --unchecked-icon-border-color: var(--color-error);
-    --unchecked-hover-icon-border-color: var(--color-error);
-    --unchecked-active-icon-border-color: var(--color-error);
-    --checked-icon-border-color: var(--color-error);
-    --checked-hover-icon-border-color: var(--color-error);
-    --checked-active-icon-border-color: var(--color-error);
+    --this-icon-border-color: var(--color-error);
+    --this-hover-icon-border-color: var(--color-error);
+    --this-active-icon-border-color: var(--color-error);
+    --this-checked-icon-border-color: var(--color-error);
+    --this-checked-hover-icon-border-color: var(--color-error);
+    --this-checked-active-icon-border-color: var(--color-error);
   }
 }
 
@@ -155,120 +155,4 @@
 
 .checkbox--extra {
   --this-font-size: var(--font-size-extra);
-}
-
-/* Цвета */
-
-.checkbox--grey {
-  --this-spinner-color: var(--color-grey);
-
-  --unchecked-hover-icon-background-color: var(--color-grey-white-90);
-  --unchecked-hover-icon-border-color: var(--color-grey);
-
-  --unchecked-active-icon-background-color: var(--color-grey-white-80);
-  --unchecked-active-icon-border-color: var(--color-grey);
-
-  --checked-icon-background-color: var(--color-grey);
-  --checked-icon-border-color: var(--color-grey);
-
-  --checked-hover-icon-background-color: var(--color-grey-white-10);
-  --checked-hover-icon-border-color: var(--color-grey);
-
-  --checked-active-icon-background-color: var(--color-grey-white-20);
-  --checked-active-icon-border-color: var(--color-grey);
-}
-
-.checkbox--first {
-  --this-spinner-color: var(--color-first);
-
-  --unchecked-hover-icon-background-color: var(--color-first-white-90);
-  --unchecked-hover-icon-border-color: var(--color-first);
-
-  --unchecked-active-icon-background-color: var(--color-first-white-80);
-  --unchecked-active-icon-border-color: var(--color-first);
-
-  --checked-icon-background-color: var(--color-first);
-  --checked-icon-border-color: var(--color-first);
-
-  --checked-hover-icon-background-color: var(--color-first-white-10);
-  --checked-hover-icon-border-color: var(--color-first);
-
-  --checked-active-icon-background-color: var(--color-first-white-20);
-  --checked-active-icon-border-color: var(--color-first);
-}
-
-.checkbox--second {
-  --this-spinner-color: var(--color-second);
-
-  --unchecked-hover-icon-background-color: var(--color-second-white-90);
-  --unchecked-hover-icon-border-color: var(--color-second);
-
-  --unchecked-active-icon-background-color: var(--color-second-white-80);
-  --unchecked-active-icon-border-color: var(--color-second);
-
-  --checked-icon-background-color: var(--color-second);
-  --checked-icon-border-color: var(--color-second);
-
-  --checked-hover-icon-background-color: var(--color-second-white-10);
-  --checked-hover-icon-border-color: var(--color-second);
-
-  --checked-active-icon-background-color: var(--color-second-white-20);
-  --checked-active-icon-border-color: var(--color-second);
-}
-
-.checkbox--third {
-  --this-spinner-color: var(--color-third);
-
-  --unchecked-hover-icon-background-color: var(--color-third-white-90);
-  --unchecked-hover-icon-border-color: var(--color-third);
-
-  --unchecked-active-icon-background-color: var(--color-third-white-80);
-  --unchecked-active-icon-border-color: var(--color-third);
-
-  --checked-icon-background-color: var(--color-third);
-  --checked-icon-border-color: var(--color-third);
-
-  --checked-hover-icon-background-color: var(--color-third-white-10);
-  --checked-hover-icon-border-color: var(--color-third);
-
-  --checked-active-icon-background-color: var(--color-third-white-20);
-  --checked-active-icon-border-color: var(--color-third);
-}
-
-.checkbox--success {
-  --this-spinner-color: var(--color-success);
-
-  --unchecked-hover-icon-background-color: var(--color-success-white-90);
-  --unchecked-hover-icon-border-color: var(--color-success);
-
-  --unchecked-active-icon-background-color: var(--color-success-white-80);
-  --unchecked-active-icon-border-color: var(--color-success);
-
-  --checked-icon-background-color: var(--color-success);
-  --checked-icon-border-color: var(--color-success);
-
-  --checked-hover-icon-background-color: var(--color-success-white-10);
-  --checked-hover-icon-border-color: var(--color-success);
-
-  --checked-active-icon-background-color: var(--color-success-white-20);
-  --checked-active-icon-border-color: var(--color-success);
-}
-
-.checkbox--error {
-  --this-spinner-color: var(--color-error);
-
-  --unchecked-hover-icon-background-color: var(--color-error-white-90);
-  --unchecked-hover-icon-border-color: var(--color-error);
-
-  --unchecked-active-icon-background-color: var(--color-error-white-80);
-  --unchecked-active-icon-border-color: var(--color-error);
-
-  --checked-icon-background-color: var(--color-error);
-  --checked-icon-border-color: var(--color-error);
-
-  --checked-hover-icon-background-color: var(--color-error-white-10);
-  --checked-hover-icon-border-color: var(--color-error);
-
-  --checked-active-icon-background-color: var(--color-error-white-20);
-  --checked-active-icon-border-color: var(--color-error);
 }

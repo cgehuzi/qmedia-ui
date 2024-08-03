@@ -19,7 +19,6 @@
 }
 
 .button {
-  --this-icon-size: 20px;
   --this-font-size: var(--control-font-size);
   --this-padding-inline: var(--control-padding-inline);
   --this-padding-block: var(--control-padding-block);
@@ -88,7 +87,7 @@
 }
 
 .button__icon {
-  width: var(--this-icon-size);
+  width: max(16px, 1.1em);
 
   &:first-child {
     margin-left: -0.2em;
@@ -168,7 +167,6 @@
 /* Размеры */
 
 .button--micro {
-  --this-icon-size: 15px;
   --this-font-size: var(--control-micro-font-size);
   --this-padding-inline: var(--control-micro-padding-inline);
   --this-padding-block: var(--control-micro-padding-block);
@@ -177,7 +175,6 @@
 }
 
 .button--small {
-  --this-icon-size: 17px;
   --this-font-size: var(--control-small-font-size);
   --this-padding-inline: var(--control-small-padding-inline);
   --this-padding-block: var(--control-small-padding-block);
@@ -186,7 +183,6 @@
 }
 
 .button--large {
-  --this-icon-size: 20px;
   --this-font-size: var(--control-large-font-size);
   --this-padding-inline: var(--control-large-padding-inline);
   --this-padding-block: var(--control-large-padding-block);
@@ -195,7 +191,6 @@
 }
 
 .button--extra {
-  --this-icon-size: 20px;
   --this-font-size: var(--control-extra-font-size);
   --this-padding-inline: var(--control-extra-padding-inline);
   --this-padding-block: var(--control-extra-padding-block);

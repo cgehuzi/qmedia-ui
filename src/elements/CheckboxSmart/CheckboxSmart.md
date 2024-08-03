@@ -64,34 +64,6 @@ import { Gapped } from '../../components/Gapped';
 </Gapped>;
 ```
 
-#### Цвета
-
-```js
-import { Gapped } from '../../components/Gapped';
-
-<Gapped isVertical>
-  <CheckboxSmart color="grey" checked>
-    <CheckboxSmart.Title>Цвет grey</CheckboxSmart.Title>
-  </CheckboxSmart>
-  <CheckboxSmart color="first" checked>
-    <CheckboxSmart.Title>Цвет first</CheckboxSmart.Title>
-    <CheckboxSmart.Caption> Цвет по умолчанию</CheckboxSmart.Caption>
-  </CheckboxSmart>
-  <CheckboxSmart color="second" checked>
-    <CheckboxSmart.Title>Цвет second</CheckboxSmart.Title>
-  </CheckboxSmart>
-  <CheckboxSmart color="third" checked>
-    <CheckboxSmart.Title>Цвет third</CheckboxSmart.Title>
-  </CheckboxSmart>
-  <CheckboxSmart color="success" checked>
-    <CheckboxSmart.Title>Цвет success</CheckboxSmart.Title>
-  </CheckboxSmart>
-  <CheckboxSmart color="error" checked>
-    <CheckboxSmart.Title>Цвет error</CheckboxSmart.Title>
-  </CheckboxSmart>
-</Gapped>;
-```
-
 #### Размеры
 
 ```js

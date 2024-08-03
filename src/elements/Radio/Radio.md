@@ -32,33 +32,6 @@ import { Gapped } from '../../components/Gapped';
 </Gapped>;
 ```
 
-#### Цвета
-
-```js
-import { Gapped } from '../../components/Gapped';
-
-<Gapped isVertical>
-  <Radio color="grey" checked>
-    Цвет grey
-  </Radio>
-  <Radio color="first" checked>
-    Цвет first (по умолчанию)
-  </Radio>
-  <Radio color="second" checked>
-    Цвет second
-  </Radio>
-  <Radio color="third" checked>
-    Цвет third
-  </Radio>
-  <Radio color="success" checked>
-    Цвет success
-  </Radio>
-  <Radio color="error" checked>
-    Цвет error
-  </Radio>
-</Gapped>;
-```
-
 #### Размеры
 
 ```js

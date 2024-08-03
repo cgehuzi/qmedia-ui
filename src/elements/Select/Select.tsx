@@ -10,8 +10,6 @@ export interface SelectProps extends React.HTMLAttributes<HTMLSelectElement> {
   placeholder?: string;
   /** Размер компонента */
   size?: 'micro' | 'small' | 'base' | 'large' | 'extra';
-  /** Цвет компонента */
-  color?: 'grey' | 'first' | 'second' | 'third' | 'success' | 'error';
   /** Название иконки Feather для отображения в левой части компонента */
   feather?: string;
   /** Отключает компонент */
@@ -41,7 +39,6 @@ export class Select extends React.Component<SelectProps> {
 
   static defaultProps = {
     size: 'base',
-    color: 'first',
     isInvalid: false,
     isWaiting: false,
   };
@@ -53,7 +50,6 @@ export class Select extends React.Component<SelectProps> {
   render() {
     const {
       size,
-      color,
       feather,
       isInvalid,
       isWaiting,
@@ -76,7 +72,6 @@ export class Select extends React.Component<SelectProps> {
           isInvalid && 'select--invalid',
           disabled && 'select--disabled',
           isWaiting && 'select--waiting',
-          color && `select--${color}`,
           size !== 'base' && `select--${size}`,
           feather && 'select--with-icon',
           className
@@ -106,6 +101,8 @@ export class Select extends React.Component<SelectProps> {
             className={classNames('select__icon', isWaiting && 'select__icon--spinner')}
           />
         )}
+
+        <FeatherIcon icon="chevron-down" className="select__icon select__icon--arrow" />
       </label>
     );
   }

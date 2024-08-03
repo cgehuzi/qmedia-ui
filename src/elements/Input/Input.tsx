@@ -8,8 +8,6 @@ export interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
   value: string;
   /** Размер компонента */
   size?: 'micro' | 'small' | 'base' | 'large' | 'extra';
-  /** Цвет компонента */
-  color?: 'grey' | 'first' | 'second' | 'third' | 'success' | 'error';
   /** Название иконки Feather для отображения в левой части компонента */
   feather?: string;
   /** Состояние ошибки */
@@ -39,7 +37,6 @@ export class Input extends React.Component<InputProps> {
 
   static defaultProps = {
     size: 'base',
-    color: 'first',
     isInvalid: false,
     isWaiting: false,
   };
@@ -51,7 +48,6 @@ export class Input extends React.Component<InputProps> {
   render() {
     const {
       size,
-      color,
       feather,
       isInvalid,
       isWaiting,
@@ -69,7 +65,6 @@ export class Input extends React.Component<InputProps> {
           isInvalid && 'input--invalid',
           disabled && 'input--disabled',
           isWaiting && 'input--waiting',
-          color && `input--${color}`,
           size !== 'base' && `input--${size}`,
           feather && 'input--with-icon',
           className

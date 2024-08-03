@@ -8,8 +8,6 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
   value?: string;
   /** Размер компонента */
   size?: 'micro' | 'small' | 'base' | 'large' | 'extra';
-  /** Цвет компонента */
-  color?: 'grey' | 'first' | 'second' | 'third' | 'success' | 'error';
   /** Состояние ошибки */
   isInvalid?: boolean;
   /** Состояние ожидания */
@@ -38,7 +36,6 @@ export class Checkbox extends React.Component<CheckboxProps> {
   }
 
   static defaultProps = {
-    color: 'first',
     size: 'base',
     isInvalid: false,
     isWaiting: false,
@@ -51,7 +48,6 @@ export class Checkbox extends React.Component<CheckboxProps> {
   render() {
     const {
       size,
-      color,
       isInvalid,
       isWaiting,
       value,
@@ -72,7 +68,6 @@ export class Checkbox extends React.Component<CheckboxProps> {
           disabled && 'checkbox--disabled',
           this.state.checked && 'checkbox--checked',
           isWaiting && 'checkbox--waiting',
-          color && `checkbox--${color}`,
           size !== 'base' && `checkbox--${size}`,
           className
         )}

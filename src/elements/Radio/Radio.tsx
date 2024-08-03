@@ -8,8 +8,6 @@ export interface RadioProps extends React.HTMLAttributes<HTMLInputElement> {
   value: string;
   /** Размер компонента */
   size?: 'micro' | 'small' | 'base' | 'large' | 'extra';
-  /** Цвет компонента */
-  color?: 'grey' | 'first' | 'second' | 'third' | 'success' | 'error';
   /** Состояние ошибки */
   isInvalid?: boolean;
   /** Состояние ожидания */
@@ -38,7 +36,6 @@ export class Radio extends React.Component<RadioProps> {
   }
 
   static defaultProps = {
-    color: 'first',
     size: 'base',
     isInvalid: false,
     isWaiting: false,
@@ -47,7 +44,6 @@ export class Radio extends React.Component<RadioProps> {
   render() {
     const {
       size,
-      color,
       isInvalid,
       isWaiting,
       value,
@@ -68,7 +64,6 @@ export class Radio extends React.Component<RadioProps> {
           disabled && 'radio--disabled',
           checked && 'radio--checked',
           isWaiting && 'radio--waiting',
-          color && `radio--${color}`,
           size !== 'base' && `radio--${size}`,
           className
         )}
