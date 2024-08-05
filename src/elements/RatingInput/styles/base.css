@@ -1,0 +1,78 @@
+@keyframes rating-input-waiting {
+  0% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.rating-input {
+  --star-size: var(--font-size-base);
+
+  display: flex;
+  justify-content: flex-start;
+
+  .react-simple-star-rating {
+    display: block !important;
+
+    [class*='style-module']:has(> &) {
+      display: block !important;
+    }
+
+    .empty-icons,
+    .filled-icons {
+      display: flex !important;
+      gap: 0.1em !important;
+    }
+  }
+}
+
+.rating-input--disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.rating-input--waiting {
+  pointer-events: none;
+  animation: rating-input-waiting 1.5s linear infinite;
+}
+
+.rating-input--micro {
+  --star-size: var(--font-size-micro);
+}
+
+.rating-input--small {
+  --star-size: var(--font-size-small);
+}
+
+.rating-input--large {
+  --star-size: var(--font-size-large);
+}
+
+.rating-input--extra {
+  --star-size: var(--font-size-extra);
+}
+
+.rating-input__star {
+  width: var(--star-size);
+  flex-shrink: 0;
+  fill: currentColor;
+
+  .rating-input--invalid & {
+    stroke: var(--color-error-trans-20, red);
+  }
+}
+
+.rating-input__star--fill {
+  color: var(--rating-color, orange);
+}
+
+.rating-input__star--empty {
+  color: var(--rating-empty-color, var(--color-grey-white-70, grey));
+}

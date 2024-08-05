@@ -9,7 +9,6 @@
 @import './container/index.css' layer(global);
 @import './fancybox/index.css' layer(global);
 @import './feather/index.css' layer(global);
-@import './react-simple-star-rating/index.css' layer(global);
 @import './react-toastify/index.css' layer(global);
 @import './swiper/index.css' layer(global);
 
