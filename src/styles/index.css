@@ -1,21 +1,20 @@
 @layer variables, global, elements, components, modificators;
 
-@import './variables/colors.css' layer(variables);
-@import './variables/fonts.css' layer(variables);
-@import './variables/theme.css' layer(variables);
-@import './variables/z-index.css' layer(variables);
+@import './variables/index.css' layer(variables);
 
 @import './global.css' layer(global);
-@import './container/index.css' layer(global);
-@import './fancybox/index.css' layer(global);
-@import './feather/index.css' layer(global);
-@import './react-toastify/index.css' layer(global);
-@import './swiper/index.css' layer(global);
-
-@import './_modificators.css' layer(modificators);
 
 @layer global {
-  .app {
-    display: contents;
+  .container {
+    width: 100%;
+    padding-inline: calc((100% - var(--container-max-width, 100%)) / 2 + var(--container-padding));
+  }
+
+  .feather {
+    flex-shrink: 0;
+    height: auto;
+    width: var(--feather-width);
   }
 }
+
+@import './_modificators.css' layer(modificators);

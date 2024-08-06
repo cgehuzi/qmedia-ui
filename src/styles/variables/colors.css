@@ -1,7 +1,7 @@
 :root {
   /* color-grey */
 
-  --color-grey: hsl(210, 13%, 50%);
+  --color-grey: grey;
   --color-grey-text: white;
 
   --color-grey-white-10: color-mix(in srgb, var(--color-grey), white 10%);
@@ -36,7 +36,7 @@
 
   /* color-first */
 
-  --color-first: hsl(208, 87%, 50%);
+  --color-first: blue;
   --color-first-text: white;
 
   --color-first-white-10: color-mix(in srgb, var(--color-first), white 10%);

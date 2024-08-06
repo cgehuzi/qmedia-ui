@@ -1,18 +1,27 @@
 :root {
+  /* body */
+
   --body-text-color: var(--color-grey-black-70);
   --body-line-height: 1.5;
 
-  --box-shadow-small: 0 0 8px color-mix(in srgb, var(--color-grey-black-80) 10%, transparent);
-  --box-shadow-base: 0 0 16px color-mix(in srgb, var(--color-grey-black-80) 10%, transparent);
-  --box-shadow-large: 0 0 24px color-mix(in srgb, var(--color-grey-black-80) 10%, transparent);
+  /* fonts */
 
-  --backdrop-color: color-mix(in srgb, var(--color-grey-black-80) 80%, transparent);
+  --font-family-base: 'Arial', sans-serif;
+  --font-family-title: 'Arial', sans-serif;
 
-  --transition-turbo: 0.2s ease-in-out;
-  --transition-fast: 0.3s ease-in-out;
-  --transition-slow: 0.5s ease-in-out;
+  --font-weight-thin: 200;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 
-  /* Controls */
+  --font-size-micro: 0.8rem;
+  --font-size-small: 0.9rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.125rem;
+  --font-size-extra: 1.25rem;
+
+  /* сontrols */
 
   --control-background-color: white;
   --control-border-color: var(--color-grey-white-40);
@@ -33,14 +42,8 @@
 
   --control-font-family: var(--font-family-base);
   --control-font-weight: var(--font-weight-regular);
-  --control-font-size: var(--font-size-base);
-  --control-padding-inline: 1rem;
-  --control-padding-block: 0.45rem;
-  --control-padding: var(--control-padding-block) var(--control-padding-inline);
-  --control-border-width: 1px;
-  --control-border-radius: 0.325rem;
 
-  /* Controls size */
+  /* сontrol micro */
 
   --control-micro-font-size: var(--font-size-micro);
   --control-micro-padding-inline: 0.6rem;
@@ -49,12 +52,25 @@
   --control-micro-border-width: 1px;
   --control-micro-border-radius: 0.25rem;
 
+  /* сontrol small */
+
   --control-small-font-size: var(--font-size-small);
   --control-small-padding-inline: 0.75rem;
   --control-small-padding-block: 0.35rem;
   --control-small-padding: var(--control-small-padding-block) var(--control-small-padding-inline);
   --control-small-border-width: 1px;
   --control-small-border-radius: 0.3rem;
+
+  /* сontrol base */
+
+  --control-font-size: var(--font-size-base);
+  --control-padding-inline: 1rem;
+  --control-padding-block: 0.45rem;
+  --control-padding: var(--control-padding-block) var(--control-padding-inline);
+  --control-border-width: 1px;
+  --control-border-radius: 0.325rem;
+
+  /* сontrol large */
 
   --control-large-font-size: var(--font-size-base);
   --control-large-padding-inline: 1.25rem;
@@ -63,34 +79,19 @@
   --control-large-border-width: 1px;
   --control-large-border-radius: 0.325rem;
 
+  /* сontrol extra */
+
   --control-extra-font-size: var(--font-size-base);
   --control-extra-padding-inline: 1.5rem;
   --control-extra-padding-block: 0.75rem;
   --control-extra-padding: var(--control-extra-padding-block) var(--control-extra-padding-inline);
   --control-extra-border-width: 1px;
   --control-extra-border-radius: 0.35rem;
-}
 
-/* Phone */
+  /* elements */
 
-@media (width < 768px) {
-  :root {
-    --rounded-radius: 7px;
-  }
-}
-
-/* Tablet */
-
-@media (768px <= width < 1200px) {
-  :root {
-    --rounded-radius: 9px;
-  }
-}
-
-/* Desktop */
-
-@media (width >= 1200px) {
-  :root {
-    --rounded-radius: 12px;
-  }
+  --backdrop-color: hsl(from var(--color-grey-black-90) h s l / 0.9);
+  --badge-color: hsl(0, 80%, 60%);
+  --badge-text-color: #ffffff;
+  --rating-color: hsl(43, 100%, 50%);
 }

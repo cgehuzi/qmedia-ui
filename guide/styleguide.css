@@ -1,8 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 @import '../src/styles/index.css';
 
 :root {
+  --font-family-base: 'Mulish', 'Arial', sans-serif;
+  --font-family-title: 'Mulish', 'Arial', sans-serif;
+
+  --font-weight-thin: 320;
+  --font-weight-regular: 400;
+  --font-weight-medium: 520;
+  --font-weight-semibold: 650;
+  --font-weight-bold: 720;
+
+  --color-grey: lightslategray;
+  --color-first: royalblue;
   --color-second: teal;
   --color-third: orange;
   --color-third-text: black;

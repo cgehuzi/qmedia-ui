@@ -83,7 +83,6 @@
 .button__text {
   overflow: hidden;
   text-overflow: ellipsis;
-  flex-grow: 1;
 }
 
 .button__icon {
