@@ -31,6 +31,22 @@ import { Gapped } from '../../components/Gapped';
 </Gapped>;
 ```
 
+#### Дробные значения
+
+Для компонента возможно включить заливку звёзд, исходя из дробных значений `value`. Для этого предусмотрен параметр `allowFraction`.
+
+Для `readonly` компонентов будет отображаться точное значение заливки, например 2.3, иначе для выбора будет доступны значения, кратные 0.5.
+
+```js
+import { Gapped } from '../../components/Gapped';
+
+<Gapped isVertical>
+  <RatingInput value={2.3} />
+  <RatingInput value={2.3} allowFraction />
+  <RatingInput value={2.3} allowFraction readonly />
+</Gapped>;
+```
+
 #### Состояния
 
 У инпута есть несколько состояний

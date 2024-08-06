@@ -23,6 +23,8 @@ export interface RatingInputProps {
   className?: string;
   /** Состояние только для чтения */
   readonly?: boolean;
+  /** Разрешить выбор дробного значения */
+  allowFraction?: boolean;
 }
 
 /**
@@ -38,11 +40,21 @@ export class RatingInput extends React.Component<RatingInputProps> {
     isWaiting: false,
     starsCount: 5,
     readonly: false,
+    allowFraction: false,
   };
 
   render() {
-    const { value, size, isInvalid, isWaiting, disabled, readonly, starsCount, className } =
-      this.props;
+    const {
+      value,
+      size,
+      isInvalid,
+      isWaiting,
+      disabled,
+      readonly,
+      starsCount,
+      allowFraction,
+      className,
+    } = this.props;
 
     return (
       <div
@@ -66,6 +78,7 @@ export class RatingInput extends React.Component<RatingInputProps> {
           onClick={this.handleChange}
           iconsCount={starsCount}
           readonly={readonly || disabled || isWaiting}
+          allowFraction={allowFraction}
         />
       </div>
     );
