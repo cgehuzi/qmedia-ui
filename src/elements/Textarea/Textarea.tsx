@@ -135,12 +135,13 @@ export class Textarea extends React.Component<TextareaProps> {
     this.setValue(event.target.value);
   };
 
+  componentDidMount(): void {
+    this.setValue(this.props.value);
+  }
+
   componentDidUpdate(prevProps: Readonly<TextareaProps>): void {
     if (prevProps.value !== this.props.value) {
-      console.log('asd');
-      this.setState({
-        value: this.props.value,
-      });
+      this.setValue(this.props.value);
     }
   }
 }
