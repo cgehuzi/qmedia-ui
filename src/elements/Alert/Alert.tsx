@@ -15,7 +15,7 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
 
 /**
  * Информационное сообщение или предупреждение.
- * 
+ *
  * Поддерживает все стандартные атрибуты и события элемента `div`.
  */
 export class Alert extends React.Component<AlertProps> {
@@ -31,7 +31,7 @@ export class Alert extends React.Component<AlertProps> {
   };
 
   render() {
-    const { size, color, content, className, children, ...props } = this.props;
+    const { size, color, content, className, children, myRef, ...props } = this.props;
     const componentProps = {
       className: classNames(
         'alert',

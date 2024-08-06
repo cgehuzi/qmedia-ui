@@ -57,6 +57,7 @@ export class Select extends React.Component<SelectProps> {
       disabled,
       placeholder,
       className,
+      myRef,
       onChange,
       ...props
     } = this.props;

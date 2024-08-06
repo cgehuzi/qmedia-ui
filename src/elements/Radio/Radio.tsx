@@ -52,6 +52,7 @@ export class Radio extends React.Component<RadioProps> {
       defaultChecked,
       className,
       children,
+      myRef,
       onChange,
       ...props
     } = this.props;

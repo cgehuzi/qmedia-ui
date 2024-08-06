@@ -37,7 +37,7 @@ export class Gapped extends React.Component<GappedProps> {
   }
 
   render() {
-    const { gap, isVertical, align, justify, isWrap, className, style, children, ...props } =
+    const { gap, isVertical, align, justify, isWrap, className, style, children, myRef, ...props } =
       this.props;
 
     return (

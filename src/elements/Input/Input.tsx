@@ -55,6 +55,7 @@ export class Input extends React.Component<InputProps> {
       disabled,
       className,
       onChange,
+      myRef,
       ...props
     } = this.props;
 

@@ -57,6 +57,7 @@ export class Link extends React.Component<LinkProps> {
       disabled,
       className,
       children,
+      myRef,
       ...props
     } = this.props;
 

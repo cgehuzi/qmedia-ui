@@ -61,6 +61,7 @@ export class Textarea extends React.Component<TextareaProps> {
       value,
       disabled,
       className,
+      myRef,
       onChange,
       ...props
     } = this.props;

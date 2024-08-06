@@ -68,6 +68,7 @@ export class Button extends React.Component<ButtonProps> {
       disabled,
       className,
       children,
+      myRef,
       ...props
     } = this.props;
 

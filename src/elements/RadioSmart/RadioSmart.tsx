@@ -61,6 +61,7 @@ export class RadioSmart extends React.Component<RadioSmartProps> {
       defaultChecked,
       className,
       children,
+      myRef,
       onChange,
       ...props
     } = this.props;

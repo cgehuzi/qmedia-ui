@@ -29,7 +29,7 @@ export class Badge extends React.Component<BadgeProps> {
   };
 
   render() {
-    const { size, position, className, style, children, ...props } = this.props;
+    const { size, position, className, style, children, myRef, ...props } = this.props;
 
     return (
       <div

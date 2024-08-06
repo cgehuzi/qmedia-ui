@@ -56,6 +56,7 @@ export class Checkbox extends React.Component<CheckboxProps> {
       defaultChecked,
       className,
       children,
+      myRef,
       onChange,
       ...props
     } = this.props;

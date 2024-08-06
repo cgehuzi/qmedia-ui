@@ -26,7 +26,7 @@ export interface CheckboxSmartProps extends React.HTMLAttributes<HTMLInputElemen
 
 /**
  * Стилизованный `<input type="checkbox">`. Оформлен в виде интерактивной плашки с заголовком и пояснением.
- * 
+ *
  * Поддерживает все стандартные атрибуты и события элемента `input`.
  *
  * ---
@@ -66,6 +66,7 @@ export class CheckboxSmart extends React.Component<CheckboxSmartProps> {
       defaultChecked,
       className,
       children,
+      myRef,
       onChange,
       ...props
     } = this.props;
