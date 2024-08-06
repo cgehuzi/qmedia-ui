@@ -111,6 +111,10 @@
 .button--underline-dashed,
 .button--underline-dotted {
   text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .button--underline-solid {
