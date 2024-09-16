@@ -5,7 +5,7 @@ serve:
 	npx styleguidist server --config guide/styleguide.config.js
 
 build-guide:
-	rm -r -f guide/build &&npx styleguidist build --config guide/styleguide.config.js
+	rm -r -f guide/build && npx styleguidist build --config guide/styleguide.config.js
 
 build:
 	rm -r -f dist && npx tsc && npx copyfiles -u 1 'src/**/*.css' dist
