@@ -1,7 +1,7 @@
 Базовый пример
 
 ```js
-<Select value="price_asc">
+<Select defaultValue="price_asc">
   <option value="default">По популярности</option>
   <option value="price_asc">По возрастанию цены</option>
   <option value="price_desc">По убыванию цены</option>
@@ -99,7 +99,6 @@ const checkValue = (value) => {
       setIsInvalid(false);
       setFeather(value ? 'corner-down-left' : 'help-circle');
       checkValue(value);
-      return value;
     }}
   >
     <option value="">Не знаю</option>
@@ -111,11 +110,9 @@ const checkValue = (value) => {
 
 #### Обработка событий
 
-Компонент поддерживает все стандарные обработчики нативного `input`. Но есть исключения...
+Компонент поддерживает все стандарные обработчики нативного `select`.
 
 ##### onChange
-
-Этот обработчик не только вызывает коллбэк, но и требует явно передать итоговое значение `value`.
 
 ```js
 const removeJo = (value) => value.replaceAll('ё', 'е').replaceAll('Ё', 'Е');

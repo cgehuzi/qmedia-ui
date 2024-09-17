@@ -89,7 +89,6 @@ const handleKeyDown = (e) => {
       const { value } = e.target;
       setIsInvalid(false);
       setFeather(value ? 'corner-down-left' : 'help-circle');
-      return value;
     }}
   />
 </Gapped>;
@@ -97,20 +96,19 @@ const handleKeyDown = (e) => {
 
 #### Обработка событий
 
-Компонент поддерживает все стандарные обработчики нативного `input`. Но есть исключения...
+Компонент поддерживает все стандарные обработчики нативного `textarea`.
 
 ##### onChange
 
-Этот обработчик не только вызывает коллбэк, но и требует явно передать итоговое значение `value`.
-
 ```js
 const removeJo = (value) => value.replaceAll('ё', 'е').replaceAll('Ё', 'Е');
+const [value, setValue] = React.useState('');
 
 <Textarea
   placeholder="Никаких букв ё!"
+  value={value}
   onChange={(e) => {
-    const { value } = e.target;
-    return removeJo(value);
+    setValue(removeJo(e.target.value));
   }}
 />;
 ```

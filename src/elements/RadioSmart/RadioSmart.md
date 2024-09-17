@@ -159,18 +159,22 @@ const handleChange = (e) => {
 import { Gapped } from '../../components/Gapped';
 
 const [tryCount, setTryCount] = React.useState(0);
-const [checked, setChecked] = React.useState(false);
+const [value, setValue] = React.useState('1');
 
 const handleChange = (e) => {
   setTryCount(tryCount + 1);
   if (tryCount < 3) return;
-  setChecked(true);
+  setValue(e.target.value);
 };
 
 <Gapped isVertical>
-  <RadioSmart checked={checked} onChange={handleChange}>
-    <RadioSmart.Title>Первые 3 попытки будут проигнорированы</RadioSmart.Title>
-    <RadioSmart.Caption>Текущее количество попыток: {tryCount}</RadioSmart.Caption>
+  <strong>Первые 3 попытки будут проигнорированы</strong>
+  <RadioSmart checked={value === '1'} value="1" onChange={handleChange}>
+    1 вариант
   </RadioSmart>
+  <RadioSmart checked={value === '2'} value="2" onChange={handleChange}>
+    2 вариант
+  </RadioSmart>
+  <small>Текущее количество попыток: {tryCount}</small>
 </Gapped>;
 ```
