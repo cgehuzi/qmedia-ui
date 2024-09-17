@@ -43,7 +43,6 @@ export class CheckboxSmart extends React.Component<CheckboxSmartProps> {
     size: 'base',
     isInvalid: false,
     isWaiting: false,
-    checked: false,
   };
 
   state = {
