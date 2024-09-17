@@ -94,15 +94,16 @@ export class Input extends React.Component<InputProps> {
       this.props.onChange(event);
     }
 
-    if (typeof this.props.value === 'undefined') {
-      this.setState({
-        value: event.target.value,
-      });
-    }
+    this.setState({
+      value: event.target.value,
+    });
   };
 
   componentDidUpdate(prevProps: Readonly<InputProps>): void {
-    if (prevProps.value !== this.props.value) {
+    if (
+      prevProps.value !== this.props.value && // если значение в пропсах изменилось
+      this.props.value !== this.state.value // и оно не равно текущему значению в стейте
+    ) {
       this.setState({
         value: this.props.value,
       });

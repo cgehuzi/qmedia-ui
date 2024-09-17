@@ -123,13 +123,14 @@ export class Textarea extends React.Component<TextareaProps> {
       this.props.onChange(event);
     }
 
-    if (typeof this.props.value === 'undefined') {
-      this.setValue(event.target.value);
-    }
+    this.setValue(event.target.value);
   };
 
   componentDidUpdate(prevProps: Readonly<TextareaProps>): void {
-    if (prevProps.value !== this.props.value) {
+    if (
+      prevProps.value !== this.props.value && // если значение в пропсах изменилось
+      this.props.value !== this.state.value // и оно не равно текущему значению в стейте
+    ) {
       this.setValue(this.props.value);
     }
   }
