@@ -20,8 +20,6 @@ export interface SelectProps extends React.HTMLAttributes<HTMLSelectElement> {
   isWaiting?: boolean;
   /** Ссылка на HTML-элемент */
   myRef?: React.RefObject<HTMLSelectElement>;
-  /** Обработчик изменения значения. Возвращаемое значение заменит `value` */
-  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => string | number;
 }
 
 /**
@@ -44,7 +42,7 @@ export class Select extends React.Component<SelectProps> {
   };
 
   state = {
-    value: this.props.value || '',
+    value: this.props.value || this.props.defaultValue || '',
   };
 
   render() {
@@ -54,6 +52,7 @@ export class Select extends React.Component<SelectProps> {
       isInvalid,
       isWaiting,
       value,
+      defaultValue,
       disabled,
       placeholder,
       className,
@@ -61,10 +60,6 @@ export class Select extends React.Component<SelectProps> {
       onChange,
       ...props
     } = this.props;
-
-    const childrenWithPlaceholder = React.Children.map(this.props.children, (child) => {
-      return child;
-    });
 
     return (
       <label
@@ -109,24 +104,16 @@ export class Select extends React.Component<SelectProps> {
   }
 
   handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    // если передан обработчик, то используем его
+    // если передан обработчик, то вызываем его
     if (this.props.onChange) {
-      const nextValue = this.props.onChange(event);
-      // если обработчик передал значение
-      if (typeof nextValue === 'string' || typeof nextValue === 'number') {
-        // сохраняем изменение
-        this.setState({
-          value: String(nextValue),
-        });
-      }
-      // иначе отменяем изменение
-      return;
+      this.props.onChange(event);
     }
 
-    // если обработчик не передан, то используем состояние HTML-элемента
-    this.setState({
-      value: event.target.value,
-    });
+    if (typeof this.props.value === 'undefined') {
+      this.setState({
+        value: event.target.value,
+      });
+    }
   };
 
   componentDidMount(): void {

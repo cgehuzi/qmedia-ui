@@ -18,8 +18,6 @@ export interface RadioProps extends React.HTMLAttributes<HTMLInputElement> {
   disabled?: boolean;
   /** Отмечен ли компонент */
   checked?: boolean;
-  /** Обработчик изменения. Возвращаемое значение будет передано в состояние `checked` */
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => boolean;
 }
 
 /**
@@ -39,6 +37,10 @@ export class Radio extends React.Component<RadioProps> {
     size: 'base',
     isInvalid: false,
     isWaiting: false,
+  };
+
+  state = {
+    checked: this.props.checked || this.props.defaultChecked || false,
   };
 
   render() {
@@ -63,7 +65,7 @@ export class Radio extends React.Component<RadioProps> {
           'radio',
           isInvalid && 'radio--invalid',
           disabled && 'radio--disabled',
-          checked && 'radio--checked',
+          this.state.checked && 'radio--checked',
           isWaiting && 'radio--waiting',
           size !== 'base' && `radio--${size}`,
           className
@@ -72,10 +74,10 @@ export class Radio extends React.Component<RadioProps> {
         <input
           className="radio__field"
           type="radio"
-          disabled={disabled || isWaiting}
-          checked={checked}
-          onChange={this.handleChange}
           value={value}
+          checked={this.state.checked}
+          disabled={disabled || isWaiting}
+          onChange={this.handleChange}
           {...props}
           ref={this.myRef}
         />
@@ -95,7 +97,18 @@ export class Radio extends React.Component<RadioProps> {
       this.props.onChange(event);
     }
 
-    // отменяем нативное изменение
-    return;
+    if (typeof this.props.checked !== 'boolean') {
+      this.setState({
+        checked: event.target.checked,
+      });
+    }
   };
+
+  componentDidUpdate(prevProps: Readonly<RadioProps>): void {
+    if (prevProps.checked !== this.props.checked) {
+      this.setState({
+        checked: this.props.checked,
+      });
+    }
+  }
 }

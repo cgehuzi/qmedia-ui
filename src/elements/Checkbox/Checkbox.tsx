@@ -18,8 +18,6 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
   disabled?: boolean;
   /** Отмечен ли компонент */
   checked?: boolean;
-  /** Обработчик изменения. Возвращаемое значение будет передано в состояние `checked` */
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => boolean;
 }
 
 /**
@@ -94,24 +92,16 @@ export class Checkbox extends React.Component<CheckboxProps> {
   }
 
   handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // если передан обработчик, то используем его
+    // если передан обработчик, то вызываем его
     if (this.props.onChange) {
-      const nextChecked = this.props.onChange(event);
-      // если обработчик передал значение
-      if (typeof nextChecked === 'boolean') {
-        // сохраняем изменение
-        this.setState({
-          checked: nextChecked,
-        });
-      }
-      // иначе отменяем изменение
-      return;
+      this.props.onChange(event);
     }
 
-    // если обработчик не передан, то используем состояние HTML-элемента
-    this.setState({
-      checked: event.target.checked,
-    });
+    if (typeof this.props.checked !== 'boolean') {
+      this.setState({
+        checked: event.target.checked,
+      });
+    }
   };
 
   componentDidUpdate(prevProps: Readonly<CheckboxProps>): void {

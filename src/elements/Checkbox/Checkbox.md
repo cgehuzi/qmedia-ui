@@ -20,7 +20,9 @@ import { Gapped } from '../../components/Gapped';
 import { Gapped } from '../../components/Gapped';
 
 <Gapped isVertical>
-  <Checkbox checked value="value">children</Checkbox>
+  <Checkbox checked value="value">
+    children
+  </Checkbox>
   <Checkbox checked value="value" />
 </Gapped>;
 ```
@@ -93,15 +95,17 @@ const handleChange = (e) => {
 import { Gapped } from '../../components/Gapped';
 
 const [tryCount, setTryCount] = React.useState(0);
+const [checked, setChecked] = React.useState(false);
 
 const handleChange = (e) => {
   setTryCount(tryCount + 1);
-  if (tryCount < 3) return false;
-  return e.target.checked;
+  setChecked(tryCount < 3 ? false : e.target.checked);
 };
 
 <Gapped isVertical>
-  <Checkbox onChange={handleChange}>Первые 3 попытки будут проигнорированы</Checkbox>
+  <Checkbox checked={checked} onChange={handleChange}>
+    Первые 3 попытки будут проигнорированы
+  </Checkbox>
   <small>Текущее количество попыток: {tryCount}</small>
 </Gapped>;
 ```

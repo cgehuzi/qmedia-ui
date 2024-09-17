@@ -1,7 +1,7 @@
 import './styles/index.css';
 import React from 'react';
 import classNames from 'classnames';
-import _, { get } from 'lodash';
+import _ from 'lodash';
 
 export interface TextareaProps extends React.HTMLAttributes<HTMLTextAreaElement> {
   /** Значение `value` корневого `textarea` */
@@ -20,8 +20,6 @@ export interface TextareaProps extends React.HTMLAttributes<HTMLTextAreaElement>
   myRef?: React.RefObject<HTMLTextAreaElement>;
   /** Отключает компонент */
   disabled?: boolean;
-  /** Обработчик изменения значения. Возвращаемое значение заменит `value` */
-  onChange?: (event: React.ChangeEvent<HTMLTextAreaElement>) => string | number;
 }
 
 const getValueLength = (value: string) => {
@@ -48,7 +46,7 @@ export class Textarea extends React.Component<TextareaProps> {
   };
 
   state = {
-    value: this.props.value || '',
+    value: String(this.props.value || this.props.defaultValue || ''),
   };
 
   render() {
@@ -59,6 +57,7 @@ export class Textarea extends React.Component<TextareaProps> {
       isInvalid,
       isWaiting,
       value,
+      defaultValue,
       disabled,
       className,
       myRef,
@@ -119,25 +118,15 @@ export class Textarea extends React.Component<TextareaProps> {
   };
 
   handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    // если передан обработчик, то используем его
+    // если передан обработчик, то вызываем его
     if (this.props.onChange) {
-      const nextValue = this.props.onChange(event);
-      // если обработчик передал значение
-      if (typeof nextValue === 'string' || typeof nextValue === 'number') {
-        // сохраняем изменение
-        this.setValue(String(nextValue));
-      }
-      // иначе отменяем изменение
-      return;
+      this.props.onChange(event);
     }
 
-    // если обработчик не передан, то используем состояние HTML-элемента
-    this.setValue(event.target.value);
+    if (typeof this.props.value === 'undefined') {
+      this.setValue(event.target.value);
+    }
   };
-
-  componentDidMount(): void {
-    this.setValue(this.props.value);
-  }
 
   componentDidUpdate(prevProps: Readonly<TextareaProps>): void {
     if (prevProps.value !== this.props.value) {

@@ -20,8 +20,6 @@ export interface RadioSmartProps extends React.HTMLAttributes<HTMLInputElement> 
   disabled?: boolean;
   /** Отмечен ли компонент */
   checked?: boolean;
-  /** Обработчик изменения. Возвращаемое значение будет передано в состояние `checked` */
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => boolean;
 }
 
 /**
@@ -45,6 +43,10 @@ export class RadioSmart extends React.Component<RadioSmartProps> {
     size: 'base',
     isInvalid: false,
     isWaiting: false,
+  };
+
+  state = {
+    checked: this.props.checked || this.props.defaultChecked || false,
   };
 
   static Title = RadioSmartTitle;
@@ -72,7 +74,7 @@ export class RadioSmart extends React.Component<RadioSmartProps> {
           'radio-smart',
           isInvalid && 'radio-smart--invalid',
           disabled && 'radio-smart--disabled',
-          checked && 'radio-smart--checked',
+          this.state.checked && 'radio-smart--checked',
           isWaiting && 'radio-smart--waiting',
           size !== 'base' && `radio-smart--${size}`,
           className
@@ -81,10 +83,10 @@ export class RadioSmart extends React.Component<RadioSmartProps> {
         <input
           className="radio-smart__field"
           type="radio"
-          disabled={disabled || isWaiting}
-          checked={checked}
-          onChange={this.handleChange}
           value={value}
+          checked={this.state.checked}
+          disabled={disabled || isWaiting}
+          onChange={this.handleChange}
           {...props}
           ref={this.myRef}
         />
@@ -104,7 +106,18 @@ export class RadioSmart extends React.Component<RadioSmartProps> {
       this.props.onChange(event);
     }
 
-    // отменяем нативное изменение
-    return;
+    if (typeof this.props.checked !== 'boolean') {
+      this.setState({
+        checked: event.target.checked,
+      });
+    }
   };
+
+  componentDidUpdate(prevProps: Readonly<RadioSmartProps>): void {
+    if (prevProps.checked !== this.props.checked) {
+      this.setState({
+        checked: this.props.checked,
+      });
+    }
+  }
 }

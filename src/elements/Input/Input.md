@@ -95,12 +95,13 @@ const handleKeyDown = (e) => {
 
 ```js
 const removeJo = (value) => value.replaceAll('ё', 'е').replaceAll('Ё', 'Е');
+const [value, setValue] = React.useState('');
 
 <Input
   placeholder="Никаких букв ё!"
+  value={value}
   onChange={(e) => {
-    const { value } = e.target;
-    return removeJo(value);
+    setValue(removeJo(e.target.value));
   }}
 />;
 ```

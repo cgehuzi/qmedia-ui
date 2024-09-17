@@ -28,7 +28,7 @@
 Иконка будет находиться слева от текста.
 
 ```js
-<Select value="price_asc" feather="bar-chart">
+<Select defaultValue="price_asc" feather="bar-chart">
   <option value="">Не выбрана</option>
   <option value="default">По популярности</option>
   <option value="price_asc">По возрастанию цены</option>
@@ -119,18 +119,20 @@ const checkValue = (value) => {
 
 ```js
 const removeJo = (value) => value.replaceAll('ё', 'е').replaceAll('Ё', 'Е');
+const [value, setValue] = React.useState('');
 
 <Select
   placeholder="Никаких букв ё!"
+  value={value}
   onChange={(e) => {
-    const { value } = e.target;
-    return removeJo(value);
+    setValue(removeJo(e.target.value));
   }}
 >
-  <option value="">Ну ОК, е мое!</option>
+  <option value="">Не участвую в этом</option>
   <option>Ежик</option>
   <option>Елка</option>
   <option>Ёжик</option>
   <option>Ёлка</option>
+  <option>Все ясно, е мое!</option>
 </Select>;
 ```

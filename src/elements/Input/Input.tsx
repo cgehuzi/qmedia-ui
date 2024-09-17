@@ -18,8 +18,6 @@ export interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
   myRef?: React.RefObject<HTMLInputElement>;
   /** Отключает компонент */
   disabled?: boolean;
-  /** Обработчик изменения значения. Возвращаемое значение заменит `value` */
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => string | number;
 }
 
 /**
@@ -42,7 +40,7 @@ export class Input extends React.Component<InputProps> {
   };
 
   state = {
-    value: this.props.value || '',
+    value: this.props.value || this.props.defaultValue || '',
   };
 
   render() {
@@ -52,10 +50,11 @@ export class Input extends React.Component<InputProps> {
       isInvalid,
       isWaiting,
       value,
+      defaultValue,
       disabled,
       className,
-      onChange,
       myRef,
+      onChange,
       ...props
     } = this.props;
 
@@ -90,24 +89,16 @@ export class Input extends React.Component<InputProps> {
   }
 
   handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    // если передан обработчик, то используем его
+    // если передан обработчик, то вызываем его
     if (this.props.onChange) {
-      const nextValue = this.props.onChange(event);
-      // если обработчик передал значение
-      if (typeof nextValue === 'string' || typeof nextValue === 'number') {
-        // сохраняем изменение
-        this.setState({
-          value: String(nextValue),
-        });
-      }
-      // иначе отменяем изменение
-      return;
+      this.props.onChange(event);
     }
 
-    // если обработчик не передан, то используем состояние HTML-элемента
-    this.setState({
-      value: event.target.value,
-    });
+    if (typeof this.props.value === 'undefined') {
+      this.setState({
+        value: event.target.value,
+      });
+    }
   };
 
   componentDidUpdate(prevProps: Readonly<InputProps>): void {
