@@ -1,7 +1,7 @@
 Базовый пример
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 import { Button } from '../../elements/Button';
 
 <Gapped align="center">
@@ -19,7 +19,7 @@ import { Button } from '../../elements/Button';
 #### Размеры
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped align="center">
   <Badge size="micro" />
@@ -44,7 +44,7 @@ import { Gapped } from '../../components/Gapped';
 Доступно 2 варианта абсолютного позиционарования: `left` (вверху слева) и `right` (верху справа).
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 import { Button } from '../../elements/Button';
 
 <Gapped align="center">

@@ -17,7 +17,7 @@
 #### Размер
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
   <Input value="Размер micro" size="micro" />
@@ -33,7 +33,7 @@ import { Gapped } from '../../components/Gapped';
 У инпутов есть несколько состояний
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 const [isWaiting, setIsWaiting] = React.useState(false);
 const [isInvalid, setIsInvalid] = React.useState(false);

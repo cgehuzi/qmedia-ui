@@ -7,7 +7,7 @@
 #### Размеры
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped align="center">
   <Button size="micro">Micro</Button>
@@ -27,7 +27,7 @@ import { Gapped } from '../../components/Gapped';
 - `transparent` – с прозрачным фоном
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isWrap>
   <Button variant="filled">filled</Button>
@@ -41,7 +41,7 @@ import { Gapped } from '../../components/Gapped';
 Текст внутри кнопки может быть подчёркнут.
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isWrap>
   <Button underline="none">Без подчёркивания</Button>
@@ -55,7 +55,7 @@ import { Gapped } from '../../components/Gapped';
 Компонент можно сделать ссылкой, чтобы при рендере был использован тег `<a>`. За это отвечает параметр `isLink`.
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped align="center">
   <Button>Я кнопка</Button>
@@ -72,7 +72,7 @@ import { Gapped } from '../../components/Gapped';
 Иконка может находиться как слева от текста кнопки, так и справа и даже в обоих позициях одновременно.
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isWrap>
   <Button feather="x">Закрыть</Button>
@@ -90,7 +90,7 @@ import { Gapped } from '../../components/Gapped';
 Если ширины родительского блока не хватает для отображения текста в кнопке, то текст будет обрезан с добавлением ... в конце.
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
   <Button>Обычная кнопка</Button>
@@ -108,7 +108,7 @@ import { Gapped } from '../../components/Gapped';
 С помощью параметра `isSquare` их можно привести к единому виду, что обеспечит квадратное отображение кнопок.
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped align="center">
   <Button size="micro" feather="home" isSquare />
@@ -126,7 +126,7 @@ import { Gapped } from '../../components/Gapped';
 Если в кнопке есть иконка, на время ожидания иконка заменяется на спиннер, если иконки нет — кнопка начинает мигать. Когда иконки две — заменяется только левая.
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 const [isWaiting, setIsWaiting] = React.useState(false);
 
@@ -169,7 +169,7 @@ const handleWaiting = () => {
 - -trans-xx : `inherit`
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 const [variant, setVariant] = React.useState('filled');
 const [color, setColor] = React.useState('grey');

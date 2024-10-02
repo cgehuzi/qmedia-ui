@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 export interface GappedProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Расстояние между элементами в пикселях */
+  /** Расстояние между элементами в пикселях. По умолчанию 10px (задано через стили селектора .gapped) */
   gap?: number;
   /** Направление потока дочерних элементов */
   isVertical?: boolean;
@@ -24,7 +24,7 @@ export class Gapped extends React.Component<GappedProps> {
   myRef: React.RefObject<HTMLDivElement>;
 
   static defaultProps = {
-    gap: 10,
+    gap: null,
     isVertical: false,
     align: 'start',
     justify: 'start',
@@ -51,7 +51,7 @@ export class Gapped extends React.Component<GappedProps> {
           className
         )}
         style={{
-          gap: `${gap}px`,
+          gap: gap ? `${gap}px` : '',
           ...style,
         }}
         {...props}

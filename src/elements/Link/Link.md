@@ -7,7 +7,7 @@
 #### Размеры
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped align="center">
   <Link feather="home" size="micro">Размер micro</Link>
@@ -23,7 +23,7 @@ import { Gapped } from '../../components/Gapped';
 Текст может иметь разные подчёркиванияя.
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isWrap>
   <Link underline="none" href="." target="_blank">
@@ -45,7 +45,7 @@ import { Gapped } from '../../components/Gapped';
 Иконка может находиться как слева от текста, так и справа и даже в обоих позициях одновременно.
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isWrap>
   <Link feather="x">Закрыть</Link>
@@ -63,7 +63,7 @@ import { Gapped } from '../../components/Gapped';
 Если в ссылке есть иконка, на время ожидания иконка заменяется на спиннер, если иконки нет — ссылка начинает мигать. Когда иконки две — заменяется только левая.
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 const [isWaiting, setIsWaiting] = React.useState(false);
 
@@ -98,7 +98,7 @@ const handleWaiting = () => {
 Ссылкам доступен полный набор цветов, предоставляемых дизайн-системой. Цвет задаётся параметром `color`. Значение – имя цвета из CSS-переменных дизайн-системы (без префикса `--color-`).
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 import { Button } from '../../elements/Button';
 
 const [color, setColor] = React.useState('grey');

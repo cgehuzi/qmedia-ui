@@ -1,7 +1,7 @@
 Базовый пример
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 const [value, setValue] = React.useState('');
 
 <Gapped>
@@ -28,7 +28,7 @@ const [value, setValue] = React.useState('');
 Оба имеют параметр `html` для передачи на рендер HTML-контента в виде строки.
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped justify="stretch">
   <RadioSmart checked>Без дочерних элементов</RadioSmart>
@@ -65,7 +65,7 @@ import { Gapped } from '../../components/Gapped';
 2. `value` – если children пустой
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
   <RadioSmart checked value="value">
@@ -78,7 +78,7 @@ import { Gapped } from '../../components/Gapped';
 #### Размеры
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
   <RadioSmart size="micro" checked>
@@ -113,7 +113,7 @@ import { Gapped } from '../../components/Gapped';
 У радио-кнопок есть несколько состояний
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 const [isWaiting, setIsWaiting] = React.useState(false);
 const [checked, setChecked] = React.useState(false);
@@ -156,7 +156,7 @@ const handleChange = (e) => {
 ##### onChange
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 const [tryCount, setTryCount] = React.useState(0);
 const [value, setValue] = React.useState('1');

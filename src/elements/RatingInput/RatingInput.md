@@ -7,7 +7,7 @@
 #### Размер
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
   <RatingInput value={3} size="micro" />
@@ -21,7 +21,7 @@ import { Gapped } from '../../components/Gapped';
 #### Количество звёзд
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
   <RatingInput value={3} starsCount={3} />
@@ -38,7 +38,7 @@ import { Gapped } from '../../components/Gapped';
 Для `readonly` компонентов будет отображаться точное значение заливки, например 2.3, иначе для выбора будет доступны значения, кратные 0.5.
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
   <RatingInput value={2.3} />
@@ -52,7 +52,7 @@ import { Gapped } from '../../components/Gapped';
 У инпута есть несколько состояний
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped align="stretch" isVertical>
   <Gapped align="center">
@@ -84,7 +84,7 @@ import { Gapped } from '../../components/Gapped';
 Этот обработчик принимает в себя цифровое значение текущего клика по звезде.
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 const [value, setValue] = React.useState(4);
 
 <Gapped align="center">

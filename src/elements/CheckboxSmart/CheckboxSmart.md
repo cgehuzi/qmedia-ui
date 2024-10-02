@@ -17,7 +17,7 @@
 Оба имеют параметр `html` для передачи на рендер HTML-контента в виде строки.
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped justify="stretch">
   <CheckboxSmart checked>Без дочерних элементов</CheckboxSmart>
@@ -54,7 +54,7 @@ import { Gapped } from '../../components/Gapped';
 2. `value` – если children пустой
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
   <CheckboxSmart checked value="value">
@@ -67,7 +67,7 @@ import { Gapped } from '../../components/Gapped';
 #### Размеры
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
   <CheckboxSmart size="micro" checked>
@@ -102,7 +102,7 @@ import { Gapped } from '../../components/Gapped';
 У чекбоксов есть несколько состояний
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 const [isWaiting, setIsWaiting] = React.useState(false);
 const [checked, setChecked] = React.useState(false);
@@ -145,7 +145,7 @@ const handleChange = (e) => {
 ##### onChange
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 const [tryCount, setTryCount] = React.useState(0);
 const [checked, setChecked] = React.useState(false);

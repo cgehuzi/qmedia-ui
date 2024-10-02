@@ -11,7 +11,7 @@
 При установке ограничения по умолчанию счётчик выводится. Чтобы его скрыть, нужно явно передать `showCounter={false}`
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped justify="stretch">
   <Textarea showCounter placeholder="Простой счётчик" />
@@ -27,7 +27,7 @@ import { Gapped } from '../../components/Gapped';
 #### Размер
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
   <Textarea value="Размер micro" size="micro" />
@@ -43,7 +43,7 @@ import { Gapped } from '../../components/Gapped';
 У инпутов есть несколько состояний
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 const [isWaiting, setIsWaiting] = React.useState(false);
 const [isInvalid, setIsInvalid] = React.useState(false);

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const COMPONENTS_DIR = path.resolve(__dirname, '../src/components');
+// const COMPONENTS_DIR = path.resolve(__dirname, '../src/components');
 const ELEMENTS_DIR = path.resolve(__dirname, '../src/elements');
 
 const findComponents = (dirPath) => {
@@ -42,7 +42,7 @@ const findInComponents = (parentDirName) => {
 };
 
 const { sections: elementsSections, components: elementsComponents } = findInComponents(ELEMENTS_DIR);
-const { sections: componentsSections, components: componentsComponents } = findInComponents(COMPONENTS_DIR);
+// const { sections: componentsSections, components: componentsComponents } = findInComponents(COMPONENTS_DIR);
 
 const getCommonSections = () => [
   {
@@ -71,16 +71,16 @@ const getCommonSections = () => [
     sectionDepth: 2,
     sections: elementsSections,
   },
-  {
-    name: 'Components',
-    content: path.join(__dirname, '../src/components/README.md'),
-    components: componentsComponents,
-    sectionDepth: 2,
-    sections: componentsSections,
-  },
+  // {
+  //   name: 'Components',
+  //   content: path.join(__dirname, '../src/components/README.md'),
+  //   components: componentsComponents,
+  //   sectionDepth: 2,
+  //   sections: componentsSections,
+  // },
 ].filter((section) => !section.content || fs.existsSync(section.content));
 
 module.exports = {
-  components: componentsComponents,
+  // components: componentsComponents,
   commonSections: getCommonSections(),
 };

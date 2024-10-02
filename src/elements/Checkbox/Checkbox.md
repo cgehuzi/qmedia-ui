@@ -1,7 +1,7 @@
 Базовый пример
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
   <Checkbox>Обычный чекбокс</Checkbox>
@@ -17,7 +17,7 @@ import { Gapped } from '../../components/Gapped';
 2. `value` – если children пустой
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
   <Checkbox checked value="value">
@@ -30,7 +30,7 @@ import { Gapped } from '../../components/Gapped';
 #### Размеры
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
   <Checkbox checked size="micro">
@@ -54,7 +54,7 @@ import { Gapped } from '../../components/Gapped';
 У чекбоксов есть несколько состояний
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 const [isWaiting, setIsWaiting] = React.useState(false);
 const [checked, setChecked] = React.useState(false);
@@ -90,7 +90,7 @@ const handleChange = (e) => {
 ##### onChange
 
 ```js
-import { Gapped } from '../../components/Gapped';
+import { Gapped } from '../Gapped';
 
 const [tryCount, setTryCount] = React.useState(0);
 const [checked, setChecked] = React.useState(false);
