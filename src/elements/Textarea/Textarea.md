@@ -112,3 +112,15 @@ const [value, setValue] = React.useState('');
   }}
 />;
 ```
+
+```js
+const getOnlyNumbers = (value) => value.replaceAll(/\D/g, '');
+const [value, setValue] = React.useState('');
+
+<Textarea
+  placeholder="Только цифры"
+  value={value}
+  onChange={(e) => {
+    setValue(getOnlyNumbers(e.target.value));
+  }}
+/>;

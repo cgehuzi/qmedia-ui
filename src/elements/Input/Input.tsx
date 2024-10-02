@@ -94,8 +94,10 @@ export class Input extends React.Component<InputProps> {
       this.props.onChange(event);
     }
 
+    const resultValue = this.props.value !== undefined ? this.props.value : event.target.value;
+
     this.setState({
-      value: event.target.value,
+      value: resultValue,
     });
   };
 
