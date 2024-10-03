@@ -71,17 +71,18 @@ export class Toggle extends React.Component<ToggleProps> {
           className
         )}
       >
-        <input
-          className="toggle__field"
-          type="checkbox"
-          value={value}
-          checked={this.state.checked}
-          disabled={disabled || isWaiting}
-          onChange={this.handleChange}
-          {...props}
-          ref={this.myRef}
-        />
         <div className="toggle__container">
+          <input
+            className="toggle__field"
+            type="checkbox"
+            value={value}
+            checked={this.state.checked}
+            disabled={disabled || isWaiting}
+            onChange={this.handleChange}
+            {...props}
+            ref={this.myRef}
+          />
+          <div className="toggle__back" />
           <div className="toggle__circle" />
         </div>
         {children && <div className="toggle__title">{children}</div>}
