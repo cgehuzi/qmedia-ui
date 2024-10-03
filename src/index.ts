@@ -10,4 +10,5 @@ export * from './elements/RadioSmart';
 export * from './elements/RatingInput';
 export * from './elements/Select';
 export * from './elements/Textarea';
-export * from './components/Gapped';
+export * from './elements/Gapped';
+export * from './elements/Toggle';

@@ -2,15 +2,10 @@
 
 ```js
 import { Gapped } from '../Gapped';
-const [value, setValue] = React.useState('');
 
 <Gapped isVertical>
-  <Radio checked={value === 'cash'} onChange={() => setValue('cash')}>
-    Оплата при получении
-  </Radio>
-  <Radio checked={value === 'online'} onChange={() => setValue('online')}>
-    Оплата онлайн
-  </Radio>
+  <Toggle>Обычный переключатель</Toggle>
+  <Toggle>Обычный переключатель</Toggle>
 </Gapped>;
 ```
 
@@ -22,10 +17,10 @@ const [value, setValue] = React.useState('');
 import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
-  <Radio checked value="value">
+  <Toggle checked value="value">
     children
-  </Radio>
-  <Radio checked value="value" />
+  </Toggle>
+  <Toggle checked value="value" />
 </Gapped>;
 ```
 
@@ -35,25 +30,25 @@ import { Gapped } from '../Gapped';
 import { Gapped } from '../Gapped';
 
 <Gapped isVertical>
-  <Radio checked size="micro">
+  <Toggle checked size="micro">
     Размер micro
-  </Radio>
-  <Radio checked size="small">
+  </Toggle>
+  <Toggle checked size="small">
     Размер small
-  </Radio>
-  <Radio checked>Размер base (по умолчанию)</Radio>
-  <Radio checked size="large">
+  </Toggle>
+  <Toggle checked>Размер base (по умолчанию)</Toggle>
+  <Toggle checked size="large">
     Размер large
-  </Radio>
-  <Radio checked size="extra">
+  </Toggle>
+  <Toggle checked size="extra">
     Размер extra
-  </Radio>
+  </Toggle>
 </Gapped>;
 ```
 
 #### Состояния
 
-У радио-кнопок есть несколько состояний
+У переключателей есть несколько состояний
 
 ```js
 import { Gapped } from '../Gapped';
@@ -65,23 +60,23 @@ const handleChange = (e) => {
   setIsWaiting(true);
   setTimeout(() => {
     setIsWaiting(false);
-    setChecked(true);
+    setChecked(!checked);
   }, 3000);
 };
 
 <Gapped isVertical>
-  <Radio checked disabled>
+  <Toggle checked disabled>
     в отключенном состоянии
-  </Radio>
-  <Radio checked isInvalid>
+  </Toggle>
+  <Toggle isInvalid>
     в состоянии ошибки
-  </Radio>
-  <Radio checked isWaiting>
+  </Toggle>
+  <Toggle checked isWaiting>
     в режиме ожидания
-  </Radio>
-  <Radio checked={checked} isWaiting={isWaiting} onChange={handleChange}>
+  </Toggle>
+  <Toggle checked={checked} isWaiting={isWaiting} onChange={handleChange}>
     действие после ожидания
-  </Radio>
+  </Toggle>
 </Gapped>;
 ```
 
@@ -95,22 +90,17 @@ const handleChange = (e) => {
 import { Gapped } from '../Gapped';
 
 const [tryCount, setTryCount] = React.useState(0);
-const [value, setValue] = React.useState('1');
+const [checked, setChecked] = React.useState(false);
 
 const handleChange = (e) => {
   setTryCount(tryCount + 1);
-  if (tryCount < 3) return;
-  setValue(e.target.value);
+  setChecked(tryCount < 3 ? false : e.target.checked);
 };
 
 <Gapped isVertical>
-  <strong>Первые 3 попытки будут проигнорированы</strong>
-  <Radio checked={value === '1'} value="1" onChange={handleChange}>
-    1 вариант
-  </Radio>
-  <Radio checked={value === '2'} value="2" onChange={handleChange}>
-    2 вариант
-  </Radio>
+  <Toggle checked={checked} onChange={handleChange}>
+    Первые 3 попытки будут проигнорированы
+  </Toggle>
   <small>Текущее количество попыток: {tryCount}</small>
 </Gapped>;
 ```

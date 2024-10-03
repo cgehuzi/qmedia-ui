@@ -3,7 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 import FeatherIcon from 'feather-icons-react';
 
-export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface ToggleProps extends React.HTMLAttributes<HTMLInputElement> {
   /** Значение `value` корневого `input` */
   value?: string;
   /** Размер компонента */
@@ -21,14 +21,14 @@ export interface CheckboxProps extends React.HTMLAttributes<HTMLInputElement> {
 }
 
 /**
- * Стилизованный `<input type="checkbox">`.
+ * Стилизованный `<input type="toggle">`.
  *
  * Поддерживает все стандартные атрибуты и события элемента `input`.
  */
-export class Checkbox extends React.Component<CheckboxProps> {
+export class Toggle extends React.Component<ToggleProps> {
   myRef: React.RefObject<HTMLInputElement>;
 
-  constructor(props: CheckboxProps) {
+  constructor(props: ToggleProps) {
     super(props);
     this.myRef = props.myRef || React.createRef();
   }
@@ -62,17 +62,17 @@ export class Checkbox extends React.Component<CheckboxProps> {
     return (
       <label
         className={classNames(
-          'checkbox',
-          isInvalid && 'checkbox--invalid',
-          disabled && 'checkbox--disabled',
-          this.state.checked && 'checkbox--checked',
-          isWaiting && 'checkbox--waiting',
-          size !== 'base' && `checkbox--${size}`,
+          'toggle',
+          isInvalid && 'toggle--invalid',
+          disabled && 'toggle--disabled',
+          this.state.checked && 'toggle--checked',
+          isWaiting && 'toggle--waiting',
+          size !== 'base' && `toggle--${size}`,
           className
         )}
       >
         <input
-          className="checkbox__field"
+          className="toggle__field"
           type="checkbox"
           value={value}
           checked={this.state.checked}
@@ -81,12 +81,10 @@ export class Checkbox extends React.Component<CheckboxProps> {
           {...props}
           ref={this.myRef}
         />
-        {isWaiting ? (
-          <FeatherIcon icon="loader" className="checkbox__spinner" />
-        ) : (
-          <div className="checkbox__icon" />
-        )}
-        {children && <div className="checkbox__title">{children}</div>}
+        <div className="toggle__container">
+          <div className="toggle__circle" />
+        </div>
+        {children && <div className="toggle__title">{children}</div>}
       </label>
     );
   }
@@ -104,7 +102,7 @@ export class Checkbox extends React.Component<CheckboxProps> {
     }
   };
 
-  componentDidUpdate(prevProps: Readonly<CheckboxProps>): void {
+  componentDidUpdate(prevProps: Readonly<ToggleProps>): void {
     if (prevProps.checked !== this.props.checked) {
       this.setState({
         checked: this.props.checked,

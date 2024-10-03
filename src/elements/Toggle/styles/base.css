@@ -1,0 +1,177 @@
+@keyframes toggle-waiting {
+  0% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.toggle {
+  --this-font-size: var(--font-size-base);
+  --this-icon-size: 1.1em;
+
+  --this-background-color: var(--control-background-color);
+  --this-border-color: var(--control-border-color);
+
+  --this-hover-background-color: var(--color-first-white-90);
+  --this-hover-border-color: var(--color-first);
+
+  --this-active-background-color: var(--color-first-white-80);
+  --this-active-border-color: var(--color-first);
+
+  --this-checked-background-color: var(--color-first);
+  --this-checked-border-color: var(--color-first);
+
+  --this-checked-hover-background-color: var(--color-first-black-20);
+  --this-checked-hover-border-color: var(--color-first);
+
+  --this-checked-active-background-color: var(--color-first-black-10);
+  --this-checked-active-border-color: var(--color-first);
+
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  margin: 0;
+  gap: 0.5em;
+  font-size: var(--this-font-size);
+  line-height: 1.3em;
+  color: inherit;
+  cursor: pointer;
+}
+
+.toggle--disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.toggle--waiting {
+  cursor: default;
+  pointer-events: none;
+  animation: toggle-waiting 1.5s linear infinite;
+}
+
+.toggle__field {
+  font-size: var(--this-font-size);
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: var(--this-icon-size);
+  height: var(--this-icon-size);
+  margin: 0;
+
+  .toggle--waiting & {
+    display: none;
+  }
+}
+
+.toggle__container {
+  transition: 0.15s ease-in;
+  display: block;
+  position: relative;
+  height: calc(var(--this-icon-size) + 6px);
+  border: 1px solid var(--this-border-color);
+  border-radius: calc((var(--this-icon-size) + 6px) / 2);
+  background-color: var(--this-background-color);
+  width: calc(var(--this-icon-size) * 2.1);
+
+  .toggle:hover & {
+    background-color: var(--this-hover-background-color);
+  }
+
+  .toggle:active & {
+    background-color: var(--this-active-background-color);
+  }
+
+  .toggle--checked & {
+    background-color: var(--this-checked-background-color);
+    border-color: var(--this-checked-border-color);
+  }
+
+  .toggle--checked:hover & {
+    background-color: var(--this-checked-hover-background-color);
+    border-color: var(--this-checked-hover-border-color);
+  }
+
+  .toggle--checked:active & {
+    background-color: var(--this-checked-active-background-color);
+    border-color: var(--this-checked-active-border-color);
+  }
+
+  .toggle--invalid & {
+    --this-border-color: var(--color-error);
+    --this-hover-border-color: var(--color-error);
+    --this-active-border-color: var(--color-error);
+
+    --this-checked-background-color: var(--color-error);
+    --this-checked-border-color: var(--color-error);
+    --this-checked-hover-border-color: var(--color-error);
+    --this-checked-active-border-color: var(--color-error);
+    --this-checked-hover-background-color: var(--color-error);
+    --this-checked-active-background-color: var(--color-error);
+  }
+}
+
+.toggle__circle {
+  transition: 0.15s ease-in;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: var(--this-icon-size);
+  height: var(--this-icon-size);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: var(--this-background-color);
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  border: 1.5px solid var(--this-border-color);
+  border-radius: 50%;
+  cursor: pointer;
+
+  .toggle--checked & {
+    left: calc(100% - var(--this-icon-size) - 2px);
+    border-color: var(--this-checked-border-color);
+  }
+}
+
+.toggle__title {
+  flex-grow: 1;
+  margin-top: 0.05em;
+
+  & a[href] {
+    color: inherit;
+    text-decoration: underline;
+    pointer-events: all;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/* Размеры */
+
+.toggle--micro {
+  --this-font-size: var(--font-size-micro);
+}
+
+.toggle--small {
+  --this-font-size: var(--font-size-small);
+}
+
+.toggle--large {
+  --this-font-size: var(--font-size-large);
+}
+
+.toggle--extra {
+  --this-font-size: var(--font-size-extra);
+}

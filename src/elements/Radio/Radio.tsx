@@ -86,7 +86,7 @@ export class Radio extends React.Component<RadioProps> {
         ) : (
           <div className="radio__icon" />
         )}
-        <div className="radio__title">{children || value}</div>
+        {children && <div className="radio__title">{children}</div>}
       </label>
     );
   }
