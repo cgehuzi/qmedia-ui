@@ -4,6 +4,8 @@
 
 @import './global.css' layer(global);
 
+@import './_modificators.css' layer(modificators);
+
 @layer global {
   .container {
     width: 100%;
@@ -16,5 +18,3 @@
     width: var(--feather-width);
   }
 }
-
-@import './_modificators.css' layer(modificators);
